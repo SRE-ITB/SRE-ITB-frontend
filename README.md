@@ -24,9 +24,9 @@ yarn dev
 ## Branching and Commit Messages
 
 Setiap membuat branch baru harus ambil base dari `main`. Untuk penamaan commit dan branch mengikuti format berikut.
-Format branch: `<type>/<title>`
-Format commit: `<type>: <subject>`
-Penamaan menggunakan kebab case
+Format branch: `<type>/<title>`, contoh `feat/Navbar`.
+Format commit: `<type>: <subject>`, contoh `feat: add navbar`.
+Penamaan menggunakan camel case
 
 Untuk type mengikuti semantic berikut.
 - `feat`: (new feature for the user, not a new feature for build script)
@@ -36,5 +36,3 @@ Untuk type mengikuti semantic berikut.
 - `refactor`: (refactoring production code, eg. renaming a variable)
 - `test`: (adding missing tests, refactoring tests; no production code change)
 - `chore`: (updating grunt tasks etc; no production code change)
-
-## Link

@@ -1,9 +1,9 @@
-const LandingPage: React.FC = () => {
+const Landing: React.FC = () => {
   return (
-    <div className='h-screen relative'>
+    <div className='h-screen relative font-[Montserrat-Bold]'>
       your code here
     </div>
   )
 }
 
-export default LandingPage
+export default Landing
