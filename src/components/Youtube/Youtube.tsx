@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 const Youtube: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-screen h-4/5 bg-emerald-800">
+    <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green">
       <iframe
         className="aspect-video w-1/2 lg:w-2/5 md:w-3/5"
         src="https://www.youtube.com/embed/H2t9jZBPlpA"
