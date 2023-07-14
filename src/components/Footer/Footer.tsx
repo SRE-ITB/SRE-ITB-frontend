@@ -52,33 +52,33 @@ const Footer: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="h-auto w-full flex flex-col justify-center items-center bg-green md:justify-start md:flex-row">
+      <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row">
         <div className="sm:pl-8 sm:w-3/5">
-          <Image src={logo} height="240px" width="290px" />
+          <img src={logo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
         </div>
         <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-4">
           {contacts.map((contact, index) => (
             <div className="flex items-center" key={index}>
               <Link href={contact.link}>
-                <div className="mr-2">
+                <div className="mr-2 cursor-pointer">
                   <Image
                     src={contact.image}
                     alt={contact.type}
-                    width="40px"
-                    height="40px"
+                    width="35px"
+                    height="35px"
                     style={{ filter: 'brightness(0) invert(0.9)' }}
                   />
                 </div>
               </Link>
               <Link href={contact.link}>
-                <p className="font-normal">{contact.username}</p>
+                <p className="font-normal text-[12px] sm:text-[14px]">{contact.username}</p>
               </Link>
             </div>
           ))}
         </div>
         <br />
       </div>
-      <div className="h-[80px] w-full bg-black text-[18px] text-white font-sans italic flex items-center justify-center md:justify-start md:pl-20">
+      <div className="sm:h-[70px] h-[50px] w-full bg-black sm:text-[18px] text-[15px] text-white font-sans italic flex items-center justify-center md:justify-start md:pl-20">
         <p>© 2023 SRE ITB – All rights reserved</p>
       </div>
     </div>
