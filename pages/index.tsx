@@ -1,9 +1,5 @@
 const Landing: React.FC = () => {
-  return (
-    <div className='h-screen relative font-[Montserrat-Bold]'>
-      your code here
-    </div>
-  )
-}
+  return <div className="h-screen relative font-[Montserrat-Bold]"></div>;
+};
 
-export default Landing
+export default Landing;
