@@ -1,5 +1,11 @@
-const Landing: React.FC = () => {
-  return <div className="h-screen relative font-[Montserrat-Bold]"></div>;
-};
+import Footer from '@src/components/Footer/Footer'
 
-export default Landing;
+const Landing: React.FC = () => {
+  return (
+    <div className="h-auto relative">
+      <Footer />
+    </div>
+  )
+}
+
+export default Landing
