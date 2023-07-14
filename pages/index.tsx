@@ -1,7 +1,11 @@
+import Youtube from '@src/components/Youtube/Youtube'
+import Footer from '@src/components/Footer/Footer'
+
 const Landing: React.FC = () => {
   return (
-    <div className='h-screen relative font-[Montserrat-Bold]'>
-      your code here
+    <div className="h-auto relative">
+      <Youtube />
+      <Footer />
     </div>
   )
 }
