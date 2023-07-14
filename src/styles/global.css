@@ -74,4 +74,14 @@
     font-family: 'Montserrat-Bold';
     src: url('../assets/fonts/Montserrat-Bold.ttf');
   }
+
+  @font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../assets/fonts/OpenSans-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+  }
 }

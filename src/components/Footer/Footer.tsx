@@ -3,11 +3,11 @@ import Image from 'next/image'
 
 // Assets
 import logo from '../Logo/whiteLogo.png'
-import instagram from '../../assets/images/instagram.svg'
-import gmail from '../../assets/images/gmail.svg'
-import linkedin from '../../assets/images/linkedin.svg'
-import tiktok from '../../assets/images/tiktok.svg'
-import youtube from '../../assets/images/youtube.svg'
+import instagram from '@src/assets/images/Socmed/instagram.svg'
+import gmail from '../../assets/images/Socmed/gmail.svg'
+import linkedin from '../../assets/images/Socmed/linkedin.svg'
+import tiktok from '../../assets/images/Socmed/tiktok.svg'
+import youtube from '../../assets/images/Socmed/youtube.svg'
 
 const Footer: React.FC = () => {
   interface Contact {
