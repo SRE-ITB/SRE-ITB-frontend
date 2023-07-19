@@ -1,12 +1,9 @@
-// BootStrap
-import { Carousel } from 'react-bootstrap';
+import React from 'react';
 
 // import swiper
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
 // import swiper styles
-import 'swiper/css'
+import 'swiper/swiper-bundle.css';
 
 // Import image
 import Image from 'next/image'
@@ -67,20 +64,21 @@ const Slider: React.FC = () => {
   return (
     <Swiper
       spaceBetween={30}
-      slidesPerView={1}
+      slidesPerView={3}
       autoplay={{
         delay: 4000,
-        disableOnInteraction: true
+        disableOnInteraction: false, // Set this to true if you want to stop autoplay on user interaction
       }}
       pagination={{
-        clickable: true
+        clickable: true,
       }}
-      modules={[Autoplay, Pagination]}
     >
       {contents.map((item, index) => (
         <SwiperSlide key={index}>
           <div className='h-[300px] w-[300px] bg-green rounded'>
-            <Image className='d-block w-100' src={item.image} alt={`Slide ${index + 1}`} />
+            <div className='rounded'>
+              <Image className='d-block w-100' src={item.image} alt={`Slide ${index + 1}`} />
+            </div>
             <div className='mt-2 px-4'>
               <p className='text-xl font-[Montserrat-Bold] text-white text-center'>{item.title}</p>
               <p className='text-white text-center font-[Montserrat-Medium] text-[14px] mt-2'>{item.desc}</p>
@@ -93,3 +91,13 @@ const Slider: React.FC = () => {
 };
 
 export default Slider;
+
+// spaceBetween={30}
+//       slidesPerView={3}
+//       autoplay={{
+//         delay: 4000,
+//         disableOnInteraction: true
+//       }}
+//       pagination={{
+//         clickable: true
+//       }}
