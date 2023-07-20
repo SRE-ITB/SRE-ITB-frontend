@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../Style.css';
-import i1 from '../Img/whiteLogo.png';
+import i1 from '.../Images/Logo/whiteLogo.png';
 
 export default function Navbar(): JSX.Element {
   const [open, setOpen] = useState<boolean>(false);
