@@ -2,12 +2,12 @@ import Carousel from '@src/components/Carousel/Carousel'
 
 // Assets
 import ExternalEvent from '@src/assets/Images/Carousel/ExternalEvents.jpg'
-import CareerTalks from '@src/assets/Images/Carousel/03. Career Talks.jpg'
-import REProject from '@src/assets/Images/Carousel/03. RE Project.jpg'
-import REview from '@src/assets/Images/Carousel/03. REview.png'
-import SocialProject from '@src/assets/Images/Carousel/03. Social Project.jpg'
-import Gathering from '@src/assets/Images/Carousel/03. gathering.jpg'
-import SkillTraining from '@src/assets/Images/Carousel/03. Skill Training.jpg'
+import CareerTalks from '@src/assets/Images/Carousel/CareerTalks.jpg'
+import REProject from '@src/assets/Images/Carousel/REProject.jpg'
+import REview from '@src/assets/Images/Carousel/REview.png'
+import SocialProject from '@src/assets/Images/Carousel/SocialProject.jpg'
+import Gathering from '@src/assets/Images/Carousel/Gathering.jpg'
+import SkillTraining from '@src/assets/Images/Carousel/SkillTraining.jpg'
 
 const Activity = (): JSX.Element => {
   const contents = [
