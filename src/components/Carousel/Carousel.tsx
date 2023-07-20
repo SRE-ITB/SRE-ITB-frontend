@@ -14,7 +14,7 @@ const Carousel = (): JSX.Element => {
         See More of Our Activities
       </div>
     </div>
-  );
+  )
 }
 
-export default Carousel;
+export default Carousel

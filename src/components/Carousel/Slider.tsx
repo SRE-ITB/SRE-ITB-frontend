@@ -1,12 +1,8 @@
-import React from 'react';
-
-// import swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-// import swiper styles
-import 'swiper/swiper-bundle.css';
-
-// Import image
-import Image from 'next/image'
+import React from 'react'
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css' // Import Swiper styles
+import Card from '../Card/Card'
 
 // Assets
 import ExternalEvent from '../../assets/images/Carousel/03 External Events.jpg'
@@ -17,87 +13,73 @@ import SocialProject from '../../assets/images/Carousel/03. Social Project.jpg'
 import Gathering from '../../assets/images/Carousel/03. gathering.jpg'
 import SkillTraining from '../../assets/images/Carousel/03. Skill Training.jpg'
 
+// Install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation])
+
 const Slider: React.FC = () => {
   const contents = [
     {
       image: REview,
-      title: "REview",
-      desc: "Webinar series to learn the fundamental of renewable energy"
+      title: 'REview',
+      desc: 'Webinar series to learn the fundamental of renewable energy'
     },
     {
       image: SocialProject,
-      title: "Social Project",
-      desc: "A community service projecy to help disadvantages individuals"
+      title: 'Social Project',
+      desc: 'A community service projecy to help disadvantages individuals'
     },
     {
       image: REProject,
-      title: "RE PRoject",
-      desc: "Renewable energy installation project"
+      title: 'RE PRoject',
+      desc: 'Renewable energy installation project'
     },
     {
       image: CareerTalks,
-      title: "Career Talks",
-      desc: "Talk show with renewable enery expert regarding green jobs"
+      title: 'Career Talks',
+      desc: 'Talk show with renewable enery expert regarding green jobs'
     },
     {
       image: ExternalEvent,
-      title: "External Event",
-      desc: "External events from SRE national where we can meet with other SRE chapter"
+      title: 'External Event',
+      desc: 'External events from SRE national where we can meet with other SRE chapter'
     },
     {
       image: SkillTraining,
-      title: "Skill Training",
-      desc: "Soft skill workshop sesiion as preparatio before doing final project"
+      title: 'Skill Training',
+      desc: 'Soft skill workshop sesiion as preparatio before doing final project'
     },
     {
       image: Gathering,
-      title: "Gathering",
-      desc: "One day event where members will get together and doing fun games"
+      title: 'Gathering',
+      desc: 'One day event where members will get together and doing fun games'
     },
     {
       image: Gathering,
-      title: "Company Visit",
-      desc: "One day visit to renewable energy company"
+      title: 'Company Visit',
+      desc: 'One day visit to renewable energy company'
     }
   ]
 
   return (
-    <Swiper
-      spaceBetween={30}
-      slidesPerView={3}
-      autoplay={{
-        delay: 4000,
-        disableOnInteraction: false, // Set this to true if you want to stop autoplay on user interaction
-      }}
-      pagination={{
-        clickable: true,
-      }}
-    >
-      {contents.map((item, index) => (
-        <SwiperSlide key={index}>
-          <div className='h-[300px] w-[300px] bg-green rounded'>
-            <div className='rounded'>
-              <Image className='d-block w-100' src={item.image} alt={`Slide ${index + 1}`} />
-            </div>
-            <div className='mt-2 px-4'>
-              <p className='text-xl font-[Montserrat-Bold] text-white text-center'>{item.title}</p>
-              <p className='text-white text-center font-[Montserrat-Medium] text-[14px] mt-2'>{item.desc}</p>
-            </div>
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
+    <div className='w-screen'>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={3}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false
+        }}
+        modules={[Autoplay, Pagination]}
+      >
+        {contents.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Card image={item.image} title={item.title} desc={item.desc}/>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  )
+}
 
-export default Slider;
-
-// spaceBetween={30}
-//       slidesPerView={3}
-//       autoplay={{
-//         delay: 4000,
-//         disableOnInteraction: true
-//       }}
-//       pagination={{
-//         clickable: true
-//       }}
+export default Slider
