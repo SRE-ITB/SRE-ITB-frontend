@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import '../Style.css';
 import i1 from '../Img/whiteLogo.png';
 
-export default function Navbar() {
-  const [open, setOpen] = useState(false);
+export default function Navbar(): JSX.Element {
+  const [open, setOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
     setOpen(!open);
