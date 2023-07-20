@@ -1,18 +1,63 @@
-import Slider from './Slider'
+import React, { useEffect, useState } from 'react'
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import Card from '../Card/Card'
 
-const Carousel = (): JSX.Element => {
+// Install Swiper modules
+SwiperCore.use([Autoplay, Pagination, Navigation])
+
+interface Content {
+  image: string
+  title: string
+  desc: string
+}
+
+interface CarouselProps {
+  contents: Content[]
+}
+
+const Carousel: React.FC<CarouselProps> = ({ contents }) => {
+  const [slidesPerView, setSlidesPerView] = useState(3)
+
+  useEffect(() => {
+    // Function to update the slidesPerView based on window width
+    const handleResize = (): void => {
+      if (window.innerWidth >= 1050) {
+        setSlidesPerView(3)
+      } else if (window.innerWidth >= 640) {
+        setSlidesPerView(2)
+      } else {
+        setSlidesPerView(1)
+      }
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <div className='flex flex-col items-center justify-center p-[5rem] text-center overflow-x-hidden'>
-      <p className='font-[Montserrat-Bold] text-4xl'>
-        What Will We Do at <span className='text-[#168470]'>SRE ITB?</span>
-      </p>
-      <div className='h-[15px] w-[100px] rounded-full bg-[#168480] mt-[1rem]'></div>
-      <div className='mt-[5rem]'>
-        <Slider />
-      </div>
-      <div className='mt-[5rem] w-[400px] md:w-[500px] lg:w-[600px] h-[50px] rounded-full border-[1px] border-[#168470] text-center flex items-center justify-center text-[#169470] hover:bg-[#169470] hover:text-white transition-all cursor-pointer'>
-        See More of Our Activities
-      </div>
+    <div className='w-screen'>
+      <Swiper
+        spaceBetween={0}
+        slidesPerView={slidesPerView}
+        pagination={{ clickable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false
+        }}
+      >
+        {contents.map((item, index) => (
+          <SwiperSlide key={index}>
+            <Card image={item.image} title={item.title} desc={item.desc} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   )
 }

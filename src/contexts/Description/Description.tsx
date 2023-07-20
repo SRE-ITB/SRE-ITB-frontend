@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import PetaIndonesia from '@src/assets/Images/Description/PetaIndonesiaEnh.png'
 
 const Description = (): JSX.Element => {
@@ -27,7 +29,7 @@ const Description = (): JSX.Element => {
             </div>
           </div>
           <div className='z-[-1] my-[-10px]'>
-            <img src={PetaIndonesia.src} alt='Header' className='w-screen'/>
+            <Image src={PetaIndonesia} alt='Header' className='w-screen'/>
           </div>
           <div className='flex justify-start'>
             <div
