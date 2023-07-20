@@ -1,7 +1,7 @@
 import Carousel from '@src/components/Carousel/Carousel'
 
 // Assets
-import ExternalEvent from '@src/assets/Images/Carousel/03 External Events.jpg'
+import ExternalEvent from '@src/assets/Images/Carousel/ExternalEvents.jpg'
 import CareerTalks from '@src/assets/Images/Carousel/03. Career Talks.jpg'
 import REProject from '@src/assets/Images/Carousel/03. RE Project.jpg'
 import REview from '@src/assets/Images/Carousel/03. REview.png'
