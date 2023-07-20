@@ -1,5 +1,5 @@
 // import React, { useState } from 'react'
-import '../Style.css'
+// import '../Style.css'
 // import i1 from '.../Images/Logo/whiteLogo.png'
 
 export default function Navbar (): JSX.Element {
