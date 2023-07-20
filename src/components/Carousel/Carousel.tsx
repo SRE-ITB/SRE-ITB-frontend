@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react'
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+
 import Card from '../Card/Card'
 
-// Install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
