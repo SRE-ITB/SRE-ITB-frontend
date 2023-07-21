@@ -13,7 +13,7 @@ const Jumbroton = (): JSX.Element => {
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
       <div className='relative w-full h-full' style={backgroundImageStyle}>
-        <div className='absolute inset-0 flex flex-col items-center justify-center'>
+        <div className='absolute inset-0 flex flex-col items-center justify-center mt-[70px]'>
           <div className='font-[OpenSans-Bold] text-center text-white'>
             <div className='text-[50px] sm:text-[60px] font-extrabold mx-[50px]' style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
               Society Of Renewable Energy
@@ -23,7 +23,7 @@ const Jumbroton = (): JSX.Element => {
             </div>
             <button
               className='mt-[200px] bg-[#FFFFFF] text-[#169470] text-[25px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
-            >
+              style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
               Join Us
             </button>
           </div>

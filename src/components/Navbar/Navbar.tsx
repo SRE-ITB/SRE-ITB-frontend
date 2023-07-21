@@ -1,96 +1,257 @@
-import React, { useState } from 'react'
-import i1 from '../assets/Images/Logo/whiteLogo.png'
-import Link from 'next/link'
+import { Dispatch, SetStateAction, useState } from 'react'
 import Image from 'next/image'
 
-export default function Navbar (): JSX.Element {
-  const [open, setOpen] = useState(false)
-  const [isDropdownVisible, setDropdownVisible] = useState(false)
-  const [isMobileDropdownVisible, setMobileDropdownVisible] = useState(false)
+import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
+import Logo from '@src/assets/Images/Logo/whiteLogo.png'
 
-  const toggleMenu = (): void => {
-    setOpen(!open)
+const MENU_LIST = [
+  {
+    text: 'Home',
+    href: '/'
+  },
+  {
+    text: 'About Us',
+    href: '/'
+  },
+  {
+    text: 'Activity',
+    contents: [
+      {
+        text: 'Internal Program',
+        href: '/'
+      },
+      {
+        text: 'External Program',
+        href: '/'
+      },
+      {
+        text: 'Learning Program',
+        href: '/'
+      },
+      {
+        text: 'Project',
+        href: '/'
+      }
+    ]
+  },
+  {
+    text: 'Student',
+    href: '/'
+  },
+  {
+    text: 'IYREF',
+    href: '/'
+  },
+  {
+    text: 'Merchandise',
+    href: '/'
   }
+]
 
-  const toggleActivityDropdown = (isHovered) => {
-    setDropdownVisible(isHovered)
-  }
-
-  const toggleMobileActivityDropdown = (): void => {
-    setMobileDropdownVisible(!isMobileDropdownVisible)
-  }
-
+function MobileHoverDropdown ({
+  open,
+  setOpen,
+  contents,
+  dropdownIdx,
+  idx
+}: {
+  open: boolean
+  setOpen: Dispatch<SetStateAction<boolean>>
+  contents: Array<{ text: string, href: string }>
+  dropdownIdx: number
+  idx: number
+}): JSX.Element {
   return (
-    <div>
-      <div className='fixed top-0 bg-gradient-to-b from-greenSRE100 to-green-0 xl:h-64 md:h-48 sm:h-32 w-screen invisible sm:visible' id='nav'>
-        <nav className='flex h-2/3 '>
-          <Image src={i1} alt='logo' />
-          <ul className='cursor-pointer ml-auto flex text-center items-center text-white font-inter mr-4 font-medium xl:text-2.5xl md:text-xl sm:text-sm'>
-            <li className='py-3 xl:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0 text-greenSRE200 font-extrabold xl:text-4xl md:text-2xl sm:text-xl'><Link href='#' className='hover:text-greenSRE200'>Home</Link></li>
-            <li className='hover:text-greenSRE200 py-3 xl:px-6 md:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0'><Link href='#'>About Us</Link></li>
-            <li onMouseEnter={() => toggleActivityDropdown(true)} onMouseLeave={() => toggleActivityDropdown(false)}>
-              <div className={'py-3 xl:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0 relative z-20'}>
-                <Link href='#' className='hover:text-greenSRE200'>Activity</Link>
+    <div
+      className={`${
+        dropdownIdx === idx ? '' : 'hidden'
+      } flex flex-col text-left`}>
+      {contents.map((content, idx) => (
+        <a
+          key={idx}
+          className="py-2 pl-5 text-white opacity-90 hover:opacity-70 font-bold cursor-pointer"
+          onClick={() => {
+            setOpen(!open)
+          }}
+          href={content.href}>
+          {content.text}
+        </a>
+      ))}
+    </div>
+  )
+}
 
-                {/* dropdown */}
-                <div className={`absolute z-10 xl:-left-12 md:-left-2 sm:-left-1 xl:top-20 md:top-14 sm:top-8 xl:w-60 md:w-28 sm:w-22 text-center bg-greenSRE100 rounded-lg ${isDropdownVisible ? 'visible' : 'invisible'}`}>
-                  <div className='p-4 hover:text-greenSRE200'><Link href='#'>Dropdown</Link></div>
-                  <div className='bg-white h-[1px] w-auto'></div>
-                  <div className='p-4 hover:text-greenSRE200'><Link href='#'>Dropdown</Link></div>
-                  <div className='bg-white h-[1px] w-auto'></div>
-                  <div className='p-4 hover:text-greenSRE200'><Link href='#'>Dropdown</Link></div>
-                  <div className='bg-white h-[1px] w-auto'></div>
-                  <div className='p-4 hover:text-greenSRE200'><Link href='#'>Dropdown</Link></div>
+function HoverDropdown ({
+  contents
+}: {
+  contents: Array<{ text: string, href: string }>
+}): JSX.Element {
+  return (
+    <div className="hidden peer-hover:absolute peer-hover:flex hover:absolute hover:flex flex-col w-64 py-3 top-20 left-1/2 transform -translate-x-1/2 border-solid border-2 border-greenSRE100 rounded-2xl bg-white z-50">
+      {contents.map((content, idx) => (
+        <a
+          key={idx}
+          className="px-5 py-3 hover:bg-greenSRE100 text-greenSRE100 hover:text-white font-bold cursor-pointer"
+          href={content.href}
+          >
+          {content.text}
+        </a>
+      ))}
+    </div>
+  )
+}
+
+function MobileNav ({
+  open,
+  setOpen,
+  dropdownIdx,
+  setDropdownIdx
+}: {
+  open: boolean
+  setOpen: Dispatch<SetStateAction<boolean>>
+  dropdownIdx: number
+  setDropdownIdx: Dispatch<SetStateAction<number>>
+}): JSX.Element {
+  return (
+    <div
+      className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-[#0D664C] transform ${
+        open ? '-translate-x-0' : '-translate-x-full'
+      } transition-transform duration-300 ease-in-out`}
+    >
+      <div className="flex flex-col h-screen justify-center items-center">
+        {MENU_LIST.map((menu, idx) => {
+          return (
+            <div
+              key={idx}
+              className="w-40 mx-auto"
+              onClick={() => {
+                setDropdownIdx(dropdownIdx === idx ? -1 : idx)
+              }}
+            >
+              <a
+                className='cursor-pointer hover:opacity-80 inline-block py-2 text-white font-bold'
+                onClick={() => {
+                  if (!menu.contents) {
+                    setOpen(!open)
+                  }
+                }}
+                href={menu.contents ? undefined : menu.href}
+              >
+                <div
+                  className='py-2 inline-flex items-center'
+                >
+                  {menu.text}
+                  {menu.contents
+                    ? (
+                      <ArrowDownIcon color="white" className="ml-1"></ArrowDownIcon>
+                      )
+                    : (
+                        ''
+                      )}
                 </div>
-
-              </div>
-            </li>
-            <li className='hover:text-greenSRE200 py-3 xl:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0'><Link href='#'>Student</Link></li>
-            <li className='hover:text-greenSRE200 py-3 xl:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0'><Link href='#'>IYREF</Link></li>
-            <li className='hover:text-greenSRE200 py-3 xl:px-6 sm:px-3 xl:m-5 lg:m-0.5 sm:m-0'><Link href='#'>Merchandise</Link></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div className='ml-auto p-8 cursor-pointer absolute z-50 right-0 sm:hidden' onClick={toggleMenu}>
-        <div className={`w-[35px] h-[3px] mb-[7px] bg-white rounded-full ${open ? 'rotate-45 translate-y-2.5 duration-200 ease-in' : 'visible duration-200 ease-in'}`}></div>
-        <div className={`w-[35px] h-[3px] mb-[7px] bg-white rounded-full ${open ? '-rotate-45 duration-200 ease-in' : 'visible duration-200 ease-in'}`}></div>
-        <div className={`w-[35px] h-[3px] bg-white rounded-full ${open ? 'invisible' : 'visible'}`}></div>
-      </div>
-      <div className='absolute z-20 top-0 bg-gradient-to-b from-greenSRE100 to-green-0 h-36 w-screen transition-all-duration-500 ease-in sm:hidden'>
-        <nav className='flex h-2/3 '>
-          <Image src={i1} alt='logo' />
-        </nav>
-      </div>
-      <div className={`bg-greenSRE200 w-screen h-screen overflow-hidden absolute z-40 -left-full ${open ? 'translate-x-full duration-500 ease-out' : '-translate-x-full duration-500 ease-in'} sm:hidden`} id='hammm'>
-        <div className='p-10'></div>
-        <ul className='text-white text-center text-2xl'>
-          <div className='w-screen h-[1px] bg-white'></div>
-          <li className='py-2'><Link href='#'>Home</Link></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-          <li className='py-2'><Link href='#'>About Us</Link></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-          <li className='py-2'><div onClick={toggleMobileActivityDropdown}>Activity <ion-icon name="arrow-dropdown"></ion-icon></div></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-
-          {/* dropdown */}
-          <div className={`bg-greenSRE100 ${isMobileDropdownVisible ? 'visible' : 'hidden'}`}>
-            <li className='py-2'><Link href='#'>Dropdown</Link></li>
-            <div className='w-screen h-[1px] bg-white'></div>
-            <li className='py-2'><Link href='#'>Dropdown</Link></li>
-            <div className='w-screen h-[1px] bg-white'></div>
-            <li className='py-2'><Link href='#'>Dropdown</Link></li>
-            <div className='w-screen h-[1px] bg-white'></div>
-          </div>
-
-          <li className='py-2'><Link href='#'>Student</Link></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-          <li className='py-2'><Link href='#'>IYREF</Link></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-          <li className='py-2'><Link href='#'>Merchandise</Link></li>
-          <div className='w-screen h-[1px] bg-white'></div>
-        </ul>
+              </a>
+              {menu.contents
+                ? (
+                <MobileHoverDropdown
+                  open={open}
+                  setOpen={setOpen}
+                  contents={menu.contents}
+                  dropdownIdx={dropdownIdx}
+                  idx={idx}
+                ></MobileHoverDropdown>
+                  )
+                : (
+                    ''
+                  )}
+            </div>
+          )
+        })}
       </div>
     </div>
   )
 }
+
+const Navbar: React.FC = () => {
+  const [open, setOpen] = useState(false)
+  const [dropdownIdx, setDropdownIdx] = useState(-1)
+
+  return (
+    <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
+      <div
+        className={`${open ? 'h-screen' : ''} w-full h-[200px] flex`}
+        style={{
+          backgroundImage:
+            'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)'
+        }}
+      >
+        <MobileNav
+          open={open}
+          setOpen={setOpen}
+          dropdownIdx={dropdownIdx}
+          setDropdownIdx={setDropdownIdx}
+        />
+        <div className="w-[200px] h-[100px] flex mt-[-15px]">
+          <a className='cursor-pointer' href="/">
+            <Image src={Logo} alt="logo" className="" />
+          </a>
+        </div>
+        <div className="w-full flex justify-end">
+          <div
+            className={`${
+              open ? 'fixed right-0' : ''
+            } right-0 top-0 mt-[32px] mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden`}
+            onClick={() => {
+              setOpen(!open)
+            }}>
+            <span
+              className={`h-1 w-6 bg-white rounded-lg transform transition duration-300 ease-in-out ${
+                open ? 'w-7 bg-white rotate-45 translate-y-2.5' : ''
+              }`}
+            />
+            <span
+              className={`h-1 w-6 bg-white rounded-lg transition-all duration-300 ease-in-out ${
+                open ? 'h-0' : 'w-6'
+              }`}
+            />
+            <span
+              className={`h-1 w-6 bg-white rounded-lg transform transition duration-300 ease-in-out ${
+                open ? 'w-7 bg-white -rotate-45 -translate-y-2.5' : ''
+              }`}
+            />
+          </div>
+          <div className="hidden lg:flex">
+            {MENU_LIST.map((menu, idx) => (
+              <div key={idx} className="relative inline-flex">
+                <a
+                  className={`${'active px-6 mx-2 py-8 h-[80px]'
+                  } ${menu.contents ? 'peer' : 'inline-block'} text-[#FFFFFF] hover:opacity-80 font-bold cursor-pointer`}
+                  href={menu.href}
+                >
+                  <div
+                    className={`${
+                      (idx === 0 && !menu.contents) || dropdownIdx === idx
+                        ? 'border-b-2 border-white'
+                        : ''
+                    } inline-flex items-center`}
+                  >
+                    {menu.text}
+                    {menu.contents ? <ArrowDownIcon color="white" /> : ''}
+                  </div>
+                </a>
+                {menu.contents
+                  ? (
+                  <HoverDropdown contents={menu.contents}></HoverDropdown>
+                    )
+                  : (
+                      ''
+                    )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar

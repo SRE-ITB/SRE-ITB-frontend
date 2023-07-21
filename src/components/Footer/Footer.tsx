@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
         <div className='sm:pl-8 sm:w-3/5'>
           <img src={logo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
           <div className='font-[OpenSans-Regular] text-white mb-[40px] mt-[-20px] text-center sm:text-left sm:ml-[57px] italic text-[20px]'>
-            EnergizingSREITB
+            #EnergizingSREITB
           </div>
         </div>
         <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
