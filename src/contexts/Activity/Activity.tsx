@@ -8,6 +8,7 @@ import REview from '@src/assets/Images/Carousel/REview.png'
 import SocialProject from '@src/assets/Images/Carousel/SocialProject.jpg'
 import Gathering from '@src/assets/Images/Carousel/Gathering.jpg'
 import SkillTraining from '@src/assets/Images/Carousel/SkillTraining.jpg'
+import CompanyVisit from '@src/assets/Images/Carousel/CompanyVisit.jpg'
 
 const Activity = (): JSX.Element => {
   const contents = [
@@ -47,7 +48,7 @@ const Activity = (): JSX.Element => {
       desc: 'One day event where members will get together and doing fun games'
     },
     {
-      image: Gathering.src,
+      image: CompanyVisit.src,
       title: 'Company Visit',
       desc: 'One day visit to renewable energy company'
     }

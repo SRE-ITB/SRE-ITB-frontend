@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
     {
       image: linkedin,
       type: 'LinkedIn',
-      username: 'Society of Renewable Energy ITB',
+      username: 'Society of Renewable<br>Energy ITB',
       link: 'https://www.linkedin.com/company/sreitb'
     }
   ]
@@ -53,10 +53,13 @@ const Footer: React.FC = () => {
   return (
     <div className="w-full">
       <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row">
-        <div className="sm:pl-8 sm:w-3/5">
+        <div className='sm:pl-8 sm:w-3/5'>
           <img src={logo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
+          <div className='font-[OpenSans-Regular] text-white mb-[40px] mt-[-20px] text-center sm:text-left sm:ml-[57px] italic text-[20px]'>
+            EnergizingSREITB
+          </div>
         </div>
-        <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
           {contacts.map((contact, index) => (
             <div className="flex items-center" key={index}>
               <Link href={contact.link}>
@@ -71,7 +74,10 @@ const Footer: React.FC = () => {
                 </div>
               </Link>
               <Link href={contact.link}>
-                <p className="font-normal text-[12px] sm:text-[14px]">{contact.username}</p>
+                <p
+                  className="font-normal text-[12px] sm:text-[14px] mt-[-5px]"
+                  dangerouslySetInnerHTML={{ __html: contact.username }}
+                />
               </Link>
             </div>
           ))}
