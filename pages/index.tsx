@@ -1,9 +1,9 @@
-import Navbar from '@src/components/Navbar/Navbar'
-import Jumbroton from '@src/contexts/Home/Jumbroton/Jumbroton'
-import Description from '@src/contexts/Home/Description/Description'
-import Carousel from '@src/contexts/Home/Activity/Activity'
-import Youtube from '@src/contexts/Home/Youtube/Youtube'
-import Footer from '@src/components/Footer/Footer'
+import Navbar from '@src/components/Navbar/Navbar';
+import Jumbroton from '@src/contexts/Home/Jumbroton/Jumbroton';
+import Description from '@src/contexts/Home/Description/Description';
+import Carousel from '@src/contexts/Home/Activity/Activity';
+import Youtube from '@src/contexts/Home/Youtube/Youtube';
+import Footer from '@src/components/Footer/Footer';
 
 const Landing: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const Landing: React.FC = () => {
       <Youtube />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;
