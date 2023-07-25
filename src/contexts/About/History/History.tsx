@@ -10,9 +10,9 @@ const History: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center w-full h-screen"
+      className="flex flex-col justify-center items-center w-full h-auto min-h-screen"
       style={divStyle}>
-      <div className="flex flex-row text-center sm:text-[45px] text-[40px] font-[Montserrat-Bold] sm:mt-2 mt-1">
+      <div className="flex flex-row text-center sm:text-[45px] text-[40px] font-[Montserrat-Bold] md:mt-2 mt-[80px]">
         <div className="text-black">Our</div>
         <div className="" style={{ marginLeft: '10px', color: '#169470' }}>
           History
