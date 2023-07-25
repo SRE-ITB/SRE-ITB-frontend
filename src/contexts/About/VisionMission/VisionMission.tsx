@@ -6,7 +6,7 @@ const VisionMission: React.FC = () => {
         style={{
           boxShadow:
             'rgba(0, 0, 0, 0.25) -2px -2px 12px, rgba(0, 0, 0, 0.25) 12px 12px 16px', // Adding drop shadow
-          borderRadius: '10%',
+          borderRadius: '10%'
         }}>
         <div className="flex flex-col justify-around items-center">
           <h5 className="text-[40px] md:text-[48px] font-semibold">Vision</h5>
@@ -17,12 +17,12 @@ const VisionMission: React.FC = () => {
               width: '150px',
               height: '15px',
               background: '#169470',
-              borderRadius: '13px',
+              borderRadius: '13px'
             }}></div>
           <p className="text-[18px] md:text-[28px] font-semibold text-center">
             SRE ITB as a renewable-energy-based community that will accommodate{' '}
             <p style={{ display: 'inline', color: '#169470' }}>
-              youth's interests{' '}
+              youth&apos;s interests{' '}
             </p>
             and{' '}
             <p style={{ display: 'inline', color: '#169470' }}>
@@ -45,7 +45,7 @@ const VisionMission: React.FC = () => {
               width: '150px',
               height: '15px',
               background: '#169470',
-              borderRadius: '13px',
+              borderRadius: '13px'
             }}></div>
           <ol className="list-disc text-justify text-[18px] md:text-[28px] font-semibold">
             <li>
@@ -79,7 +79,7 @@ const VisionMission: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default VisionMission;
+export default VisionMission

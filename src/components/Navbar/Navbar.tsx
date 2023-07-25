@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useState } from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
 import Logo from '@src/assets/Images/Logo/whiteLogo.png'
@@ -11,7 +12,7 @@ const MENU_LIST = [
   },
   {
     text: 'About Us',
-    href: '/'
+    href: '/About'
   },
   {
     text: 'Activity',
@@ -175,6 +176,9 @@ const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false)
   const [dropdownIdx, setDropdownIdx] = useState(-1)
 
+  const router = useRouter()
+  const page = router.pathname.split('/')[1] || 'Home'
+
   return (
     <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
       <div
@@ -229,7 +233,8 @@ const Navbar: React.FC = () => {
                 >
                   <div
                     className={`${
-                      (idx === 0 && !menu.contents) || dropdownIdx === idx
+                      (idx === 0 && page === 'Home') ||
+                      (idx === 1 && page === 'About')
                         ? 'border-b-2 border-white'
                         : ''
                     } inline-flex items-center`}

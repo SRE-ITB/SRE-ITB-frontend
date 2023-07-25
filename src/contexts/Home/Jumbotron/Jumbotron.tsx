@@ -1,6 +1,6 @@
-import Header from '@src/assets/Images/Jumbroton/HeaderEnh.png'
+import Header from '@src/assets/Images/Jumbotron/HeaderEnh.png'
 
-const Jumbroton = (): JSX.Element => {
+const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
     backgroundImage: `url(${Header.src})`,
     backgroundSize: 'cover',
@@ -33,4 +33,4 @@ const Jumbroton = (): JSX.Element => {
   )
 }
 
-export default Jumbroton
+export default Jumbotron

@@ -1,15 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
-import HistoryBackground from '@src/assets/Images/History/HistoryBackground.png';
+import HistoryBackground from '@src/assets/Images/History/HistoryBackground.png'
 
 const History: React.FC = () => {
   const divStyle = {
     backgroundImage: `url(${HistoryBackground.src})`,
     backgroundSize: '1550px 100%',
     backgroundPosition: 'center center',
-    backgroundRepeat: 'no-repeat',
-  };
+    backgroundRepeat: 'no-repeat'
+  }
 
   return (
     <div
@@ -27,7 +24,7 @@ const History: React.FC = () => {
           width: '225px',
           height: '15px',
           background: '#169470',
-          borderRadius: '13px',
+          borderRadius: '13px'
         }}></div>
       <div className="mx-[25vw] mt-[30px] mb-[50px] text-center sm:text-[20px] text-[18px]">
         <div className="" style={{ display: 'inline', color: '#169470' }}>
@@ -60,7 +57,7 @@ const History: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default History;
+export default History
