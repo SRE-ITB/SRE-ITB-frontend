@@ -10,9 +10,9 @@ const History: React.FC = () => {
 
   return (
     <div
-      className="flex flex-col justify-center items-center w-full h-auto min-h-screen"
+      className="flex flex-col justify-center items-center w-full h-auto min-h-screen font-[Montserrat-Medium]"
       style={divStyle}>
-      <div className="flex flex-row text-center sm:text-[45px] text-[40px] font-[Montserrat-Bold] md:mt-2 mt-[80px]">
+      <div className="flex flex-row text-center sm:text-[40px] text-[30px] font-[Montserrat-Bold] lg:mt-2 mt-[80px]">
         <div className="text-black">Our</div>
         <div className="" style={{ marginLeft: '10px', color: '#169470' }}>
           History
@@ -21,12 +21,12 @@ const History: React.FC = () => {
       <div
         style={{
           marginTop: '10px',
-          width: '225px',
+          width: '100px',
           height: '15px',
           background: '#169470',
           borderRadius: '13px'
         }}></div>
-      <div className="mx-[25vw] mt-[30px] mb-[50px] text-center sm:text-[20px] text-[18px]">
+      <div className="sm:mx-[22vw] mx-[15vw] mt-[30px] mb-[50px] text-center sm:text-[20px] text-[16px]">
         <div className="" style={{ display: 'inline', color: '#169470' }}>
           SRE ITB
         </div>
@@ -51,7 +51,7 @@ const History: React.FC = () => {
         <br />
         <br />
         <div
-          className="text-[32px]"
+          className="sm:text-[32px] text-[25px]"
           style={{ display: 'inline', color: '#169470', fontWeight: 'bold' }}>
           #RElevatingSREITB
         </div>

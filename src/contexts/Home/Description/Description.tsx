@@ -67,7 +67,7 @@ const Description = (): JSX.Element => {
         borderRadius: '13px'
       }}
       ></div>
-      <div className='mx-[5vw] mt-[30px] mb-[50px] text-center sm:text-[24px] text-[16px]'>
+      <div className='mx-[5vw] mt-[30px] mb-[50px] text-center sm:text-[22px] text-[16px]'>
         <div className='' style={{ display: 'inline', color: '#169470', fontWeight: 'bold' }}>
           Society of Renewable Energy (SRE) &nbsp;
         </div>
