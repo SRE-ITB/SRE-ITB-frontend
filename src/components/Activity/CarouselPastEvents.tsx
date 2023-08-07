@@ -17,7 +17,7 @@ interface CarouselProps {
   contents: Content[]
 }
 
-const Carousel: React.FC<CarouselProps> = ({ contents }) => {
+const CarouselPastEvents: React.FC<CarouselProps> = ({ contents }) => {
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {
@@ -42,16 +42,15 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
   }, [])
 
   return (
-    <div className='w-screen'>
+    <div className="w-screen">
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false
-        }}
-      >
+          disableOnInteraction: false,
+        }}>
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
             <Card image={item.image} title={item.title} desc={item.desc} />
@@ -62,4 +61,4 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
   )
 }
 
-export default Carousel
+export default CarouselPastEvents

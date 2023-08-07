@@ -8,16 +8,16 @@ import Card from '@src/components/Activity/Card'
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
-  image: string
-  title: string
-  desc: string
+  thumbnail: string
+  nama_kegiatan: string
+  deskripsi_pendek: string
 }
 
-interface LastCardProps {
+interface CarouselProps {
   contents: Content[]
 }
 
-const LastCard: React.FC<LastCardProps> = ({ contents }) => {
+const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {
@@ -42,19 +42,23 @@ const LastCard: React.FC<LastCardProps> = ({ contents }) => {
   }, [])
 
   return (
-    <div className='w-screen'>
+    <div className="w-screen">
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
+        centeredSlides={true}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false
-        }}
-      >
+          disableOnInteraction: false,
+        }}>
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card image={item.image} title={item.title} desc={item.desc} />
+            <Card
+              image={item.thumbnail}
+              title={item.nama_kegiatan}
+              desc={item.deskripsi_pendek}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -62,4 +66,4 @@ const LastCard: React.FC<LastCardProps> = ({ contents }) => {
   )
 }
 
-export default LastCard
+export default CarouselLastActivity
