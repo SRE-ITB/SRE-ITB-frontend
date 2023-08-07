@@ -3,7 +3,7 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 
-import Card from '@src/components/Activity/Card'
+import WideCard from '@src/components/Activity/WideCard'
 
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
@@ -42,11 +42,11 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
   }, [])
 
   return (
-    <div className="w-screen">
+    <div className="w-screen justify-center">
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
-        centeredSlides={true}
+        centeredSlides={false}
         pagination={{ clickable: true }}
         autoplay={{
           delay: 3000,
@@ -54,7 +54,7 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
         }}>
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card
+            <WideCard
               image={item.thumbnail}
               title={item.nama_kegiatan}
               desc={item.deskripsi_pendek}
