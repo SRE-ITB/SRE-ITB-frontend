@@ -1,4 +1,4 @@
-import Header from '@src/assets/Images/Activity/learning.jpg'
+import Header from '@src/assets/Images/Activity/project.jpg'
 
 const JumbotronLearning = (): JSX.Element => {
   const backgroundImageStyle = {
