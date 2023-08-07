@@ -1,4 +1,4 @@
-# SRE ITB Frontend 
+# SRE ITB Frontend
 
 ## Tech Stack
 
