@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "node index.js",
     "prepare": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "install-next": "npm install next"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
