@@ -12,7 +12,7 @@ const MENU_LIST = [
   },
   {
     text: 'About Us',
-    href: '/About'
+    href: '/about'
   },
   {
     text: 'Activity',
@@ -177,7 +177,7 @@ const Navbar: React.FC = () => {
   const [dropdownIdx, setDropdownIdx] = useState(-1)
 
   const router = useRouter()
-  const page = router.pathname.split('/')[1] || 'Home'
+  const page = router.pathname.split('/')[1] || 'home'
 
   return (
     <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
@@ -233,8 +233,8 @@ const Navbar: React.FC = () => {
                 >
                   <div
                     className={`${
-                      (idx === 0 && page === 'Home') ||
-                      (idx === 1 && page === 'About')
+                      (idx === 0 && page === 'home') ||
+                      (idx === 1 && page === 'about')
                         ? 'border-b-2 border-white'
                         : ''
                     } inline-flex items-center`}

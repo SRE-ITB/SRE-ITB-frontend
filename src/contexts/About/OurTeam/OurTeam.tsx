@@ -18,7 +18,7 @@ const OurTeam: React.FC = () => {
       </p>
       {/* CARD */}
       <div className='mt-8 flex flex-col md:flex-row md:gap-x-4 text-center justify-center items-center gap-y-4'>
-        <div className='bg-green rounded-[10px] text-white flex items-center justify-center w-[75vw] md:w-[45vw] lg:max-w-[400px]'>
+        <div className='rounded-[10px] text-white flex items-center justify-center w-[75vw] md:w-[45vw] lg:max-w-[400px]' style={{ filter: 'drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.25))' }}>
           <div className='rounded-[10px] p-4 bg-greenSRE100 flex flex-col items-center justify-center m-2 md:h-[250px]'>
             <p className='font-semibold text-2xl lg:text-3xl'>MANAGEMENT TEAM</p>
             <div className='my-4 w-[150px] h-[3px] bg-white'></div>
@@ -29,7 +29,7 @@ const OurTeam: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className='bg-green rounded-[10px] text-white flex items-center justify-center w-[75vw] md:w-[45vw] lg:max-w-[400px]'>
+        <div className='rounded-[10px] text-white flex items-center justify-center w-[75vw] md:w-[45vw] lg:max-w-[400px]' style={{ filter: 'drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.25))' }}>
           <div className='rounded-[10px] p-4 bg-greenSRE100 flex flex-col items-center justify-center m-2 md:h-[250px]'>
             <p className='font-semibold text-2xl lg:text-3xl'>SRE MEMBER</p>
             <div className='my-4 w-[150px] h-[3px] bg-white'></div>

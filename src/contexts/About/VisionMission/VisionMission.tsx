@@ -4,10 +4,9 @@ const VisionMission: React.FC = () => {
   return (
     <div className="w-full h-auto flex flex-col justify-around items-center py-10 font-[Montserrat-Medium]">
       <div
-        className="h-4/5 w-4/5 flex flex-col justify-around items-center px-[8vw] py-[4vw]"
+        className="h-4/5 w-4/5 flex flex-col justify-around items-center px-[8vw] py-[4vw] rounded-[30px]"
         style={{
-          boxShadow: 'rgba(0, 0, 0, 0.25) -2px -2px 12px, rgba(0, 0, 0, 0.25) 12px 12px 16px',
-          borderRadius: '10%'
+          boxShadow: 'rgba(0, 0, 0, 0.25) -2px -2px 12px, rgba(0, 0, 0, 0.25) 12px 12px 16px'
         }}
       >
         <div className="flex flex-col justify-around items-center">
