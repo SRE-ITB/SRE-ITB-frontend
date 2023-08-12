@@ -19,19 +19,19 @@ const MENU_LIST = [
     contents: [
       {
         text: 'Internal Program',
-        href: '/'
+        href: '/activity/internal'
       },
       {
         text: 'External Program',
-        href: '/'
+        href: '/activity/external'
       },
       {
         text: 'Learning Program',
-        href: '/'
+        href: '/activity/learning'
       },
       {
         text: 'Project',
-        href: '/'
+        href: '/activity/project'
       }
     ]
   },
