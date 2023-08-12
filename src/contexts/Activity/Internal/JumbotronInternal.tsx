@@ -7,7 +7,7 @@ const JumbotronInternal = (): JSX.Element => {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     width: '100vw',
-    height: '100vh',
+    height: '100vh'
   }
 
   return (
@@ -18,21 +18,21 @@ const JumbotronInternal = (): JSX.Element => {
             <div
               className="text-[50px] sm:text-[60px] font-extrabold mx-[50px]"
               style={{
-                filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))',
+                filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
               }}>
               Internal Program
             </div>
             <div
               className="font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px]"
               style={{
-                filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))',
+                filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))'
               }}>
               The journey of developing strong teamwork
             </div>
             <button
               className="mt-[200px] bg-[#FFFFFF] text-[#169470] text-[25px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer"
               style={{
-                filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))',
+                filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
               }}>
               See More
             </button>

@@ -2,28 +2,30 @@ import CarouselLastActivity from '@src/components/Activity/CarouselLastActivity'
 import React, { useEffect, useState } from 'react'
 
 const LastActivity = (): JSX.Element => {
-  const [contents, setContents] = useState<
-    {
-      thumbnail: string
-      nama_kegiatan: string
-      deskripsi_pendek: string
-    }[]
-  >([])
+  const [contents, setContents] = useState<Array<{
+    thumbnail: string
+    nama_kegiatan: string
+    deskripsi_pendek: string
+  }>>([])
 
   useEffect(() => {
-    const fetchContents = async () => {
-      const res = await fetch('https://api.sreitb.com/kegiatan/2')
-      const data = await res.json()
-      setContents([
-        {
-          thumbnail: data.data.thumbnail,
-          nama_kegiatan: data.data.nama_kegiatan,
-          deskripsi_pendek: data.data.deskripsi_pendek,
-        },
-      ])
-      console.log(contents) 
+    const fetchContents = async (): Promise<void> => {
+      try {
+        const res = await fetch('https://api.sreitb.com/kegiatan/2')
+        const data = await res.json()
+        setContents([
+          {
+            thumbnail: data.data.thumbnail,
+            nama_kegiatan: data.data.nama_kegiatan,
+            deskripsi_pendek: data.data.deskripsi_pendek
+          }
+        ])
+        console.log(contents)
+      } catch (err) {
+        console.log(err)
+      }
     }
-    fetchContents()
+    void fetchContents()
   }, [])
 
   return (

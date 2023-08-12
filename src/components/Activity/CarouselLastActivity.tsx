@@ -50,7 +50,7 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
         pagination={{ clickable: true }}
         autoplay={{
           delay: 3000,
-          disableOnInteraction: false,
+          disableOnInteraction: false
         }}>
         {contents.map((item, index) => (
           <SwiperSlide key={index}>

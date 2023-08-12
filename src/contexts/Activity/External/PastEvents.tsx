@@ -10,18 +10,18 @@ const PastEvents = (): JSX.Element => {
     {
       image: REview.src,
       title: 'Welcoming Party',
-      desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.',
+      desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.'
     },
     {
       image: SocialProject.src,
       title: 'Staff Onboarding',
-      desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.',
+      desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.'
     },
     {
       image: REProject.src,
       title: 'Town Hall Meeting',
-      desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.',
-    },
+      desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.'
+    }
   ]
 
   return (

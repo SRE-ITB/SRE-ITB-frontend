@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 
-const WideCard: React.FC<{ image: any; title: string; desc: string }> = ({
+const WideCard: React.FC<{ image: any, title: string, desc: string }> = ({
   image,
   title,
-  desc,
+  desc
 }) => {
   return (
     <div
