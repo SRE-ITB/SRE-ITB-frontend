@@ -59,11 +59,11 @@ const Footer: React.FC = () => {
             #EnergizingSREITB
           </div>
         </div>
-        <div className="text-white grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
+        <div className="text-white sm:grid flex grid-cols-1 md:grid-cols-2 gap-2 md:gap-4">
           {contacts.map((contact, index) => (
             <div className="flex items-center" key={index}>
               <Link href={contact.link}>
-                <div className="mr-2 cursor-pointer">
+                <div className="cursor-pointer mx-[2vw] sm:mx-0 sm:mr-2">
                   <Image
                     src={contact.image}
                     alt={contact.type}
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link href={contact.link}>
                 <p
-                  className="font-normal text-[12px] sm:text-[14px] mt-[-5px]"
+                  className="hidden sm:block font-normal text-[12px] sm:text-[14px] mt-[-5px]"
                   dangerouslySetInnerHTML={{ __html: contact.username }}
                 />
               </Link>
