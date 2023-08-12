@@ -8,15 +8,15 @@ module.exports = {
           : 'https://earvinpiamonte-nextjs-tailwindcss-template.vercel.app',
       title: 'Next.js + Tailwind CSS template',
       description: 'Next.js + Tailwind CSS template',
-      socialPreview: '/images/preview.png',
-    },
+      socialPreview: '/images/preview.png'
+    }
   },
   swcMinify: true,
   i18n: {
     locales: ['en-US'],
-    defaultLocale: 'en-US',
+    defaultLocale: 'en-US'
   },
   images: {
-    domains: ['drive.google.com'],
-  },
-};
+    domains: ['drive.google.com']
+  }
+}
