@@ -40,7 +40,7 @@ const Activity = (): JSX.Element => {
     {
       image: SkillTraining.src,
       title: 'Skill Training',
-      desc: 'Soft skill workshop sesiion as preparatio before doing final project'
+      desc: 'Soft skill workshop session as preparation before doing final project'
     },
     {
       image: Gathering.src,
