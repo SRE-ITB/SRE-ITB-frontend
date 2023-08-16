@@ -29,7 +29,7 @@ const LastActivity = (): JSX.Element => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center text-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
+    <div className="flex flex-col items-center justify-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
       <p className="font-[Montserrat-Bold] sm:text-[40px] text-[30px] mx-[5vw]">
         Latest <span className="text-[#169470]">Update</span>
       </p>
