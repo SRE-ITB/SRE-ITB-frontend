@@ -19,7 +19,7 @@ const Card: React.FC<{ image: any, title: string, desc: string }> = ({
           className="rounded-[30px]"
         />
       </div>
-      <div className="h-[130px] w-full px-4 flex flex-col items-center justify-center mt-[10px]">
+      <div className="h-[130px] w-full px-4 justify-center mt-[10px]">
         <h5 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
           {title}
         </h5>
