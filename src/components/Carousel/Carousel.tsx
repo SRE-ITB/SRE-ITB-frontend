@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
+import 'swiper/css/pagination'
 
 import Card from '../Card/Card'
+
+SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
   image: string
@@ -44,18 +47,21 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          el: '.custom-pagination'
+        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false
         }}
-        modules={[Autoplay, Pagination]}
       >
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
             <Card image={item.image} title={item.title} desc={item.desc} />
           </SwiperSlide>
         ))}
+        <div className="swiper-pagination custom-pagination"></div>
       </Swiper>
     </div>
   )

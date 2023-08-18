@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/css/pagination'
 
 import Card from '@src/components/Activity/Card'
 
@@ -46,7 +47,10 @@ const CarouselPastEvents: React.FC<CarouselProps> = ({ contents }) => {
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          el: '.custom-pagination'
+        }}
         autoplay={{
           delay: 3000,
           disableOnInteraction: false
@@ -56,6 +60,7 @@ const CarouselPastEvents: React.FC<CarouselProps> = ({ contents }) => {
             <Card image={item.image} title={item.title} desc={item.desc} />
           </SwiperSlide>
         ))}
+        <div className="swiper-pagination custom-pagination"></div>
       </Swiper>
     </div>
   )

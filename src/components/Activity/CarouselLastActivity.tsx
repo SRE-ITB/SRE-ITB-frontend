@@ -22,7 +22,6 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
   return (
     <div className="w-screen justify-center">
       <Swiper
-        spaceBetween={30}
         slidesPerView={1}
         pagination={{
           clickable: true,
