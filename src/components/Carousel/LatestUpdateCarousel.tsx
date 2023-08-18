@@ -12,6 +12,7 @@ interface Content {
   thumbnail: string
   nama_kegiatan: string
   deskripsi_pendek: string
+  id: number
 }
 
 interface CarouselProps {
@@ -34,6 +35,7 @@ const LatestUpdateCarousel: React.FC<CarouselProps> = ({ contents }) => {
               image={item.thumbnail}
               title={item.nama_kegiatan}
               desc={item.deskripsi_pendek}
+              id={item.id}
             />
           </SwiperSlide>
         ))}

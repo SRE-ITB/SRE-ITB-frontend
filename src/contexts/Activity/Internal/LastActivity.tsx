@@ -6,6 +6,7 @@ const LastActivity = (): JSX.Element => {
     thumbnail: string
     nama_kegiatan: string
     deskripsi_pendek: string
+    id: number
   }>>([])
 
   useEffect(() => {
@@ -16,7 +17,8 @@ const LastActivity = (): JSX.Element => {
         setContents(data.data.map((item: any) => ({
           thumbnail: item.thumbnail,
           nama_kegiatan: item.name,
-          deskripsi_pendek: item.short_description
+          deskripsi_pendek: item.short_description,
+          id: item.id
         })))
       } catch (err) {
         console.log(err)

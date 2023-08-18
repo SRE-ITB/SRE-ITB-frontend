@@ -7,11 +7,11 @@ import Footer from '@src/components/Navigation/Footer'
 const Learning: React.FC = () => {
   return (
     <div className="h-auto relative">
-        <Navbar />
-        <JumbotronLearning />
-        <PastEvents />
-        <LastActivity />
-        <Footer />
+      <Navbar />
+      <JumbotronLearning />
+      <PastEvents />
+      <LastActivity />
+      <Footer />
     </div>
   )
 }
