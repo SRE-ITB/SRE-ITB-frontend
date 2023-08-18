@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { Autoplay, Pagination } from 'swiper'
 import 'swiper/css'
 
 import Card from '../Card/Card'
-
-SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
   image: string
@@ -51,6 +49,7 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
           delay: 3000,
           disableOnInteraction: false
         }}
+        modules={[Autoplay, Pagination]}
       >
         {contents.map((item, index) => (
           <SwiperSlide key={index}>

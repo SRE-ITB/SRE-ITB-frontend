@@ -24,7 +24,7 @@ const WideCard: React.FC<{ image: any, title: string, desc: string }> = ({
           {title}
         </h5>
         <p className="text-white font-[Montserrat-Medium]">{desc}</p>
-        <div className='absolute bottom-8 right-0 left-0 flex justify-center'>
+        <div className='absolute md:bottom-8 bottom-12 right-0 left-0 flex justify-center'>
           <button className='border-2 border-white rounded-[20px] px-5 py-1 text-white font-[Montserrat-Medium] hover:bg-[#0D664C]  transition-all'>Read More</button>
         </div>
       </div>

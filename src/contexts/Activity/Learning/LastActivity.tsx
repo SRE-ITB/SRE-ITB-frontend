@@ -11,16 +11,13 @@ const LastActivity = (): JSX.Element => {
   useEffect(() => {
     const fetchContents = async (): Promise<void> => {
       try {
-        const res = await fetch('https://api.sreitb.com/kegiatan/2')
+        const res = await fetch('https://api.sreitb.com/activity/learning')
         const data = await res.json()
-        setContents([
-          {
-            thumbnail: data.data.thumbnail,
-            nama_kegiatan: data.data.nama_kegiatan,
-            deskripsi_pendek: data.data.deskripsi_pendek
-          }
-        ])
-        console.log(contents)
+        setContents(data.data.map((item: any) => ({
+          thumbnail: item.thumbnail,
+          nama_kegiatan: item.name,
+          deskripsi_pendek: item.short_description
+        })))
       } catch (err) {
         console.log(err)
       }

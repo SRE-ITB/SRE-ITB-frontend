@@ -2,6 +2,7 @@ import React from 'react'
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/css/pagination'
 
 import WideCard from '@src/components/Activity/WideCard'
 
@@ -21,9 +22,12 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
   return (
     <div className="w-screen justify-center">
       <Swiper
-        spaceBetween={0}
+        spaceBetween={30}
         slidesPerView={1}
-        pagination={{ clickable: true }}
+        pagination={{
+          clickable: true,
+          el: '.custom-pagination'
+        }}
       >
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
@@ -34,6 +38,7 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
             />
           </SwiperSlide>
         ))}
+        <div className="swiper-pagination custom-pagination"></div>
       </Swiper>
     </div>
   )
