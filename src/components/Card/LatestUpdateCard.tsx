@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const WideCard: React.FC<{ image: any, title: string, desc: string }> = ({
+const LatestUpdateCard: React.FC<{ image: any, title: string, desc: string }> = ({
   image,
   title,
   desc
@@ -32,4 +32,4 @@ const WideCard: React.FC<{ image: any, title: string, desc: string }> = ({
   )
 }
 
-export default WideCard
+export default LatestUpdateCard

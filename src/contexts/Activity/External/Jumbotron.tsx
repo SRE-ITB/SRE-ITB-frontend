@@ -1,6 +1,6 @@
-import Header from '@src/assets/Images/Activity/internal.jpg'
+import Header from '@src/assets/Images/Activity/extra.webp'
 
-const JumbotronInternal = (): JSX.Element => {
+const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
     backgroundImage: `url(${Header.src})`,
     backgroundSize: 'cover',
@@ -20,7 +20,7 @@ const JumbotronInternal = (): JSX.Element => {
               style={{
                 filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
               }}>
-              Internal Program
+              External Program
             </div>
             <div
               className="font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px]"
@@ -43,4 +43,4 @@ const JumbotronInternal = (): JSX.Element => {
   )
 }
 
-export default JumbotronInternal
+export default Jumbotron

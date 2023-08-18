@@ -1,6 +1,6 @@
-import Header from '@src/assets/Images/Activity/project.jpg'
+import Header from '@src/assets/Images/Activity/learning.jpg'
 
-const JumbotronLearning = (): JSX.Element => {
+const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
     backgroundImage: `url(${Header.src})`,
     backgroundSize: 'cover',
@@ -43,4 +43,4 @@ const JumbotronLearning = (): JSX.Element => {
   )
 }
 
-export default JumbotronLearning
+export default Jumbotron

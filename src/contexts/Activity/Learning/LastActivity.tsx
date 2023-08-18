@@ -1,4 +1,4 @@
-import CarouselLastActivity from '@src/components/Activity/CarouselLastActivity'
+import CarouselLastActivity from '@src/components/Carousel/LatestUpdateCarousel'
 import React, { useEffect, useState } from 'react'
 
 const LastActivity = (): JSX.Element => {

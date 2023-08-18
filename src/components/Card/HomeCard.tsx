@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card: React.FC<{ image: any, title: string, desc: string }> = ({ image, title, desc }) => {
+const HomeCard: React.FC<{ image: any, title: string, desc: string }> = ({ image, title, desc }) => {
   return (
     <div className="relative bg-gradient-to-r from-[#0D664C] to-[#169470] w-auto h-[500px] rounded-xl overflow-hidden mb-[10px] mx-[5%]" style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
       <div className="h-[350px] relative">
@@ -15,4 +15,4 @@ const Card: React.FC<{ image: any, title: string, desc: string }> = ({ image, ti
   )
 }
 
-export default Card
+export default HomeCard

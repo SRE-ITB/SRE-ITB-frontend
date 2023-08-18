@@ -1,8 +1,8 @@
-import Navbar from '@src/components/Navbar/Navbar'
-import History from '@src/contexts/About/History/History'
-import VisionMission from '@src/contexts/About/VisionMission/VisionMission'
-import OurTeam from '@src/contexts/About/OurTeam/OurTeam'
-import Footer from '@src/components/Footer/Footer'
+import Navbar from '@src/components/Navigation/Navbar'
+import History from '@src/contexts/About/History'
+import VisionMission from '@src/contexts/About/VisionMission'
+import OurTeam from '@src/contexts/About/OurTeam'
+import Footer from '@src/components/Navigation/Footer'
 
 const Landing: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card: React.FC<{ image: any, title: string, desc: string }> = ({
+const PastEventsCard: React.FC<{ image: any, title: string, desc: string }> = ({
   image,
   title,
   desc
@@ -29,4 +29,4 @@ const Card: React.FC<{ image: any, title: string, desc: string }> = ({
   )
 }
 
-export default Card
+export default PastEventsCard

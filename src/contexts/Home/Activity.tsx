@@ -1,4 +1,4 @@
-import Carousel from '@src/components/Carousel/Carousel'
+import Carousel from '@src/components/Carousel/HomeCarousel'
 
 // Assets
 import ExternalEvent from '@src/assets/Images/Carousel/ExternalEvents.jpg'

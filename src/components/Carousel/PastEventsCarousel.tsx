@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-import Card from '../Card/Card'
+import Card from '@src/components/Card/PastEventsCard'
 
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
@@ -18,7 +18,7 @@ interface CarouselProps {
   contents: Content[]
 }
 
-const Carousel: React.FC<CarouselProps> = ({ contents }) => {
+const PastEventsCarousel: React.FC<CarouselProps> = ({ contents }) => {
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {
@@ -43,7 +43,7 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
   }, [])
 
   return (
-    <div className='w-screen'>
+    <div className="w-screen">
       <Swiper
         spaceBetween={0}
         slidesPerView={slidesPerView}
@@ -54,8 +54,7 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
         autoplay={{
           delay: 3000,
           disableOnInteraction: false
-        }}
-      >
+        }}>
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
             <Card image={item.image} title={item.title} desc={item.desc} />
@@ -67,4 +66,4 @@ const Carousel: React.FC<CarouselProps> = ({ contents }) => {
   )
 }
 
-export default Carousel
+export default PastEventsCarousel

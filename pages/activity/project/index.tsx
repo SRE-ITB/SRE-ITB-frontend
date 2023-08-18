@@ -1,8 +1,8 @@
-import Navbar from '@src/components/Navbar/Navbar'
-import JumbotronProject from '@src/contexts/Activity/Project/JumbotronProject'
+import Navbar from '@src/components/Navigation/Navbar'
+import JumbotronProject from '@src/contexts/Activity/Project/Jumbotron'
 import PastEvents from '@src/contexts/Activity/Internal/PastEvents'
 import LastActivity from '@src/contexts/Activity/Internal/LastActivity'
-import Footer from '@src/components/Footer/Footer'
+import Footer from '@src/components/Navigation/Footer'
 
 const Internal: React.FC = () => {
   return (

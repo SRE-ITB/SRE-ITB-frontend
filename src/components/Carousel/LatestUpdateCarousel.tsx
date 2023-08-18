@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
 
-import WideCard from '@src/components/Activity/WideCard'
+import WideCard from '@src/components/Card/LatestUpdateCard'
 
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
@@ -18,7 +18,7 @@ interface CarouselProps {
   contents: Content[]
 }
 
-const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
+const LatestUpdateCarousel: React.FC<CarouselProps> = ({ contents }) => {
   return (
     <div className="w-screen justify-center">
       <Swiper
@@ -43,4 +43,4 @@ const CarouselLastActivity: React.FC<CarouselProps> = ({ contents }) => {
   )
 }
 
-export default CarouselLastActivity
+export default LatestUpdateCarousel

@@ -1,4 +1,4 @@
-import CarouselPastEvents from '@src/components/Activity/CarouselPastEvents'
+import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
 import REProject from '@src/assets/Images/Carousel/REProject.jpg'
