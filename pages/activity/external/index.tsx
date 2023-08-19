@@ -1,3 +1,4 @@
+import SEO from '@src/components/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import JumbotronExternal from '@src/contexts/Activity/External/Jumbotron'
 import PastEvents from '@src/contexts/Activity/External/PastEvents'
@@ -6,13 +7,13 @@ import Footer from '@src/components/Navigation/Footer'
 
 const External: React.FC = () => {
   return (
-    <div className="h-auto relative">
+    <SEO title="SRE ITB | External Program">
       <Navbar />
       <JumbotronExternal />
       <PastEvents />
       <LastActivity />
       <Footer />
-    </div>
+    </SEO>
   )
 }
 

@@ -1,3 +1,4 @@
+import SEO from '@src/components/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Jumbotron from '@src/contexts/Home/Jumbotron'
 import Description from '@src/contexts/Home/Description'
@@ -7,14 +8,14 @@ import Footer from '@src/components/Navigation/Footer'
 
 const Landing: React.FC = () => {
   return (
-    <div className="h-auto relative">
+    <SEO title="SRE ITB">
       <Navbar />
       <Jumbotron />
       <Description />
       <Carousel />
       <Youtube />
       <Footer />
-    </div>
+    </SEO>
   )
 }
 
