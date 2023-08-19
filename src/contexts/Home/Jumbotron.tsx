@@ -1,4 +1,4 @@
-import Header from '@src/assets/Images/Jumbotron/HeaderEnh.png'
+import Header from '@src/assets/Images/Jumbotron/HeaderEnh.webp'
 
 const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {

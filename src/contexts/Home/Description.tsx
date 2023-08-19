@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import PetaIndonesia from '@src/assets/Images/Description/PetaIndonesiaEnh.png'
+import PetaIndonesia from '@src/assets/Images/Description/PetaIndonesiaEnh.webp'
 
 const Description = (): JSX.Element => {
   return (
