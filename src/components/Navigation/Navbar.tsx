@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
-import Logo from '@src/assets/Images/Logo/whiteLogo.png'
+import Logo from '@src/assets/Images/Logo/whiteLogo.webp'
 
 const MENU_LIST = [
   {

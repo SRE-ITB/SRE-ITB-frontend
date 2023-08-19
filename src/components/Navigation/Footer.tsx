@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 // Assets
-import logo from '@src/assets/Images/Logo/whiteLogo.png'
+import logo from '@src/assets/Images/Logo/whiteLogo.webp'
 import instagram from '@src/assets/Images/Socmed/instagram.svg'
 import gmail from '@src/assets/Images/Socmed/gmail.svg'
 import linkedin from '@src/assets/Images/Socmed/linkedin.svg'
