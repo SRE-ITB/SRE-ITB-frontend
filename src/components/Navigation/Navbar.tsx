@@ -37,15 +37,15 @@ const MENU_LIST = [
   },
   {
     text: 'Student',
-    href: '/'
+    href: '/student'
   },
   {
     text: 'IYREF',
-    href: '/'
+    href: '/iyref'
   },
   {
     text: 'Merchandise',
-    href: '/'
+    href: '/merchandise'
   }
 ]
 
