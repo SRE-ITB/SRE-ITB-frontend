@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const Youtube: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green">
@@ -14,11 +12,7 @@ const Youtube: React.FC = () => {
           boxShadow: '5px 5px 5px rgba(0, 0, 0, 0.25)'
         }}>
       </iframe>
-      <br />
-      <Link href="https://www.youtube.com/embed/H2t9jZBPlpA">
-        <a className="text-white text-base underline">SRE ITB TEASER</a>
-      </Link>
-      <div className='h-[15vw]'></div>
+      <div className='h-[10vw]'></div>
     </div>
   )
 }
