@@ -234,7 +234,8 @@ const Navbar: React.FC = () => {
                   <div
                     className={`${
                       (idx === 0 && page === 'home') ||
-                      (idx === 1 && page === 'about')
+                      (idx === 1 && page === 'about') ||
+                      (idx === 2 && page === 'activity')
                         ? 'border-b-2 border-white'
                         : ''
                     } inline-flex items-center`}
