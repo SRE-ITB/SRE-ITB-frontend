@@ -1,9 +1,9 @@
 import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import REProject from '@src/assets/Images/Carousel/REProject.jpg'
-import REview from '@src/assets/Images/Carousel/REview.png'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.jpg'
+import REProject from '@src/assets/Images/Carousel/REProject.webp'
+import REview from '@src/assets/Images/Carousel/REview.webp'
+import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [

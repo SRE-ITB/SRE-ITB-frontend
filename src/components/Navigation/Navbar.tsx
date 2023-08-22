@@ -235,7 +235,10 @@ const Navbar: React.FC = () => {
                     className={`${
                       (idx === 0 && page === 'home') ||
                       (idx === 1 && page === 'about') ||
-                      (idx === 2 && page === 'activity')
+                      (idx === 2 && page === 'activity') ||
+                      (idx === 3 && page === 'student') ||
+                      (idx === 4 && page === 'iyref') ||
+                      (idx === 5 && page === 'merchandise')
                         ? 'border-b-2 border-white'
                         : ''
                     } inline-flex items-center`}

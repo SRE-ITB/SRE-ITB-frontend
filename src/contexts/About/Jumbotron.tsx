@@ -1,4 +1,4 @@
-import Header from '@src/assets/Images/Jumbotron/AboutUs.png'
+import Header from '@src/assets/Images/Jumbotron/AboutUs.webp'
 
 const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
@@ -18,8 +18,8 @@ const Jumbotron = (): JSX.Element => {
             <div className='text-[50px] sm:text-[60px] font-extrabold mx-[50px]' style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
               About Us
             </div>
-            <div className='font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px]' style={{ filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))' }}>
-              Lorem Ipsum
+            <div className='font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px] italic' style={{ filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))' }}>
+              Learn more about who we are
             </div>
             <button
               className='mt-[200px] bg-[#FFFFFF] text-[#169470] text-[25px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'

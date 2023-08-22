@@ -1,4 +1,4 @@
-import Header from '@src/assets/Images/Activity/project.jpg'
+import Header from '@src/assets/Images/Activity/project.webp'
 
 const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
@@ -16,14 +16,14 @@ const Jumbotron = (): JSX.Element => {
         <div className="absolute inset-0 flex flex-col items-center justify-center mt-[70px]">
           <div className="font-[OpenSans-Bold] text-center text-white">
             <div
-              className="text-[50px] sm:text-[60px] font-extrabold mx-[50px]"
+              className="text-[50px] sm:text-[60px] font-extrabold mx-[50px] leading-[60px]"
               style={{
                 filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
               }}>
               Learning Program
             </div>
             <div
-              className="font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px]"
+              className="font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px] italic mt-[20px]"
               style={{
                 filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))'
               }}>
