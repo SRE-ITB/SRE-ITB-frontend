@@ -8,57 +8,57 @@ import Logo from '@src/assets/Images/Logo/whiteLogo.webp'
 const MENU_LIST = [
   {
     text: 'Home',
-    href: '/'
+    href: '/',
   },
   {
     text: 'About Us',
-    href: '/about'
+    href: '/about',
   },
   {
     text: 'Activity',
     contents: [
       {
         text: 'Internal Program',
-        href: '/activity/internal'
+        href: '/activity/internal',
       },
       {
         text: 'External Program',
-        href: '/activity/external'
+        href: '/activity/external',
       },
       {
         text: 'Learning Program',
-        href: '/activity/learning'
+        href: '/activity/learning',
       },
       {
         text: 'Project',
-        href: '/activity/project'
-      }
-    ]
+        href: '/activity/project',
+      },
+    ],
   },
   {
     text: 'Student',
-    href: '/student'
+    href: '/student',
   },
   {
     text: 'IYREF',
-    href: '/iyref'
+    href: '/iyref',
   },
   {
     text: 'Merchandise',
-    href: '/merchandise'
-  }
+    href: '/merchandise',
+  },
 ]
 
-function MobileHoverDropdown ({
+function MobileHoverDropdown({
   open,
   setOpen,
   contents,
   dropdownIdx,
-  idx
+  idx,
 }: {
   open: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
-  contents: Array<{ text: string, href: string }>
+  contents: Array<{ text: string; href: string }>
   dropdownIdx: number
   idx: number
 }): JSX.Element {
@@ -82,10 +82,10 @@ function MobileHoverDropdown ({
   )
 }
 
-function HoverDropdown ({
-  contents
+function HoverDropdown({
+  contents,
 }: {
-  contents: Array<{ text: string, href: string }>
+  contents: Array<{ text: string; href: string }>
 }): JSX.Element {
   return (
     <div className="hidden peer-hover:absolute peer-hover:flex hover:absolute hover:flex flex-col w-64 py-3 top-20 left-1/2 transform -translate-x-1/2 border-solid border-2 border-green rounded-lg bg-white z-50">
@@ -93,8 +93,7 @@ function HoverDropdown ({
         <a
           key={idx}
           className="px-5 py-3 hover:bg-green text-green hover:text-white font-bold cursor-pointer"
-          href={content.href}
-          >
+          href={content.href}>
           {content.text}
         </a>
       ))}
@@ -102,11 +101,11 @@ function HoverDropdown ({
   )
 }
 
-function MobileNav ({
+function MobileNav({
   open,
   setOpen,
   dropdownIdx,
-  setDropdownIdx
+  setDropdownIdx,
 }: {
   open: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
@@ -117,8 +116,7 @@ function MobileNav ({
     <div
       className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-[#0D664C] transform ${
         open ? '-translate-x-0' : '-translate-x-full'
-      } transition-transform duration-300 ease-in-out`}
-    >
+      } transition-transform duration-300 ease-in-out`}>
       <div className="flex flex-col h-screen justify-center items-center">
         {MENU_LIST.map((menu, idx) => {
           return (
@@ -127,43 +125,36 @@ function MobileNav ({
               className="w-40 mx-auto"
               onClick={() => {
                 setDropdownIdx(dropdownIdx === idx ? -1 : idx)
-              }}
-            >
+              }}>
               <a
-                className='cursor-pointer hover:opacity-80 inline-block py-2 text-white font-bold'
+                className="cursor-pointer hover:opacity-80 inline-block py-2 text-white font-bold"
                 onClick={() => {
                   if (!menu.contents) {
                     setOpen(!open)
                   }
                 }}
-                href={menu.contents ? undefined : menu.href}
-              >
-                <div
-                  className='py-2 inline-flex items-center'
-                >
+                href={menu.contents ? undefined : menu.href}>
+                <div className="py-2 inline-flex items-center">
                   {menu.text}
-                  {menu.contents
-                    ? (
-                      <ArrowDownIcon color="white" className="ml-1"></ArrowDownIcon>
-                      )
-                    : (
-                        ''
-                      )}
+                  {menu.contents ? (
+                    <ArrowDownIcon
+                      color="white"
+                      className="ml-1"></ArrowDownIcon>
+                  ) : (
+                    ''
+                  )}
                 </div>
               </a>
-              {menu.contents
-                ? (
+              {menu.contents ? (
                 <MobileHoverDropdown
                   open={open}
                   setOpen={setOpen}
                   contents={menu.contents}
                   dropdownIdx={dropdownIdx}
-                  idx={idx}
-                ></MobileHoverDropdown>
-                  )
-                : (
-                    ''
-                  )}
+                  idx={idx}></MobileHoverDropdown>
+              ) : (
+                ''
+              )}
             </div>
           )
         })}
@@ -200,15 +191,19 @@ const Navbar: React.FC = () => {
     <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
       <div
         className={`${open ? 'h-screen' : ''} w-full ${
-          isNavbarSolid ? 'h-[90px] transform' : 'h-[200px]'
+          isNavbarSolid ? 'h-[90px] transform' : 'h-[90px] transform'
         } flex`}
         style={{
-          backgroundImage: 'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)',
+          backgroundImage:
+            'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)',
           ...(isNavbarSolid && {
-            backgroundColor: 'rgba(13, 102, 76, 1)'
-          })
-        }}
-      >
+            backgroundColor: 'rgba(13, 102, 76, 1)',
+            transition: 'background-color 0.25s ease-in-out',
+          }),
+          ...(!isNavbarSolid && {
+            transition: 'background-color 0.25s ease-in-out',
+          }),
+        }}>
         <MobileNav
           open={open}
           setOpen={setOpen}
@@ -216,7 +211,7 @@ const Navbar: React.FC = () => {
           setDropdownIdx={setDropdownIdx}
         />
         <div className="w-[130px] h-0 mt-[-12px] flex">
-          <a className='cursor-pointer' href="/">
+          <a className="cursor-pointer" href="/">
             <Image src={Logo} alt="logo" className="" />
           </a>
         </div>
@@ -248,10 +243,10 @@ const Navbar: React.FC = () => {
             {MENU_LIST.map((menu, idx) => (
               <div key={idx} className="relative inline-flex">
                 <a
-                  className={`${'active px-6 mx-2 py-8 h-[80px]'
-                  } ${menu.contents ? 'peer' : 'inline-block'} text-[#FFFFFF] hover:opacity-80 font-bold cursor-pointer`}
-                  href={menu.href}
-                >
+                  className={`${'active px-6 mx-2 py-8 h-[80px]'} ${
+                    menu.contents ? 'peer' : 'inline-block'
+                  } text-[#FFFFFF] hover:opacity-80 font-bold cursor-pointer`}
+                  href={menu.href}>
                   <div
                     className={`${
                       (idx === 0 && page === 'home') ||
@@ -262,19 +257,16 @@ const Navbar: React.FC = () => {
                       (idx === 5 && page === 'merchandise')
                         ? 'border-b-2 border-white'
                         : ''
-                    } inline-flex items-center`}
-                  >
+                    } inline-flex items-center`}>
                     {menu.text}
                     {menu.contents ? <ArrowDownIcon color="white" /> : ''}
                   </div>
                 </a>
-                {menu.contents
-                  ? (
+                {menu.contents ? (
                   <HoverDropdown contents={menu.contents}></HoverDropdown>
-                    )
-                  : (
-                      ''
-                    )}
+                ) : (
+                  ''
+                )}
               </div>
             ))}
           </div>
