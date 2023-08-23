@@ -1,4 +1,4 @@
-import CarouselLastActivity from '@src/components/Activity/CarouselLastActivity'
+import CarouselLastActivity from '@src/components/Carousel/LatestUpdateCarousel'
 import React, { useEffect, useState } from 'react'
 
 const LastActivity = (): JSX.Element => {
@@ -6,21 +6,20 @@ const LastActivity = (): JSX.Element => {
     thumbnail: string
     nama_kegiatan: string
     deskripsi_pendek: string
+    id: number
   }>>([])
 
   useEffect(() => {
     const fetchContents = async (): Promise<void> => {
       try {
-        const res = await fetch('https://api.sreitb.com/kegiatan/1')
+        const res = await fetch('https://api.sreitb.com/activity/external')
         const data = await res.json()
-        setContents([
-          {
-            thumbnail: data.data.thumbnail,
-            nama_kegiatan: data.data.nama_kegiatan,
-            deskripsi_pendek: data.data.deskripsi_pendek
-          }
-        ])
-        console.log(contents)
+        setContents(data.data.map((item: any) => ({
+          thumbnail: item.thumbnail,
+          nama_kegiatan: item.name,
+          deskripsi_pendek: item.short_description,
+          id: item.id
+        })))
       } catch (err) {
         console.log(err)
       }
@@ -29,7 +28,7 @@ const LastActivity = (): JSX.Element => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center justify-center text-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
+    <div className="flex flex-col items-center justify-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
       <p className="font-[Montserrat-Bold] sm:text-[40px] text-[30px] mx-[5vw]">
         Latest <span className="text-[#169470]">Update</span>
       </p>

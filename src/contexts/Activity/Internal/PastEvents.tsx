@@ -1,9 +1,9 @@
-import CarouselPastEvents from '@src/components/Activity/CarouselPastEvents'
+import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import REProject from '@src/assets/Images/Carousel/REProject.jpg'
-import REview from '@src/assets/Images/Carousel/REview.png'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.jpg'
+import REProject from '@src/assets/Images/Carousel/REProject.webp'
+import REview from '@src/assets/Images/Carousel/REview.webp'
+import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
@@ -25,7 +25,7 @@ const PastEvents = (): JSX.Element => {
   ]
 
   return (
-    <div className="flex flex-col items-center justify-center text-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
+    <div id='internal' className="flex flex-col items-center justify-center text-center overflow-x-hidden sm:mt-[5vw] mt-[10vw] sm:mb-[5vw] mb-[10vw]">
       <p className="font-[Montserrat-Bold] sm:text-[40px] text-[30px] mx-[5vw]">
         Our <span className="text-[#169470]">Past Events</span>
       </p>
