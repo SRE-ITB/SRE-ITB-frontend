@@ -88,11 +88,11 @@ function HoverDropdown ({
   contents: Array<{ text: string, href: string }>
 }): JSX.Element {
   return (
-    <div className="hidden peer-hover:absolute peer-hover:flex hover:absolute hover:flex flex-col w-64 py-3 top-20 left-1/2 transform -translate-x-1/2 border-solid border-2 border-greenSRE100 rounded-2xl bg-white z-50">
+    <div className="hidden peer-hover:absolute peer-hover:flex hover:absolute hover:flex flex-col w-64 py-3 top-20 left-1/2 transform -translate-x-1/2 border-solid border-2 border-green rounded-lg bg-white z-50">
       {contents.map((content, idx) => (
         <a
           key={idx}
-          className="px-5 py-3 hover:bg-greenSRE100 text-greenSRE100 hover:text-white font-bold cursor-pointer"
+          className="px-5 py-3 hover:bg-green text-green hover:text-white font-bold cursor-pointer"
           href={content.href}
           >
           {content.text}
