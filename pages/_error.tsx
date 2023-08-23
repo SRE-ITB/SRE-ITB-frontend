@@ -1,9 +1,12 @@
 import ErrorPage from '@src/contexts/404/404page'
+import SEO from '@src/components/SEO'
 
-const Error = () => {
-    return (
-        <ErrorPage />
-    )
+const Error: React.FC = () => {
+  return (
+    <SEO title="SRE ITB | Error">
+      <ErrorPage />
+    </SEO>
+  )
 }
 
-export default Error;
+export default Error
