@@ -1,4 +1,4 @@
-import Header from '@src/assets/Images/Activity/project.webp'
+import Header from '@src/assets/Images/Activity/learning.webp'
 
 const Jumbotron = (): JSX.Element => {
   const backgroundImageStyle = {
@@ -8,6 +8,16 @@ const Jumbotron = (): JSX.Element => {
     backgroundRepeat: 'no-repeat',
     width: '100vw',
     height: '100vh'
+  }
+
+  const handleScroll = (sectionId: string): void => {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 100,
+        behavior: 'smooth'
+      })
+    }
   }
 
   return (
@@ -33,7 +43,8 @@ const Jumbotron = (): JSX.Element => {
               className="mt-[200px] bg-[#FFFFFF] text-[#169470] text-[25px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer"
               style={{
                 filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
-              }}>
+              }}
+              onClick={() => handleScroll('learning')}>
               See More
             </button>
           </div>

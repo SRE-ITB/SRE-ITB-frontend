@@ -10,6 +10,7 @@ const History: React.FC = () => {
 
   return (
     <div
+      id='about'
       className="flex flex-col justify-center items-center w-full h-auto min-h-screen font-[Montserrat-Medium]"
       style={divStyle}>
       <div className="flex flex-row text-center sm:text-[40px] text-[30px] font-[Montserrat-Bold] lg:mt-2 mt-[80px]">
