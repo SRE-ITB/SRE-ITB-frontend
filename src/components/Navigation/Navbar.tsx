@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from 'react'
+import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
@@ -175,17 +175,38 @@ function MobileNav ({
 const Navbar: React.FC = () => {
   const [open, setOpen] = useState(false)
   const [dropdownIdx, setDropdownIdx] = useState(-1)
+  const [isNavbarSolid, setIsNavbarSolid] = useState(false)
 
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
 
+  useEffect(() => {
+    const handleScroll = (): void => {
+      if (window.scrollY > window.innerHeight - 90) {
+        setIsNavbarSolid(true)
+      } else {
+        setIsNavbarSolid(false)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
     <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
       <div
-        className={`${open ? 'h-screen' : ''} w-full h-[200px] flex`}
+        className={`${open ? 'h-screen' : ''} w-full ${
+          isNavbarSolid ? 'h-[90px] transform' : 'h-[200px]'
+        } flex`}
         style={{
-          backgroundImage:
-            'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)'
+          backgroundImage: 'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)',
+          ...(isNavbarSolid && {
+            backgroundColor: 'rgba(13, 102, 76, 1)'
+          })
         }}
       >
         <MobileNav
@@ -194,12 +215,12 @@ const Navbar: React.FC = () => {
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
         />
-        <div className="w-[200px] h-[100px] flex mt-[-15px]">
+        <div className="w-[130px] h-0 mt-[-12px] flex">
           <a className='cursor-pointer' href="/">
             <Image src={Logo} alt="logo" className="" />
           </a>
         </div>
-        <div className="w-full flex justify-end">
+        <div className="h-0 flex fixed right-0">
           <div
             className={`${
               open ? 'fixed right-0' : ''
