@@ -1,26 +1,31 @@
 import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import REProject from '@src/assets/Images/Carousel/REProject.webp'
 import REview from '@src/assets/Images/Carousel/REview.webp'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
+import SkillTraining from '@src/assets/Images/Carousel/SkillTraining.webp'
+import NoImage from '@src/assets/Images/Activity/NoImage.svg'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
     {
       image: REview.src,
-      title: 'Welcoming Party',
-      desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.'
+      title: 'REview',
+      desc: 'Webinar series to learn the fundamentals of renewable energy by inviting some experts in their fields.'
     },
     {
-      image: SocialProject.src,
-      title: 'Staff Onboarding',
-      desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.'
+      image: NoImage.src,
+      title: 'SRE ITB x IEEE ITB',
+      desc: 'Joint classes with IEEE ITB student branch to talk about renewable energy in terms of business. The members learned how to create a renewable energy business model canvas at the hands on session.'
     },
     {
-      image: REProject.src,
-      title: 'Town Hall Meeting',
-      desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.'
+      image: SkillTraining.src,
+      title: 'Skill Training',
+      desc: 'Soft skill workshop as preparation before the members doing their final project. The workshop always ends with hands on session.'
+    },
+    {
+      image: NoImage.src,
+      title: 'Paper Presentation',
+      desc: 'A forum where the members present their paper or scientific article they made as their final project.'
     }
   ]
 

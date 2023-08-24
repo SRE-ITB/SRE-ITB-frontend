@@ -1,24 +1,23 @@
 import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import REProject from '@src/assets/Images/Carousel/REProject.webp'
-import REview from '@src/assets/Images/Carousel/REview.webp'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
+import Gathering from '@src/assets/Images/Carousel/Gathering.webp'
+import NoImage from '@src/assets/Images/Activity/NoImage.svg'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
     {
-      image: REview.src,
+      image: Gathering.src,
       title: 'Welcoming Party',
       desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.'
     },
     {
-      image: SocialProject.src,
+      image: NoImage.src,
       title: 'Staff Onboarding',
       desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.'
     },
     {
-      image: REProject.src,
+      image: NoImage.src,
       title: 'Town Hall Meeting',
       desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.'
     }

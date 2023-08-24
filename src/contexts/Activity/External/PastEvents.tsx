@@ -1,26 +1,36 @@
 import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import REProject from '@src/assets/Images/Carousel/REProject.webp'
-import REview from '@src/assets/Images/Carousel/REview.webp'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
+import NoImage from '@src/assets/Images/Activity/NoImage.svg'
+import CareerTalks from '@src/assets/Images/Carousel/CareerTalks.webp'
+import ExternalEvents from '@src/assets/Images/Carousel/ExternalEvents.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
     {
-      image: REview.src,
-      title: 'Welcoming Party',
-      desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.'
+      image: NoImage.src,
+      title: 'SRE Goes to School',
+      desc: 'A visit to some schools in Bandung to spread awareness regarding the importance of understanding renewable energy.'
     },
     {
-      image: SocialProject.src,
-      title: 'Staff Onboarding',
-      desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.'
+      image: NoImage.src,
+      title: 'SREnclusivity Week',
+      desc: 'A week full of webinar, panel discussion, competition, and grand seminar.'
     },
     {
-      image: REProject.src,
-      title: 'Town Hall Meeting',
-      desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.'
+      image: NoImage.src,
+      title: 'BONUS GEDE',
+      desc: 'Panel discussion with some policy makers to deliver our concern regarding renewable energy and energy transition.'
+    },
+    {
+      image: CareerTalks.src,
+      title: 'Career Talks',
+      desc: 'Talk show with some renewable energy experts regarding green jobs.'
+    },
+    {
+      image: ExternalEvents.src,
+      title: 'Company Visit',
+      desc: 'One day visit to renewable energy related companies to get to know their product and work process.'
     }
   ]
 
