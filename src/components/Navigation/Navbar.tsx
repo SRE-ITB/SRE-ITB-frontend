@@ -220,7 +220,7 @@ const Navbar: React.FC = () => {
             <Image src={Logo} alt="logo" className="" />
           </a>
         </div>
-        <div className="h-0 flex fixed right-0 z-20">
+        <div className="h-0 flex fixed z-20">
           <div
             className={`${
               open ? 'fixed right-0' : ''
