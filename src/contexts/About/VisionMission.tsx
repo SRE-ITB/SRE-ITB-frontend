@@ -10,7 +10,7 @@ const VisionMission: React.FC = () => {
         }}
       >
         <div className="flex flex-col justify-around items-center">
-          <h5 className="text-[32px] md:text-[40px] font-[Montserrat-Bold]">Vision</h5>
+          <div className="text-[32px] md:text-[40px] font-[Montserrat-Bold]">Vision</div>
           <div
             style={{
               marginTop: '10px',
@@ -29,7 +29,7 @@ const VisionMission: React.FC = () => {
         </div>
         <div className="my-8" />
         <div className="flex flex-col justify-around items-center">
-          <h5 className="text-[32px] md:text-[40px] font-[Montserrat-Bold]">Mission</h5>
+          <div className="text-[32px] md:text-[40px] font-[Montserrat-Bold]">Mission</div>
           <div
             style={{
               marginTop: '10px',

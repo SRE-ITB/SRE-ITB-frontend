@@ -28,19 +28,19 @@ const History: React.FC = () => {
           borderRadius: '13px'
         }}></div>
       <div className="sm:mx-[22vw] mx-[15vw] mt-[30px] mb-[50px] text-center sm:text-[20px] text-[16px]">
-        <div className="" style={{ display: 'inline', color: '#169470' }}>
+        <h3 className="" style={{ display: 'inline', color: '#169470' }}>
           SRE ITB
-        </div>
-        <div
+        </h3>
+        <h3
           className=""
           style={{ display: 'inline', color: '#000000', fontWeight: 'normal' }}>
           , established in 2019,&nbsp;
-        </div>
-        <div className="" style={{ display: 'inline', color: '#169470' }}>
+        </h3>
+        <h3 className="" style={{ display: 'inline', color: '#169470' }}>
           pioneers the exploration and discussion of renewable energy among
           other SRE student chapter across Indonesia
-        </div>
-        <div
+        </h3>
+        <h3
           className=""
           style={{ display: 'inline', color: '#000000', fontWeight: 'normal' }}>
           . As the first student chapter dedicated to this field, SRE ITB raises
@@ -48,14 +48,14 @@ const History: React.FC = () => {
           seminars, workshops, research projects, and collaborations, SRE ITB
           inspires the next generation of engineers and researchers to shape a
           greener future for Indonesia and beyond.
-        </div>
+        </h3>
         <br />
         <br />
-        <div
+        <h2
           className="sm:text-[32px] text-[25px]"
           style={{ display: 'inline', color: '#169470', fontWeight: 'bold' }}>
           #RElevatingSREITB
-        </div>
+        </h2>
       </div>
     </div>
   )
