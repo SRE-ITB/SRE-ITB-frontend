@@ -9,12 +9,12 @@ const PastEvents = (): JSX.Element => {
   const contents = [
     {
       image: REProject.src,
-      title: 'Solar PV installation Kamojang',
+      title: 'Solar PV Installation Kamojang',
       desc: 'On July 2022, SRE ITB in collaboration with Tim Gerilya KESDM, installed a 6 kWp solar panel at Kawasan Konservasi Elang Kamojang.'
     },
     {
       image: PVPekayon.src,
-      title: 'Solar PV Installation at Pekayon',
+      title: 'Solar PV Installation Pekayon',
       desc: 'SRE ITB in collaboration with PT Astra International, installed solar pv of 1350 kWp at Kampung Binaan Astra Pekayon, Bekasi.'
     },
     {
