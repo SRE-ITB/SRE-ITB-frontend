@@ -20,10 +20,10 @@ const PastEventsCard: React.FC<{ image: any, title: string, desc: string }> = ({
         />
       </div>
       <div className="h-[130px] w-full px-4 justify-center mt-[10px]">
-        <h5 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
+        <h4 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
           {title}
-        </h5>
-        <p className="text-white font-[Montserrat-Medium]">{desc}</p>
+        </h4>
+        <h5 className="text-white font-[Montserrat-Medium]">{desc}</h5>
       </div>
     </div>
   )

@@ -68,12 +68,12 @@ const Description = (): JSX.Element => {
       }}
       ></div>
       <div className='mx-[5vw] mt-[30px] mb-[50px] text-center sm:text-[22px] text-[16px]'>
-        <div className='' style={{ display: 'inline', color: '#169470', fontWeight: 'bold' }}>
+        <h2 className='' style={{ display: 'inline', color: '#169470', fontWeight: 'bold' }}>
           Society of Renewable Energy (SRE) &nbsp;
-        </div>
-        <div className='' style={{ display: 'inline', color: '#000000', fontWeight: 'normal' }}>
+        </h2>
+        <h2 className='' style={{ display: 'inline', color: '#000000', fontWeight: 'normal' }}>
           is a student-led organization that aims to spark student’s role in the field of new and renewable energy. SRE Institut Teknologi Bandung, the first SRE student chapter, was born in 2019 to accelerate Indonesia’s energy transition by providing some learning programs and project implementation for the members
-        </div>
+        </h2>
       </div>
     </div>
   )

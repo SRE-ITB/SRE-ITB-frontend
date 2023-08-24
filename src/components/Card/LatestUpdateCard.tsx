@@ -32,10 +32,10 @@ const LatestUpdateCard: React.FC<{ image: any, title: string, desc: string, id: 
         />
       </div>
       <div className="md:w-[70%] md:h-[100%] h-[380px] px-8 py-8 relative text-center md:text-left">
-        <h5 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
+        <h4 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
           {title}
-        </h5>
-        <p className="text-white font-[Montserrat-Medium]">{desc}</p>
+        </h4>
+        <h5 className="text-white font-[Montserrat-Medium]">{desc}</h5>
         <div className='absolute md:bottom-8 bottom-12 right-0 left-0 flex justify-center'>
           <button
             className='border-2 border-white rounded-[20px] px-5 py-1 text-white font-[Montserrat-Medium] hover:bg-[#0D664C]  transition-all'
