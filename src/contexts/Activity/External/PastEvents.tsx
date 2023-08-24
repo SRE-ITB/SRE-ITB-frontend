@@ -3,7 +3,6 @@ import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 // Assets
 import NoImage from '@src/assets/Images/Activity/NoImage.svg'
 import CareerTalks from '@src/assets/Images/Carousel/CareerTalks.webp'
-import ExternalEvents from '@src/assets/Images/Carousel/ExternalEvents.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
@@ -28,7 +27,7 @@ const PastEvents = (): JSX.Element => {
       desc: 'Talk show with some renewable energy experts regarding green jobs.'
     },
     {
-      image: ExternalEvents.src,
+      image: NoImage.src,
       title: 'Company Visit',
       desc: 'One day visit to renewable energy related companies to get to know their product and work process.'
     }

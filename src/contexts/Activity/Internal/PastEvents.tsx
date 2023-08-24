@@ -2,7 +2,8 @@ import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
 import Gathering from '@src/assets/Images/Carousel/Gathering.webp'
-import NoImage from '@src/assets/Images/Activity/NoImage.svg'
+import TownHall from '@src/assets/Images/Activity/TownHall.webp'
+import Onboarding from '@src/assets/Images/Activity/Onboarding.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
@@ -12,12 +13,12 @@ const PastEvents = (): JSX.Element => {
       desc: 'First gathering event to welcome the new members by doing fun games to get to know each other, also introducing one year journey in SRE ITB that will be through together.'
     },
     {
-      image: NoImage.src,
+      image: Onboarding.src,
       title: 'Staff Onboarding',
       desc: 'The first meeting for all of SRE ITB management team where each division will have their own session to introduce themselves with their own uniqueness.'
     },
     {
-      image: NoImage.src,
+      image: TownHall.src,
       title: 'Town Hall Meeting',
       desc: 'Meeting attended by both management team and members to strengthen our bond and as the progress report regarding SRE ITB programs that had been done.'
     }
