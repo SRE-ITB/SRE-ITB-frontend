@@ -17,7 +17,7 @@ const OurTeam: React.FC = () => {
         harnessing the transformative power of sustainable practices.
       </h3>
       {/* CARD */}
-      <div className='mt-8 flex flex-col md:flex-row md:gap-x-4 text-center justify-center items-center gap-y-4'>
+      <div className='mt-8 flex flex-col md:flex-row md:gap-x-4 text-center justify-center items-center gap-y-4 mb-8'>
         <div className='rounded-[10px] text-white flex items-center justify-center w-[75vw] md:w-[45vw] lg:max-w-[400px]' style={{ filter: 'drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.25))' }}>
           <div className='rounded-[10px] p-4 bg-greenSRE100 flex flex-col items-center justify-center m-2 md:h-[300px]'>
             <div className='font-semibold text-2xl lg:text-3xl'>MANAGEMENT TEAM</div>

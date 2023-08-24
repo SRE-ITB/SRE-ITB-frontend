@@ -9,7 +9,7 @@ export default function Comingsoon (): JSX.Element {
         <h1 className='p-1 xl:p-4 text-greenSRE100 ml-auto'>COMING</h1>
         <h1 className='p-1 xl:p-4 text-greenSRE200 mr-auto'>SOON</h1>
       </div>
-      <div className='border-y-greenSRE200 border-x-0 border-[0.5vw] w-[60vw] mx-auto text-[2vw] italic font-semibold leading-[3vw] py-[10px]'>Website is currently under construction. <br /> Stay in touch! Something wonderful is coming your way.</div>
+      <div className='border-y-greenSRE200 border-x-0 border-[0.5vw] w-[60vw] mx-auto text-[2vw] italic font-semibold leading-[3vw] py-[10px]'>Stay in touch! Something exciting is coming your way.</div>
     </div>
   )
 }

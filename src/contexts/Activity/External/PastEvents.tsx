@@ -1,23 +1,26 @@
 import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 
 // Assets
-import NoImage from '@src/assets/Images/Activity/NoImage.svg'
 import CareerTalks from '@src/assets/Images/Carousel/CareerTalks.webp'
+import CompanyVisit from '@src/assets/Images/Carousel/CompanyVisit.webp'
+import BonusGede from '@src/assets/Images/Activity/BonusGede.webp'
+import School from '@src/assets/Images/Activity/School.webp'
+import Srenclusivity from '@src/assets/Images/Activity/Srenclusivity.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
     {
-      image: NoImage.src,
+      image: School.src,
       title: 'SRE Goes to School',
       desc: 'A visit to some schools in Bandung to spread awareness regarding the importance of understanding renewable energy.'
     },
     {
-      image: NoImage.src,
+      image: Srenclusivity.src,
       title: 'SREnclusivity Week',
       desc: 'A week full of webinar, panel discussion, competition, and grand seminar.'
     },
     {
-      image: NoImage.src,
+      image: BonusGede.src,
       title: 'BONUS GEDE',
       desc: 'Panel discussion with some policy makers to deliver our concern regarding renewable energy and energy transition.'
     },
@@ -27,7 +30,7 @@ const PastEvents = (): JSX.Element => {
       desc: 'Talk show with some renewable energy experts regarding green jobs.'
     },
     {
-      image: NoImage.src,
+      image: CompanyVisit.src,
       title: 'Company Visit',
       desc: 'One day visit to renewable energy related companies to get to know their product and work process.'
     }

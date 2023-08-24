@@ -3,24 +3,24 @@ import CarouselPastEvents from '@src/components/Carousel/PastEventsCarousel'
 // Assets
 import REProject from '@src/assets/Images/Carousel/REProject.webp'
 import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
-import NoImage from '@src/assets/Images/Activity/NoImage.svg'
+import PVPekayon from '@src/assets/Images/Activity/PVPekayon.webp'
 
 const PastEvents = (): JSX.Element => {
   const contents = [
     {
       image: REProject.src,
-      title: 'Solar PV installation kamojang',
-      desc: ''
+      title: 'Solar PV installation Kamojang',
+      desc: 'On July 2022, SRE ITB in collaboration with Tim Gerilya KESDM, installed a 6 kWp solar panel at Kawasan Konservasi Elang Kamojang.'
     },
     {
-      image: NoImage.src,
-      title: 'Biogas pekayon',
-      desc: ''
+      image: PVPekayon.src,
+      title: 'Solar PV Installation at Pekayon',
+      desc: 'SRE ITB in collaboration with PT Astra International, installed solar pv of 1350 kWp at Kampung Binaan Astra Pekayon, Bekasi.'
     },
     {
       image: SocialProject.src,
-      title: 'SREmpathy: Cianjur',
-      desc: ''
+      title: 'SREmpathy for Cianjur',
+      desc: 'On November 2022, SRE ITB collected some funds and public lighting to help the residents that were affected by the disaster.'
     }
   ]
 
