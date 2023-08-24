@@ -4,17 +4,17 @@
   "/_document": "pages/_document.js",
   "/en-US/404": "pages/en-US/404.html",
   "/en-US/500": "pages/en-US/500.html",
+  "/en-US/activity/external/[id]": "pages/en-US/activity/external/[id].html",
   "/en-US/merchandise": "pages/en-US/merchandise.html",
   "/en-US/student": "pages/en-US/student.html",
-  "/en-US/about": "pages/en-US/about.html",
+  "/en-US/activity/project/[id]": "pages/en-US/activity/project/[id].html",
   "/en-US/activity/learning/[id]": "pages/en-US/activity/learning/[id].html",
   "/en-US/activity/internal/[id]": "pages/en-US/activity/internal/[id].html",
-  "/en-US/activity/project/[id]": "pages/en-US/activity/project/[id].html",
-  "/en-US/activity/external/[id]": "pages/en-US/activity/external/[id].html",
+  "/en-US/about": "pages/en-US/about.html",
   "/en-US/iyref": "pages/en-US/iyref.html",
-  "/en-US/activity/external": "pages/en-US/activity/external.html",
   "/en-US/activity/learning": "pages/en-US/activity/learning.html",
-  "/en-US/activity/project": "pages/en-US/activity/project.html",
+  "/en-US/activity/internal": "pages/en-US/activity/internal.html",
+  "/en-US/activity/external": "pages/en-US/activity/external.html",
   "/en-US": "pages/en-US.html",
-  "/en-US/activity/internal": "pages/en-US/activity/internal.html"
+  "/en-US/activity/project": "pages/en-US/activity/project.html"
 }

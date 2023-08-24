@@ -414,7 +414,7 @@ const Navbar = ()=>{
                     })
                 }),
                 /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
-                    className: "h-0 flex fixed right-0",
+                    className: "h-0 flex fixed z-20 w-full justify-end",
                     children: [
                         /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                             className: `${open ? "fixed right-0" : ""} right-0 top-0 mt-[32px] mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden`,
@@ -426,7 +426,7 @@ const Navbar = ()=>{
                                     className: `h-1 w-6 bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "w-7 bg-white rotate-45 translate-y-2.5" : ""}`
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("span", {
-                                    className: `h-1 w-6 bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "h-0" : "w-6"}`
+                                    className: `h-1 w-6 bg-white rounded-lg transition-all duration-300 ease-in-out ${open ? "h-0 w-0" : "w-6"}`
                                 }),
                                 /*#__PURE__*/ jsx_runtime_.jsx("span", {
                                     className: `h-1 w-6 bg-white rounded-lg transform transition duration-300 ease-in-out ${open ? "w-7 bg-white -rotate-45 -translate-y-2.5" : ""}`

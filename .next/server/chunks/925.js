@@ -44,13 +44,9 @@ function Comingsoon() {
                     })
                 ]
             }),
-            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
+            /*#__PURE__*/ jsx_runtime_.jsx("div", {
                 className: "border-y-greenSRE200 border-x-0 border-[0.5vw] w-[60vw] mx-auto text-[2vw] italic font-semibold leading-[3vw] py-[10px]",
-                children: [
-                    "Website is currently under construction. ",
-                    /*#__PURE__*/ jsx_runtime_.jsx("br", {}),
-                    " Stay in touch! Something wonderful is coming your way."
-                ]
+                children: "Stay in touch! Something exciting is coming your way."
             })
         ]
     });
