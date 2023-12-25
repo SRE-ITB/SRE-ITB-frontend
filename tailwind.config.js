@@ -23,6 +23,7 @@ module.exports = {
         green10: '43A3A2'  
       },      
       fontFamily: {
+        montserrat: ["Montserrat", "sans-serif"],
         archivo: ["Archivo", "sans-serif"],
         varela: ["Varela-Round", "sans-serif"],
         helvatica: ["Helvatica", "sans-serif"],
