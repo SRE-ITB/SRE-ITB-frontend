@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -34,6 +36,35 @@
 
   [type='radio'] {
     @apply rounded-full;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#046669] to-[#89C190]
+  }
+
+  .font-gradient {
+    background: #046669;
+    background: linear-gradient(to right, #046669 0%, #89C190 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-stroke-white {
+    background-image: linear-gradient(90deg, #FFFFFF, #FFFFFF);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    letter-spacing: calc(1em / 16);
+  }
+
+  .text-stroke-gradient {
+    background-image: linear-gradient(90deg, #046669, #89C190);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    letter-spacing: calc(1em / 16);
   }
 }
 
