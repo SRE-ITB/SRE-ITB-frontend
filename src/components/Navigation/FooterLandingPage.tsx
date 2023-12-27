@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Youtube from '@src/contexts/Home/Youtube'
@@ -52,25 +51,14 @@ const FooterLandingPage = (): JSX.Element => {
     }
   ]
 
-  const [imageWidth, setImageWidth] = useState(0)
-
-  useEffect(() => {
-    const screenWidth = window.innerWidth + 10
-    setImageWidth(screenWidth)
-  }, [])
-
   return (
-    <footer className="flex flex-col overflow-x-hidden">
-      <div className='ml-[-5px]'>
-        <Image
-          src={FooterImage}
-          alt="Footer Illustration"
-          width={imageWidth}
-          layout="fixed"
-          className="mb-[25px]"
-          draggable={false}
-        />
-      </div>
+    <footer className="flex flex-col">
+      <Image
+        src={FooterImage}
+        alt="Footer Illustration"
+        className="mb-[25px]"
+        draggable={false}
+      />
       <div className="h-[20px] bg-green0 -mt-2" />
       <h3 className="bg-green0 w-full flex items-center justify-center py-[20px]">
         <span className="font-montserrat font-bold text-white text-shadow white-text-shadow text-4xl md:text-5xl">Our Teaser</span>
