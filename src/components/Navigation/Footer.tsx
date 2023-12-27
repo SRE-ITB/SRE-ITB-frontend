@@ -8,6 +8,7 @@ import gmail from '@src/assets/Images/Socmed/gmail.svg'
 import linkedin from '@src/assets/Images/Socmed/linkedin.svg'
 import tiktok from '@src/assets/Images/Socmed/tiktok.svg'
 import youtube from '@src/assets/Images/Socmed/youtube.svg'
+import FooterImage from "@src/assets/AssetsV2/FooterIllustrationDesktop.svg"
 
 const Footer: React.FC = () => {
   interface Contact {
@@ -52,7 +53,14 @@ const Footer: React.FC = () => {
 
   return (
     <div className="w-full">
-      <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row">
+      <Image 
+        src={FooterImage}
+        alt="Footer Illustration"
+        height={438}
+        className="mb-[25px]"
+      />
+      <div className="h-[20px] bg-green0 -mt-2" />
+      <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row bg-green0">
         <div className='sm:pl-8 sm:w-3/5'>
           <img src={logo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
           <div className='font-[OpenSans-Regular] text-white mb-[40px] mt-[-20px] text-center sm:text-left sm:ml-[57px] italic text-[20px]'>

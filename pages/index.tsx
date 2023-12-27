@@ -5,6 +5,7 @@ import Description from '@src/contexts/Home/Description'
 import Carousel from '@src/contexts/Home/Activity'
 import Youtube from '@src/contexts/Home/Youtube'
 import Footer from '@src/components/Navigation/Footer'
+import FooterLandingPage from '@src/components/Navigation/FooterLandingPage'
 
 const Landing: React.FC = () => {
   return (
@@ -13,8 +14,7 @@ const Landing: React.FC = () => {
       <Jumbotron />
       <Description />
       <Carousel />
-      <Youtube />
-      <Footer />
+      <FooterLandingPage />
     </SEO>
   )
 }
