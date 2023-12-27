@@ -52,13 +52,15 @@ const FooterLandingPage = (): JSX.Element => {
   ]
 
   return (
-    <footer className="flex flex-col">
-      <Image
-        src={FooterImage}
-        alt="Footer Illustration"
-        className="mb-[25px]"
-        draggable={false}
-      />
+    <footer className="flex flex-col overflow-x-hidden">
+      <div className='flex flex-col w-[101%]'>
+        <Image
+          src={FooterImage}
+          alt="Footer Illustration"
+          className="mb-[25px]"
+          draggable={false}
+        />
+      </div>
       <div className="h-[20px] bg-green0 -mt-2" />
       <h3 className="bg-green0 w-full flex items-center justify-center py-[20px]">
         <span className="font-montserrat font-bold text-white text-shadow white-text-shadow text-4xl md:text-5xl">Our Teaser</span>

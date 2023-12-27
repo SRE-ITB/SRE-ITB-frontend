@@ -52,13 +52,15 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <footer className="flex flex-col">
-      <Image
-        src={FooterImage}
-        alt="Footer Illustration"
-        className="mb-[25px]"
-        draggable={false}
-      />
+    <footer className="flex flex-col overflow-x-hidden">
+      <div className='flex flex-col w-[101%]'>
+        <Image
+          src={FooterImage}
+          alt="Footer Illustration"
+          className="mb-[25px]"
+          draggable={false}
+        />
+      </div>
       <div className="h-[20px] bg-green0 -mt-2" />
       <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row bg-green0">
         <div className='sm:pl-8 sm:w-3/5'>
