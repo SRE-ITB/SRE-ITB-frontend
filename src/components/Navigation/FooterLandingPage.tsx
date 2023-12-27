@@ -56,11 +56,11 @@ const FooterLandingPage = (): JSX.Element => {
       <Image
         src={FooterImage}
         alt="Footer Illustration"
-        className="mb-[25px]"
+        className="mb-[25px] w-screen"
         draggable={false}
       />
       <div className="h-[20px] bg-green0 -mt-2" />
-      <h3 className="bg-green0 w-full flex items-center justify-center">
+      <h3 className="bg-green0 w-full flex items-center justify-center py-[20px]">
         <span className="font-montserrat font-bold text-white text-shadow white-text-shadow text-4xl md:text-5xl">Our Teaser</span>
       </h3>
       <Youtube />
