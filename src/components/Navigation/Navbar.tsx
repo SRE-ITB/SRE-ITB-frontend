@@ -3,37 +3,26 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
-import Logo from '@src/assets/Images/Logo/whiteLogo.webp'
+import Logo from '@src/assets/AssetsV2/Navbar/logo.svg'
 
-const MENU_LIST = [
+interface Menu {
+  text: string
+  href: string
+  contents?: Array<{ text: string, href: string }>
+}
+
+const MENU_LIST: Menu[] = [
   {
     text: 'Home',
     href: '/'
   },
   {
-    text: 'About Us',
+    text: 'About',
     href: '/about'
   },
   {
     text: 'Activity',
-    contents: [
-      {
-        text: 'Internal Program',
-        href: '/activity/internal'
-      },
-      {
-        text: 'External Program',
-        href: '/activity/external'
-      },
-      {
-        text: 'Learning Program',
-        href: '/activity/learning'
-      },
-      {
-        text: 'Project',
-        href: '/activity/project'
-      }
-    ]
+    href: '/activity'
   },
   {
     text: 'Student',
@@ -114,10 +103,10 @@ function MobileNav ({
 }): JSX.Element {
   return (
     <div
-      className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-[#0D664C] transform ${
+      className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-green5 transform ${
         open ? '-translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out`}>
-      <div className="flex flex-col h-screen justify-center items-center">
+      <div className="flex flex-col h-screen justify-center">
         {MENU_LIST.map((menu, idx) => {
           return (
             <div
@@ -193,21 +182,12 @@ const Navbar: React.FC = () => {
   }, [])
 
   return (
-    <nav className="fixed flex top-0 w-full justify-center z-50 font-inter">
+    <nav className="fixed flex top-0 w-full justify-center z-50 font-montserrat">
       <div
-        className={`${open ? 'h-screen' : ''} w-full ${
-          isNavbarSolid ? 'h-[90px]' : 'h-[110px]'
-        } flex`}
+        className={`${open ? 'h-screen' : ''} w-full h-[100px] flex`}
         style={{
-          backgroundImage:
-            'linear-gradient(to bottom, rgba(13, 102, 76, 1) 0%, rgba(13, 102, 76, 0.5) 65%, rgba(13, 102, 76, 0) 95%)',
-          ...(isNavbarSolid && {
-            backgroundColor: 'rgba(13, 102, 76, 1)',
-            transition: 'background-color 0.25s ease-in-out'
-          }),
-          ...(!isNavbarSolid && {
-            transition: 'background-color 0.25s ease-in-out'
-          })
+          backgroundColor: isNavbarSolid ? '#2C9A7F' : 'rgba(0, 0, 0, 0)',
+          transition: 'background-color 0.3s ease'
         }}>
         <MobileNav
           open={open}
@@ -215,16 +195,16 @@ const Navbar: React.FC = () => {
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
         />
-        <div className="w-[130px] h-0 mt-[-12px] flex">
+        <div className="w-[130px] h-0 mt-[55px] ml-[4vw] flex items-center">
           <a className="cursor-pointer" href="/">
             <Image src={Logo} alt="logo" className="" />
           </a>
         </div>
-        <div className="h-0 flex fixed z-20 w-full justify-end">
+        <div className="flex fixed z-20 w-full justify-end">
           <div
             className={`${
               open ? 'fixed right-0' : ''
-            } right-0 top-0 mt-[32px] mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden`}
+            } right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden mt-[40px]`}
             onClick={() => {
               setOpen(!open)
             }}>
@@ -246,11 +226,11 @@ const Navbar: React.FC = () => {
           </div>
           <div className="hidden lg:flex">
             {MENU_LIST.map((menu, idx) => (
-              <div key={idx} className="relative inline-flex">
+              <div key={idx} className="relative inline-flex items-center mt-[3px]">
                 <a
-                  className={`${'active px-6 mx-2 py-8 h-[80px]'} ${
+                  className={`${'active px-6 mx-2 py-8'} ${
                     menu.contents ? 'peer' : 'inline-block'
-                  } text-[#FFFFFF] hover:opacity-80 font-bold cursor-pointer`}
+                  } text-[#FFFFFF] hover:opacity-80 cursor-pointer`}
                   href={menu.href}>
                   <div
                     className={`${
@@ -260,7 +240,7 @@ const Navbar: React.FC = () => {
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'iyref') ||
                       (idx === 5 && page === 'merchandise')
-                        ? 'border-b-2 border-white'
+                        ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''
                     } inline-flex items-center`}>
                     {menu.text}
