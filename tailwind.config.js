@@ -22,6 +22,7 @@ module.exports = {
         green8: '#89C190',
         green9: '#70B69B',
         green10: '#43A3A2'
+      },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],

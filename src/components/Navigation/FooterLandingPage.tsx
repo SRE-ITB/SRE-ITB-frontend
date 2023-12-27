@@ -1,8 +1,8 @@
-import Link from "next/link"
-import Image from "next/image"
-import Youtube from "@src/contexts/Home/Youtube"
+import Link from 'next/link'
+import Image from 'next/image'
+import Youtube from '@src/contexts/Home/Youtube'
 
-import FooterImage from "@src/assets/AssetsV2/FooterIllustrationDesktop.svg"
+import FooterImage from '@src/assets/AssetsV2/FooterIllustrationDesktop.svg'
 import logo from '@src/assets/Images/Logo/whiteLogo.webp'
 import instagram from '@src/assets/Images/Socmed/instagram.svg'
 import gmail from '@src/assets/Images/Socmed/gmail.svg'
@@ -10,8 +10,7 @@ import linkedin from '@src/assets/Images/Socmed/linkedin.svg'
 import tiktok from '@src/assets/Images/Socmed/tiktok.svg'
 import youtube from '@src/assets/Images/Socmed/youtube.svg'
 
-
-const FooterLandingPage = () => {
+const FooterLandingPage = (): JSX.Element => {
   interface Contact {
     image: string
     type: string
@@ -52,10 +51,9 @@ const FooterLandingPage = () => {
     }
   ]
 
-
   return (
     <footer className="w-full flex flex-col">
-      <Image 
+      <Image
         src={FooterImage}
         alt="Footer Illustration"
         height={438}

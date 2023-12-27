@@ -8,7 +8,7 @@ import gmail from '@src/assets/Images/Socmed/gmail.svg'
 import linkedin from '@src/assets/Images/Socmed/linkedin.svg'
 import tiktok from '@src/assets/Images/Socmed/tiktok.svg'
 import youtube from '@src/assets/Images/Socmed/youtube.svg'
-import FooterImage from "@src/assets/AssetsV2/FooterIllustrationDesktop.svg"
+import FooterImage from '@src/assets/AssetsV2/FooterIllustrationDesktop.svg'
 
 const Footer: React.FC = () => {
   interface Contact {
@@ -52,8 +52,8 @@ const Footer: React.FC = () => {
   ]
 
   return (
-    <div className="w-full">
-      <Image 
+    <footer className="w-full flex flex-col">
+      <Image
         src={FooterImage}
         alt="Footer Illustration"
         height={438}
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
       <div className="sm:h-[70px] h-[50px] w-full bg-black sm:text-[18px] text-[15px] text-white font-sans italic flex items-center justify-center md:justify-start md:pl-20">
         <p>© 2023 SRE ITB – All rights reserved</p>
       </div>
-    </div>
+    </footer>
   )
 }
 
