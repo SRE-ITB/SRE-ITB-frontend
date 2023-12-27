@@ -58,6 +58,7 @@ const Footer: React.FC = () => {
         alt="Footer Illustration"
         height={438}
         className="mb-[25px]"
+        draggable={false}
       />
       <div className="h-[20px] bg-green0 -mt-2" />
       <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row bg-green0">

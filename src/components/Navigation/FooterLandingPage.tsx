@@ -58,6 +58,7 @@ const FooterLandingPage = (): JSX.Element => {
         alt="Footer Illustration"
         height={438}
         className="mb-[25px]"
+        draggable={false}
       />
       <div className="h-[20px] bg-green0 -mt-2" />
       <h3 className="bg-green0 w-full flex items-center justify-center">
