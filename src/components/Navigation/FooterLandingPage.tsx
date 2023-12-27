@@ -56,7 +56,8 @@ const FooterLandingPage = (): JSX.Element => {
       <Image
         src={FooterImage}
         alt="Footer Illustration"
-        className="mb-[25px] w-screen"
+        style={{ width: 'calc(100vw + 10px)' }}
+        className="mb-[25px]"
         draggable={false}
       />
       <div className="h-[20px] bg-green0 -mt-2" />
