@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
-import Logo from '@src/assets/AssetsV2/Navbar/logo.svg'
+import Logo from '@src/assets/AssetsV2/Navbar/logo.png'
 
 interface Menu {
   text: string
@@ -195,10 +195,8 @@ const Navbar: React.FC = () => {
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
         />
-        <div className="w-[130px] h-0 mt-[55px] ml-[4vw] flex items-center">
-          <a className="cursor-pointer" href="/">
-            <Image src={Logo} alt="logo" className="" />
-          </a>
+        <div className="w-[90px] ml-[4vw] flex items-center">
+          <Image src={Logo} alt="logo" />
         </div>
         <div className="flex fixed z-20 w-full justify-end">
           <div

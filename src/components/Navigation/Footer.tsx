@@ -56,7 +56,6 @@ const Footer: React.FC = () => {
       <Image
         src={FooterImage}
         alt="Footer Illustration"
-        height={438}
         className="mb-[25px]"
         draggable={false}
       />
