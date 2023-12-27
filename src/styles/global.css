@@ -66,6 +66,10 @@
     -webkit-background-clip: text;
     letter-spacing: calc(1em / 16);
   }
+
+  .white-text-shadow {
+    text-shadow: 0px 0px 25px #89C190; /* Offset horizontal, offset vertikal, blur, dan warna */
+  }
 }
 
 @layer components {

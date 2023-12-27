@@ -10,7 +10,8 @@ module.exports = {
         white: '#FFFFFF',
         semiWhite: '#F0F1F4',
         black: '#000000',
-        semiBlack: '1F1F21',
+        semiBlack: '#1F1F21',
+        green0: '#0D664C',
         green1: '#046669',
         green2: '#046E6C',
         green3: '#0B7D73',
@@ -21,7 +22,6 @@ module.exports = {
         green8: '#89C190',
         green9: '#70B69B',
         green10: '#43A3A2'
-      },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],

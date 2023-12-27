@@ -1,6 +1,6 @@
 const Youtube: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green">
+    <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green0">
       <iframe
         className="aspect-video w-[65%] mt-[10vw]"
         src="https://www.youtube.com/embed/H2t9jZBPlpA"
