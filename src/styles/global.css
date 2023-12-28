@@ -125,3 +125,16 @@
     src: url('../assets/fonts/OpenSans-Regular.ttf');
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2C9A7F;
+  border-radius: 6px;
+}

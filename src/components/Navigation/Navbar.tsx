@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
 import Logo from '@src/assets/AssetsV2/Navbar/logo.png'
@@ -182,13 +183,14 @@ const Navbar: React.FC = () => {
   }, [])
 
   return (
-    <nav className="fixed flex top-0 w-full justify-center z-50 font-montserrat">
+    <motion.nav
+      className="fixed flex top-0 w-full justify-center z-50 font-montserrat"
+      initial={{ backgroundColor: 'rgba(0, 0, 0, 0)' }}
+      animate={{ backgroundColor: isNavbarSolid ? '#2C9A7F' : 'rgba(0, 0, 0, 0)' }}
+      transition={{ duration: 0.3, ease: 'easeInOut' }}
+    >
       <div
-        className={`${open ? 'h-screen' : ''} w-full h-[80px] flex`}
-        style={{
-          backgroundColor: isNavbarSolid ? '#2C9A7F' : 'rgba(0, 0, 0, 0)',
-          transition: 'background-color 0.3s ease'
-        }}>
+        className={`${open ? 'h-screen' : ''} w-full h-[80px] flex`}>
         <MobileNav
           open={open}
           setOpen={setOpen}
@@ -257,7 +259,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-    </nav>
+      </motion.nav>
   )
 }
 
