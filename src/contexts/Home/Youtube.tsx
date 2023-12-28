@@ -1,8 +1,8 @@
 const Youtube: React.FC = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green">
+    <div className="flex flex-col justify-center items-center w-full h-4/5 bg-green0">
       <iframe
-        className="aspect-video w-[65%] mt-[10vw]"
+        className="aspect-video w-[65%] mt-[5vw]"
         src="https://www.youtube.com/embed/H2t9jZBPlpA"
         title="SRE ITB Teaser"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
