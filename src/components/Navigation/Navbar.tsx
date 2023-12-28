@@ -184,7 +184,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="fixed flex top-0 w-full justify-center z-50 font-montserrat">
       <div
-        className={`${open ? 'h-screen' : ''} w-full h-[100px] flex`}
+        className={`${open ? 'h-screen' : ''} w-full h-[80px] flex`}
         style={{
           backgroundColor: isNavbarSolid ? '#2C9A7F' : 'rgba(0, 0, 0, 0)',
           transition: 'background-color 0.3s ease'
@@ -195,14 +195,14 @@ const Navbar: React.FC = () => {
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
         />
-        <div className="w-[90px] ml-[4vw] flex items-center">
+        <div className="w-[70px] sm:w-[90px] ml-[4vw] flex items-center">
           <Image src={Logo} alt="logo" />
         </div>
         <div className="flex fixed z-20 w-full justify-end">
           <div
             className={`${
               open ? 'fixed right-0' : ''
-            } right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden mt-[40px]`}
+            } right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden mt-[30px]`}
             onClick={() => {
               setOpen(!open)
             }}>
@@ -224,7 +224,7 @@ const Navbar: React.FC = () => {
           </div>
           <div className="hidden lg:flex">
             {MENU_LIST.map((menu, idx) => (
-              <div key={idx} className="relative inline-flex items-center mt-[3px]">
+              <div key={idx} className="relative inline-flex items-center mt-[-7px]">
                 <a
                   className={`${'active px-6 mx-2 py-8'} ${
                     menu.contents ? 'peer' : 'inline-block'

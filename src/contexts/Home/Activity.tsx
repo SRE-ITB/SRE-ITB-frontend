@@ -60,12 +60,12 @@ const Activity = (): JSX.Element => {
       <p className="text-transparent font-[Montserrat-ExtraBold] bg-clip-text bg-gradient-to-r from-green1 to-green8 text-[24px] md:text-[36px] xl:text-[48px] w-[320px] md:w-[500px] xl:w-[823px]">
         WHAT WILL WE DO AT SRE ITB?
       </p>
-      <div className="mt-[20px] h-[5px] w-[125px] rounded-full bg-gradient-to-r from-green1 to-green8"></div>
+      <div className="mt-[20px] h-[5px] xl:h-[10px] w-[125px] rounded-full bg-gradient-to-r from-green1 to-green8"></div>
       <br />
-      <div className="mt-[50px] mb-[5vw]">
+      <div className="mt-[5vw] mb-[7vw]">
         <Carousel contents={contents} />
       </div>
-      <button className="border-[2px] border-green5 bg-white hover:bg-green5 rounded-full text-green5 duration-75 hover:text-white font-[Montserrat-Bold] w-[275px] md:w-[325px] xl:w-[400px] h-[50px] text-[16px] md:text-[18px] xl:text-[20px]">
+      <button className="border-[2px] border-green5 bg-white hover:bg-green5 rounded-full text-green5 duration-75 hover:text-white font-[Montserrat-Bold] w-[275px] md:w-[325px] xl:w-[400px] h-[50px] text-[16px] md:text-[18px] xl:text-[20px] mb-[5vw]">
         See More of Our Activities
       </button>
     </div>
