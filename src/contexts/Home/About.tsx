@@ -34,8 +34,8 @@ const Description = (): JSX.Element => {
           opacity: isInView ? 1 : 0,
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
         }}>
-          <div className="flex flex-col text-center md:text-left font-extrabold">
-            <h3 className='leading-[40px] sm:leading-[50px]'>
+          <div className="flex flex-col text-center md:text-left">
+            <h3 className='leading-[40px] sm:leading-[50px] font-montserrat font-extrabold'>
               <span className="text-green2 text-[32px] xl:text-[48px]">
                 ABOUT
               </span>

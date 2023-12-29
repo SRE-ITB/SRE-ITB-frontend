@@ -5,7 +5,7 @@ import Map from '@src/assets/AssetsV2/LandingPage/SreMap.png'
 
 const HomeBanner = (): JSX.Element => {
   return (
-    <div className='bg-gradient h-screen md:h-fit flex items-center justify-center'>
+    <div className='mb-12 bg-gradient h-90vh md:h-fit flex items-center justify-center'>
       <div className='flex flex-col md:flex-row-reverse md:justify-center w-full justify-start gap-y-8 items-start md:items-center py-[50px] md:py-[80px]'>
         <div className='md:w-3/4 w-full items-center flex justify-center relative'>
           <div

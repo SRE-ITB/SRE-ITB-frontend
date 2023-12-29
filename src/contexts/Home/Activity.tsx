@@ -57,7 +57,7 @@ const Activity = (): JSX.Element => {
 
   return (
     <div className="flex flex-col items-center justify-center text-center overflow-x-hidden py-[10vw] font-montserrat">
-      <p className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-green1 to-green8 text-[24px] md:text-[36px] xl:text-[48px] w-[320px] md:w-[500px] xl:w-[823px]">
+      <p className="text-transparent font-black bg-clip-text bg-gradient-to-r from-green1 to-green8 text-[24px] md:text-[36px] xl:text-[48px] w-[320px] md:w-[500px] xl:w-[823px]">
         WHAT WILL WE DO AT SRE ITB?
       </p>
       <div className="mt-[20px] h-[5px] xl:h-[10px] w-[125px] rounded-full bg-gradient-to-r from-green1 to-green8"></div>
