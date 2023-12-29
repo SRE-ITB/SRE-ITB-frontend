@@ -13,18 +13,22 @@ const Jumbotron = (): JSX.Element => {
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
       <div className='relative w-full h-full' style={backgroundImageStyle}>
-        <div className='absolute inset-0 flex flex-col items-center justify-center mt-[70px]'>
-          <div className='font-[OpenSans-Bold] text-center text-white'>
-            <h1 className='text-[50px] sm:text-[60px] font-extrabold mx-[50px] leading-[60px]' style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
-              Society Of Renewable Energy
+        <div className='w-full h-full opacity-75 bg-[#046669]'></div>
+        <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[200px]'>
+          <div className='font-montserrat text-center md:text-left text-white'>
+            <h1 className='italic xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px]'>
+              Society Of<br />
+              Renewable Energy
             </h1>
-            <h1 className='font-[OpenSans-Regular] text-[20px] sm:text-[30px] mx-[50px] mt-[20px]' style={{ filter: 'drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.25))' }}>
+            <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px]'>
               Institut Teknologi Bandung
-            </h1>
+            </h2>
+            <h3 className='italic font-normal text-[18px] mt-[30px]'>
+              #RElevatingSREITB
+            </h3>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJoGWnY4bzPAk-bNoB6wXIWBgcMNWxgoPUSl1KSbwZsb4-Sw/viewform" target="_blank" rel="noopener noreferrer">
               <button
-                className='mt-[200px] bg-[#FFFFFF] text-[#169470] text-[25px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
-                style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}
+                className='font-extrabold mt-[50px] outline outline-2 text-[#FFFFFF] xl:text-[24px] md:text-[22px] text-[20px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
               >
                 Join Us
               </button>
