@@ -22,7 +22,7 @@ const Description = (): JSX.Element => {
             alt="earth-icon"
             className="w-[225px] xl:w-[350px] h-[225px] xl:h-[350px]"
           />
-          <h1 className="absolute text-[16px] md:text-[25px] xl:text-[40px] top-10 w-fit py-[10px] px-[6vw] sm:px-[15vw] rounded-[10px] flex justify-center items-center font-[Montserrat-ExtraBold] bg-gradient-to-r from-green1 to-green8 text-center text-white">
+          <h1 className="absolute text-[16px] md:text-[25px] xl:text-[40px] top-10 w-fit py-[10px] px-[6vw] sm:px-[15vw] rounded-[10px] flex justify-center items-center font-bold bg-gradient-to-r from-green1 to-green8 text-center text-white">
             SOCIETY OF RENEWABLE ENERGY
           </h1>
       </div>
@@ -34,7 +34,7 @@ const Description = (): JSX.Element => {
           opacity: isInView ? 1 : 0,
           transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
         }}>
-          <div className="flex flex-col text-center md:text-left font-[Montserrat-ExtraBold]">
+          <div className="flex flex-col text-center md:text-left font-extrabold">
             <h3 className='leading-[40px] sm:leading-[50px]'>
               <span className="text-green2 text-[32px] xl:text-[48px]">
                 ABOUT
@@ -57,14 +57,14 @@ const Description = (): JSX.Element => {
             opacity: isInView ? 1 : 0,
             transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s'
           }}>
-            <span className="text-transparent font-[Montserrat-Bold] bg-clip-text bg-gradient-to-r from-green1 to-green8">
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-green1 to-green8">
               Society of Renewable Energy (SRE)&nbsp;
             </span>
             is a student-led organization that aims to spark student’s role in
             the field of new and renewable energy.
             <br />
             <br />
-            <span className="text-transparent font-[Montserrat-Bold] bg-clip-text bg-gradient-to-r from-green1 to-green8">
+            <span className="text-transparent font-bold bg-clip-text bg-gradient-to-r from-green1 to-green8">
               SRE Institut Teknologi Bandung
             </span>
             , the first SRE student chapter, was born in 2019 to accelerate

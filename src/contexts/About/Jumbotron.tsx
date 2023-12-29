@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import Header from '@src/assets/Images/Jumbotron/AboutUs.webp'
 
 const Jumbotron = (): JSX.Element => {
@@ -20,18 +21,38 @@ const Jumbotron = (): JSX.Element => {
     }
   }
 
+  const [isWideScreen, setIsWideScreen] = useState(false)
+  useEffect(() => {
+    function handleResize (): void {
+      setIsWideScreen(window.innerWidth > 540)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
       <div className='relative w-full h-full' style={backgroundImageStyle}>
         <div className='w-full h-full opacity-50 bg-[#000000]'></div>
-        <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[200px]'>
-          <div className='font-montserrat text-center md:text-left text-white'>
+        <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
+          <div className='font-montserrat text-center md:text-left text-white sm:px-0 px-[6vw]'>
             <h1 className='italic xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px]'>
               About Us
             </h1>
             <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px]'>
-              A youth organization that focused in<br />
-              Renewable Energy sector.
+              {isWideScreen
+                ? (
+                <>
+                  A youth organization that focused in<br />
+                  Renewable Energy sector.
+                </>
+                  )
+                : (
+                    'A youth organization that focused in Renewable Energy sector.'
+                  )}
             </h2>
             <h3 className='italic font-normal text-[18px] mt-[30px]'>
               #RElevatingSREITB
