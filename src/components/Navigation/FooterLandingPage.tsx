@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Youtube from '@src/contexts/Home/Youtube'
+import Youtube from '@src/components/Navigation/Youtube'
 
 import FooterImage from '@src/assets/AssetsV2/FooterIllustrationDesktop.svg'
 import logo from '@src/assets/Images/Logo/whiteLogo.webp'
