@@ -10,7 +10,7 @@ const HomeCard: React.FC<{ image: any; title: string; desc: string }> = ({
 }) => {
   return (
     <div
-      className="relative bg-gradient-to-r from-green5 to-green8 w-auto h-[500px] rounded-xl overflow-hidden mb-[10px] mx-[5%]"
+      className="relative bg-gradient-to-r from-green5 to-green8 w-auto h-[500px] rounded-xl overflow-hidden mb-[10px] mx-[5%] font-montserrat"
       style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
       <div className="h-[350px] relative">
         <Image
@@ -22,10 +22,10 @@ const HomeCard: React.FC<{ image: any; title: string; desc: string }> = ({
         />
       </div>
       <div className="h-[130px] w-full px-4 flex flex-col items-center justify-center">
-        <h3 className="text-white text-xl font-semibold font-[Montserrat-Bold] mb-[10px]">
+        <h3 className="text-white text-xl font-bold mb-[10px]">
           {title}
         </h3>
-        <h4 className="text-white font-[Montserrat-Medium]">{desc}</h4>
+        <h4 className="text-white">{desc}</h4>
       </div>
     </div>
   )
