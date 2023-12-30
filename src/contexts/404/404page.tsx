@@ -1,34 +1,47 @@
-import React from 'react'
-import tree from '@src/assets/Images/404Page/forest.png'
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import plant from '@src/assets/Images/404Page/plant.png'
 
 export default function ErrorPage (): JSX.Element {
+  const [isWideScreen, setIsWideScreen] = useState(false)
+  useEffect(() => {
+    function handleResize (): void {
+      setIsWideScreen(window.innerWidth > 640)
+    }
+    window.addEventListener('resize', handleResize)
+    handleResize()
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   return (
-    <div className="h-screen text-center relative justify-center items-center flex flex-col">
-      <div className="flex text-[10vw] font-black">
-        <img
-          src={tree.src}
-          alt="tree-icon"
-          className="w-[30vw] mx-auto"
-        />
-        <div className="flex flex-col justify-center ml-[3vw]">
-          <div className="font-[inter] p-1 xl:p-4 font-black">
-            <span className="text-greenSRE100">4</span>
-            <span className="text-greenSRE200">0</span>
-            <span className="text-greenSRE100">4</span>
-          </div>
-          <div className="text-[1.3vw] italic font-semibold font-[inter] text-left ml-4">
-            We can&apos;t find the page that you&apos;re <br /> looking for...
-          </div>
-          <a
-            href="/"
-            className="font-[Montserrat-Bold] bg-[#FFFFFF] text-[#169470] text-[2vw] px-[30px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer mt-4 ml-4"
-            style={{
-              filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))'
-            }}
-          >
-            ← Back to Home
-          </a>
+    <div className="h-screen relative items-center sm:items-start flex flex-col sm:flex-row font-montserrat">
+      <div className='w-[80vw] justify-center flex sm:w-[45vw] mt-[75px]'>
+        <Image src={plant} alt="plant" className="" />
+      </div>
+      <div className='flex flex-col items-center sm:items-start sm:w-[55vw] sm:h-screen sm:justify-center'>
+        <div className='text-center sm:text-left px-[5vw] sm:px-0 sm:pr-[5vw]'>
+          <h1 className="text-[30px] md:text-[35px] xl:text-[40px] font-bold font-gradient">
+            {isWideScreen
+              ? (
+                <>
+                  Page
+                  <br />
+                  Not Found
+                </>
+                )
+              : (
+                <>
+                  Page Not Found
+                </>
+                )}
+          </h1>
+          <p className="text-[16px] md:text-[18px] xl:text-[20px] mt-[2vw]">Oops! It looks like you&apos;ve stumbled upon a page that doesn&apos;t exist. Maybe the page has been moved, deleted, or you entered the wrong URL.</p>
         </div>
+        <button className="mt-[5vw] border-[2px] font-extrabold border-green5 bg-white hover:bg-green5 rounded-full text-green5 duration-75 hover:text-white w-[275px] md:w-[325px] xl:w-[400px] h-[50px] text-[16px] md:text-[18px] xl:text-[20px]" onClick={() => { window.location.href = '/' }}>
+          Go Home
+        </button>
       </div>
     </div>
   )
