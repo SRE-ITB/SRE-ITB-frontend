@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Header from '@src/assets/Images/Jumbotron/AboutUs.webp'
 
-const Jumbotron = (): JSX.Element => {
+const Hero = (): JSX.Element => {
   const backgroundImageStyle = {
     backgroundImage: `url(${Header.src})`,
     backgroundSize: 'cover',
@@ -69,4 +69,4 @@ const Jumbotron = (): JSX.Element => {
   )
 }
 
-export default Jumbotron
+export default Hero

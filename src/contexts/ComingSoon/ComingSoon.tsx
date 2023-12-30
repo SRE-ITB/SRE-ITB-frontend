@@ -1,15 +1,38 @@
 import React from 'react'
-import landscape from '@src/assets/Images/Comingsoon/landscape.png'
 
-export default function Comingsoon (): JSX.Element {
+import Header from '@src/assets/Images/Comingsoon/header.webp'
+import leaf from '@src/assets/Images/Comingsoon/leaf.png'
+
+const Hero = (): JSX.Element => {
+  const backgroundImageStyle = {
+    backgroundImage: `url(${Header.src})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    width: '100vw',
+    height: '100vh'
+  }
+
   return (
-    <div className='h-screen text-center relative justify-center items-center flex flex-col'>
-      <img src={landscape.src} alt='tree-icon' className='w-[13vw] mx-auto xl:mt-[120px]'/>
-      <div className="flex font-[Montserrat-Bold] text-[5vw] font-black">
-        <h1 className='p-1 xl:p-4 text-greenSRE100 ml-auto'>COMING</h1>
-        <h1 className='p-1 xl:p-4 text-greenSRE200 mr-auto'>SOON</h1>
+    <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
+      <div className='relative w-full h-full' style={backgroundImageStyle}>
+        <div className='w-full h-full opacity-50 bg-[#000000]'></div>
+        <div className='absolute inset-0 justify-center items-center flex flex-col'>
+          <div className='font-montserrat text-center text-white sm:px-0 px-[6vw]'>
+            <h1 className='xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px] text-shadow white-text-shadow'>
+              Exciting News Await
+            </h1>
+            <h2 className='xl:text-[22px] md:text-[19px] text-[15px] px-[3vw] sm:px-[10vw] mt-[2.5vw]'>
+              We&apos;re cooking up something extraordinary behind the scenes. Stay tuned for a grand reveal that will redefine your experience. Our team is working tirelessly to bring you innovation, creativity, and a touch of magic.
+            </h2>
+            <div className="translate-y-[10vw] flex justify-center">
+              <img src={leaf.src} alt="leaf-icon" className="w-[100px] h-[100px]" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className='border-y-greenSRE200 border-x-0 border-[0.5vw] w-[60vw] mx-auto text-[2vw] italic font-semibold leading-[3vw] py-[10px]'>Stay in touch! Something exciting is coming your way.</div>
     </div>
   )
 }
+
+export default Hero
