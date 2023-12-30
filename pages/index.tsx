@@ -4,7 +4,7 @@ import Hero from '@src/contexts/Home/Hero'
 import About from '@src/contexts/Home/About'
 import HomeBanner from '@src/components/Banner/HomeBanner'
 import Activity from '@src/contexts/Home/Activity'
-import FooterLandingPage from '@src/components/Navigation/FooterLandingPage'
+import Footer from '@src/components/Navigation/Footer'
 
 const Landing: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const Landing: React.FC = () => {
       <About />
       <HomeBanner />
       <Activity />
-      <FooterLandingPage />
+      <Footer />
     </SEO>
   )
 }
