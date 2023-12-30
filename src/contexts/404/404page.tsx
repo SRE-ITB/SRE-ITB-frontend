@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import plant from '@src/assets/Images/404Page/plant.png'
+import plant from '@src/assets/AssetsV2/NotFound/Tanaman.svg'
 
 export default function ErrorPage (): JSX.Element {
   const [isWideScreen, setIsWideScreen] = useState(false)
