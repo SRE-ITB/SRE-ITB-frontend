@@ -1,6 +1,6 @@
 const AboutUsBanner = (): JSX.Element => {
   return (
-    <div className='bg-gradient h-screen sm:h-[550px] flex items-center justify-center overflow-y-hidden'>
+    <div className='bg-gradient h-[550px] flex items-center justify-center overflow-y-hidden'>
       <h1
         className='overflow-x-hidden absolute text-center font-montserrat text-stroke-white text-transparent font-bold white-text-shadow opacity-25 text-[60px] md:text-[75px] lg:text-[90px] max-w-full px-4'
       >
