@@ -3,8 +3,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/About/Hero'
 import VisionMission from '@src/contexts/About/VisionMission'
 import AboutUsBanner from '@src/components/Banner/AboutUsBanner'
-// import BehindSRE from '@src/contexts/About/BehindSRE'
-// import OurTeam from '@src/contexts/About/OurTeam'
+import BehindSRE from '@src/contexts/About/BehindSRE'
 import Footer from '@src/components/Navigation/Footer'
 
 const Landing: React.FC = () => {
@@ -14,8 +13,7 @@ const Landing: React.FC = () => {
       <Hero />
       <VisionMission />
       <AboutUsBanner />
-      {/* <BehindSRE />
-      <OurTeam /> */}
+      <BehindSRE />
       <Footer />
     </SEO>
   )
