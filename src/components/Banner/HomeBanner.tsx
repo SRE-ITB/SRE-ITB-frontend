@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 import LampuTangan from '@src/assets/AssetsV2/LampuTangan.svg'
-import Map from '@src/assets/AssetsV2/LandingPage/SreMap.png'
+import Map from '@src/assets/AssetsV2/LandingPage/SreMap.svg'
 
 const HomeBanner = (): JSX.Element => {
   return (
