@@ -29,12 +29,11 @@ const Hero = (): JSX.Element => {
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
       <div className='relative w-full h-full'>
         <Image
-          src={Header.src}
+          src={Header}
           alt='About Us'
           layout='fill'
           objectFit='cover'
           placeholder='blur'
-          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60JvwAAAABJRU5ErkJggg=='
         />
         <div className='w-full h-full opacity-50 bg-[#000000]'></div>
         <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
