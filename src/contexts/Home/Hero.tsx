@@ -1,18 +1,18 @@
 import Header from '@src/assets/Images/Jumbotron/HeaderEnh.webp'
+import Image from 'next/image'
 
 const Hero = (): JSX.Element => {
-  const backgroundImageStyle = {
-    backgroundImage: `url(${Header.src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    width: '100vw',
-    height: '100vh'
-  }
-
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
-      <div className='relative w-full h-full' style={backgroundImageStyle}>
+      <div className='relative w-full h-full'>
+        <Image
+          src={Header}
+          alt='Header'
+          placeholder='blur'
+          layout='fill'
+          objectFit='cover'
+          className='z-[-50]'
+        />
         <div className='w-full h-full opacity-75 bg-[#046669]'></div>
         <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
           <div className='font-montserrat text-center md:text-left text-white relative'>

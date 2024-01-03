@@ -1,12 +1,10 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
-/* eslint-disable @typescript-eslint/member-delimiter-style */
 import React from 'react'
 import Image from 'next/image'
 
-const HomeCard: React.FC<{ image: any; title: string; desc: string }> = ({
+const HomeCard: React.FC<{ image: any, title: string, desc: string }> = ({
   image,
   title,
-  desc,
+  desc
 }) => {
   return (
     <div
@@ -16,6 +14,7 @@ const HomeCard: React.FC<{ image: any; title: string; desc: string }> = ({
         <Image
           src={image}
           alt={title}
+          placeholder='blur'
           layout="fill"
           objectFit="cover"
           className=""

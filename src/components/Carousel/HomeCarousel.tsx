@@ -9,7 +9,7 @@ import Card from '../Card/HomeCard'
 SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
-  image: string
+  image: any
   title: string
   desc: string
 }

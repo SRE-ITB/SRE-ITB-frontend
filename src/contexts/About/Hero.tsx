@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Header from '@src/assets/Images/Jumbotron/AboutUs.webp'
+import Image from 'next/image'
 
 const Hero = (): JSX.Element => {
-  const backgroundImageStyle = {
-    backgroundImage: `url(${Header.src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    width: '100vw',
-    height: '100vh'
-  }
-
   const handleScroll = (sectionId: string): void => {
     const section = document.getElementById(sectionId)
     if (section) {
@@ -35,7 +27,15 @@ const Hero = (): JSX.Element => {
 
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
-      <div className='relative w-full h-full' style={backgroundImageStyle}>
+      <div className='relative w-full h-full'>
+        <Image
+          src={Header.src}
+          alt='About Us'
+          layout='fill'
+          objectFit='cover'
+          placeholder='blur'
+          blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60JvwAAAABJRU5ErkJggg=='
+        />
         <div className='w-full h-full opacity-50 bg-[#000000]'></div>
         <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
           <div className='font-montserrat text-center md:text-left text-white sm:px-0 px-[6vw]'>
@@ -59,7 +59,8 @@ const Hero = (): JSX.Element => {
             </h3>
             <button
               className='font-extrabold mt-[50px] bg-[#169470] text-[#FFFFFF] xl:text-[24px] md:text-[22px] text-[20px] px-[50px] py-[5px] rounded-full hover:outline hover:outline-3 transition-all cursor-pointer'
-              onClick={() => handleScroll('about')}>
+              onClick={() => handleScroll('about')}
+            >
               See More
             </button>
           </div>

@@ -1,21 +1,20 @@
 import React from 'react'
+import Image from 'next/image'
 
 import Header from '@src/assets/Images/Comingsoon/header.webp'
 import leaf from '@src/assets/Images/Comingsoon/leaf.png'
 
 const Hero = (): JSX.Element => {
-  const backgroundImageStyle = {
-    backgroundImage: `url(${Header.src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    width: '100vw',
-    height: '100vh'
-  }
-
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
-      <div className='relative w-full h-full' style={backgroundImageStyle}>
+      <div className='relative w-full h-full'>
+        <Image
+          src={Header}
+          alt='Coming Soon'
+          layout='fill'
+          objectFit='cover'
+          placeholder='blur'
+        />
         <div className='w-full h-full opacity-50 bg-[#000000]'></div>
         <div className='absolute inset-0 justify-center items-center flex flex-col'>
           <div className='font-montserrat text-center text-white'>

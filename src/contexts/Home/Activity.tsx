@@ -14,42 +14,42 @@ import CompanyVisit from '@src/assets/Images/Carousel/CompanyVisit.webp'
 const Activity = (): JSX.Element => {
   const contents = [
     {
-      image: REview.src,
+      image: REview,
       title: 'REview',
       desc: 'Webinar series to learn the fundamental of renewable energy',
     },
     {
-      image: SocialProject.src,
+      image: SocialProject,
       title: 'Social Project',
       desc: 'A community service projecy to help disadvantages individuals',
     },
     {
-      image: REProject.src,
+      image: REProject,
       title: 'RE PRoject',
       desc: 'Renewable energy installation project',
     },
     {
-      image: CareerTalks.src,
+      image: CareerTalks,
       title: 'Career Talks',
       desc: 'Talk show with renewable enery expert regarding green jobs',
     },
     {
-      image: ExternalEvent.src,
+      image: ExternalEvent,
       title: 'External Event',
       desc: 'External events from SRE national where we can meet with other SRE chapter',
     },
     {
-      image: SkillTraining.src,
+      image: SkillTraining,
       title: 'Skill Training',
       desc: 'Soft skill workshop session as preparation before doing final project',
     },
     {
-      image: Gathering.src,
+      image: Gathering,
       title: 'Gathering',
       desc: 'One day event where members will get together and doing fun games',
     },
     {
-      image: CompanyVisit.src,
+      image: CompanyVisit,
       title: 'Company Visit',
       desc: 'One day visit to renewable energy company',
     },
