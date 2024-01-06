@@ -169,7 +169,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
 
   useEffect(() => {
     const handleScroll = (): void => {
-      if (window.scrollY > window.innerHeight - 90) {
+      if (window.scrollY !== 0) {
         setIsNavbarSolid(true)
       } else {
         setIsNavbarSolid(false)

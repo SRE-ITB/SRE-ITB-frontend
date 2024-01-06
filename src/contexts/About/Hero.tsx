@@ -7,7 +7,7 @@ const Hero = (): JSX.Element => {
     const section = document.getElementById(sectionId)
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 50,
+        top: section.offsetTop - 110,
         behavior: 'smooth'
       })
     }

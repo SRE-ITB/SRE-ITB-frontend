@@ -11,7 +11,7 @@ import circle2 from '@src/assets/AssetsV2/AboutUs/LingkaranKanan.svg'
 
 const VisionMission: React.FC = () => {
   return (
-    <div className='font-montserrat relative w-full'>
+    <div id="about" className='font-montserrat relative w-full'>
         <div className='relative m-[10vw] xl:m-[5vw] text-center xl:text-left'>
             <span className='text-[48px] xl:text-[60px] font-gradient font-extrabold'>VISION</span>
             <p className='text-[16px] xl:text-[20px] font-normal mt-[2vh]'><span className='font-gradient font-bold opacity-100'>SRE ITB as a renewable-energy-based community</span> that will accommodate youth&apos;s interests and maximize spanotential to generate real-world impact.</p>
