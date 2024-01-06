@@ -7,7 +7,7 @@ import Photo from '@src/assets/Images/Activity/TownHall.webp'
 const Internal: React.FC = () => {
   const dummyArticles = [
     {
-      id: '1',
+      id: 1,
       thumbnail: Photo.src,
       title: 'Welcoming Party',
       // sesuain sama backend

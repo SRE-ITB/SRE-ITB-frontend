@@ -6,9 +6,11 @@ interface Documentation {
 }
 
 interface Activity {
+  id: number
   thumbnail: string
   title: string
   date: Date
+  caption: string
   description: string
   type: string
   documentation: Documentation[]
