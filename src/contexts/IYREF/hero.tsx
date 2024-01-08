@@ -26,7 +26,7 @@ const Hero = (): JSX.Element => {
             <div className="translate-y-[10vw] flex justify-center">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSeJoGWnY4bzPAk-bNoB6wXIWBgcMNWxgoPUSl1KSbwZsb4-Sw/viewform" target="_blank" rel="noopener noreferrer">
                 <button
-                className='font-bold mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[24px] md:text-[22px] text-[20px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
+                className='font-normal mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
                 >
                   Register
                 </button>
