@@ -6,6 +6,7 @@ import PropTypes from 'prop-types'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
 import Logo from '@src/assets/AssetsV2/Navbar/logo.png'
+import IyrefLogo from '@src/assets/AssetsV2/Navbar/iyref.png'
 
 interface Menu {
   text: string
@@ -198,9 +199,15 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
         />
-        <div className="w-[70px] sm:w-[90px] ml-[4vw] flex items-center">
-          <Image src={Logo} alt="logo" />
-        </div>
+          <div className="w-[70px] sm:w-[90px] ml-[30px] sm:ml-[5vw] flex items-center">
+          {page === 'iyref'
+            ? (
+              <Image src={IyrefLogo} alt="IYREF logo" />
+              )
+            : (
+              <Image src={Logo} alt="SRE logo" />
+              )}
+          </div>
         <div className="flex fixed z-20 w-full justify-end">
           <div
             className={`${

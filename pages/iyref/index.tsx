@@ -1,12 +1,12 @@
 import SEO from '@src/components/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import Comingsoon from '@src/contexts/ComingSoon/ComingSoon'
+import Hero from '@src/contexts/IYREF/hero'
 
 const Internal: React.FC = () => {
   return (
     <SEO title="SRE ITB | IYREF">
       <Navbar />
-      <Comingsoon />
+      <Hero />
     </SEO>
   )
 }
