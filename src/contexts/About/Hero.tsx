@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Header from '@src/assets/Images/Jumbotron/AboutUs.webp'
 import Image from 'next/image'
+
+import Header from '@src/assets/Images/About/Hero/Header.webp'
 
 const Hero = (): JSX.Element => {
   const handleScroll = (sectionId: string): void => {

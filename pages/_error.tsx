@@ -1,5 +1,5 @@
 import ErrorPage from '@src/contexts/404/404page'
-import SEO from '@src/components/SEO'
+import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Footer from '@src/components/Navigation/Footer'
 

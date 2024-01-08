@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
-import Logo from '@src/assets/AssetsV2/Navbar/logo.png'
-import IyrefLogo from '@src/assets/AssetsV2/Navbar/iyref.png'
+import sreLogo from '@src/assets/Images/Navigation/Navbar/sreLogo.png'
+import IyrefLogo from '@src/assets/Images/Navigation/Navbar/iyrefLogo.png'
 
 interface Menu {
   text: string
@@ -205,7 +205,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
               <Image src={IyrefLogo} alt="IYREF logo" />
               )
             : (
-              <Image src={Logo} alt="SRE logo" />
+              <Image src={sreLogo} alt="SRE logo" />
               )}
           </div>
         <div className="flex fixed z-20 w-full justify-end">

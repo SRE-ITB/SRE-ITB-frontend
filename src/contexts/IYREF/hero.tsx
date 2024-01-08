@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Header from '@src/assets/IYREF/windmill.webp'
+import Header from '@src/assets/Images/IYREF/Hero/Header.webp'
 
 const Hero = (): JSX.Element => {
   return (
@@ -9,7 +9,7 @@ const Hero = (): JSX.Element => {
       <div className='relative w-full h-full'>
         <Image
           src={Header}
-          alt='Windmill'
+          alt='Header'
           layout='fill'
           objectFit='cover'
           placeholder='blur'

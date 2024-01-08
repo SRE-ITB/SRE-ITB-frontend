@@ -1,4 +1,4 @@
-import SEO from '@src/components/SEO'
+import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 // import Articles from '@src/contexts/Activity/Article'
 // import Photo from '@src/assets/Images/Activity/TownHall.webp'

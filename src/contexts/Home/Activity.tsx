@@ -2,14 +2,14 @@
 import Carousel from '@src/components/Carousel/HomeCarousel'
 
 // Assets
-import ExternalEvent from '@src/assets/Images/Carousel/ExternalEvents.webp'
-import CareerTalks from '@src/assets/Images/Carousel/CareerTalks.webp'
-import REProject from '@src/assets/Images/Carousel/REProject.webp'
-import REview from '@src/assets/Images/Carousel/REview.webp'
-import SocialProject from '@src/assets/Images/Carousel/SocialProject.webp'
-import Gathering from '@src/assets/Images/Carousel/Gathering.webp'
-import SkillTraining from '@src/assets/Images/Carousel/SkillTraining.webp'
-import CompanyVisit from '@src/assets/Images/Carousel/CompanyVisit.webp'
+import ExternalEvent from '@src/assets/Images/Home/Activity/ExternalEvents.webp'
+import CareerTalks from '@src/assets/Images/Home/Activity/CareerTalks.webp'
+import REProject from '@src/assets/Images/Home/Activity/REProject.webp'
+import REview from '@src/assets/Images/Home/Activity/REview.webp'
+import SocialProject from '@src/assets/Images/Home/Activity/SocialProject.webp'
+import Gathering from '@src/assets/Images/Home/Activity/Gathering.webp'
+import SkillTraining from '@src/assets/Images/Home/Activity/SkillTraining.webp'
+import CompanyVisit from '@src/assets/Images/Home/Activity/CompanyVisit.webp'
 
 const Activity = (): JSX.Element => {
   const contents = [

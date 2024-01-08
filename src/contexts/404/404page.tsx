@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
-import plant from '@src/assets/AssetsV2/NotFound/Tanaman.svg'
 
-export default function ErrorPage (): JSX.Element {
+import Plant from '@src/assets/Images/Illustration/Plant.svg'
+
+const NotFound = (): JSX.Element => {
   const [isWideScreen, setIsWideScreen] = useState(false)
   useEffect(() => {
     function handleResize (): void {
@@ -18,7 +19,7 @@ export default function ErrorPage (): JSX.Element {
   return (
     <div className="h-screen relative items-center sm:items-start flex flex-col sm:flex-row font-montserrat">
       <div className='w-[80vw] justify-center flex sm:w-[45vw] mt-[75px]'>
-        <Image src={plant} alt="plant" className="" />
+        <Image src={Plant} alt="plant" className="" />
       </div>
       <div className='flex flex-col items-center sm:items-start sm:w-[55vw] sm:h-screen sm:justify-center'>
         <div className='text-center sm:text-left px-[5vw] sm:px-0 sm:pr-[5vw]'>
@@ -46,3 +47,5 @@ export default function ErrorPage (): JSX.Element {
     </div>
   )
 }
+
+export default NotFound

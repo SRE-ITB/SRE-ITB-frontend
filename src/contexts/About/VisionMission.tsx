@@ -1,15 +1,15 @@
 import Image from 'next/image'
 
-import leaf from '@src/assets/Images/Description/leaf.png'
-import hand from '@src/assets/AssetsV2/LampuTangan.svg'
-import happy from '@src/assets/AssetsV2/emoji-happy.svg'
-import flash from '@src/assets/AssetsV2/flash.svg'
-import star from '@src/assets/AssetsV2/medal-star.svg'
-import share from '@src/assets/AssetsV2/share.svg'
-import circle1 from '@src/assets/AssetsV2/AboutUs/LingkaranKiri.svg'
-import circle2 from '@src/assets/AssetsV2/AboutUs/LingkaranKanan.svg'
+import Leaf from '@src/assets/Images/Illustration/Leaf.png'
+import Bohlm from '@src/assets/Images/Illustration/Bohlm.svg'
+import Happy from '@src/assets/Images/About/VissionMission/Happy.svg'
+import Flash from '@src/assets/Images/About/VissionMission/Flash.svg'
+import Star from '@src/assets/Images/About/VissionMission/Star.svg'
+import Share from '@src/assets/Images/About/VissionMission/Share.svg'
+import Circle1 from '@src/assets/Images/About/VissionMission/Circle1.svg'
+import Circle2 from '@src/assets/Images/About/VissionMission/Circle2.svg'
 
-const VisionMission: React.FC = () => {
+const VisionMission = (): JSX.Element => {
   return (
     <div id="about" className='font-montserrat relative w-full'>
         <div className='relative m-[10vw] xl:m-[5vw] text-center xl:text-left'>
@@ -25,48 +25,48 @@ const VisionMission: React.FC = () => {
               </div>
               <div className='hidden xl:block absolute left-0 mt-[50px]'>
                 <Image
-                  src={hand}
-                  alt="Lampu SRE"
+                  src={Bohlm}
+                  alt="bohlm"
                 />
               </div>
           </div>
           <div className='xl:w-full px-[6vw] xl:px-[5vw] xl:flex xl:flex-col xl:items-end text-[15px] sm:text-[17px]'>
             <div className='xl:translate-x-[-30%] xl:w-[600px] xl:mx-0 flex py-2 pr-4 border-solid border-2 border-green8 bg-white rounded-full mx-auto mb-[20px]'>
-              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={flash.src} alt='flash-logo' className='w-[60px]'></img></div>
+              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={Flash.src} alt='flash-logo' className='w-[60px]'></img></div>
               <p className='align-middle items-center'>Enhancing renewable energy knowledge through basic and advance learning program</p>
             </div>
             <div className='hidden xl:block absolute translate-x-[-725px] translate-y-[75px] z-20'>
               <Image
-                src={circle1}
+                src={Circle1}
                 alt="circle1"
               />
             </div>
             <div className='xl:translate-x-[-20%] xl:w-[600px] xl:mx-0 flex py-2 pr-4 border-solid border-2 border-green8 bg-white rounded-full mx-auto mb-[20px]'>
-              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={star.src} alt='star-logo' className='w-[60px]'></img></div>
+              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={Star.src} alt='star-logo' className='w-[60px]'></img></div>
               <p className='align-middle items-center'>Providing exclusive portfolio through hands-on project based on each individuals interests</p>
             </div>
             <div className='hidden xl:block absolute translate-x-[-70px] translate-y-[115px] z-20'>
               <Image
-                src={circle2}
+                src={Circle2}
                 alt="circle2"
               />
             </div>
             <div className='xl:translate-x-[-10%] xl:w-[600px] xl:mx-0 flex py-2 pr-4 border-solid border-2 border-green8 bg-white rounded-full mx-auto mb-[20px]'>
-              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={happy.src} alt='happy-logo' className='w-[60px]'></img></div>
+              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={Happy.src} alt='happy-logo' className='w-[60px]'></img></div>
               <p className='align-middle items-center'>Maximizing individuals skills through various projects and development programs</p>
             </div>
             <div className='hidden xl:block absolute translate-x-[-605px] translate-y-[258px] z-20'>
               <Image
-                src={circle1}
+                src={Circle1}
                 alt="circle1"
               />
             </div>
             <div className='xl:w-[600px] xl:mx-0 flex py-2 pr-4 border-solid border-2 border-green8 bg-white rounded-full mx-auto'>
-              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={share.src} alt='share-logo' className='w-[60px]'></img></div>
+              <div className='my-auto mx-[15px] xl:mx-[25px]'><img src={Share.src} alt='share-logo' className='w-[60px]'></img></div>
               <p className='align-middle items-center'>Building and maintaining supportive internal relationship to generate significant output</p>
             </div>
             <div className='flex'>
-              <div className='mx-auto'><img src={leaf.src} alt="leaf-icon" className='w-[100px] h-[100px]'></img></div>
+              <div className='mx-auto'><img src={Leaf.src} alt="leaf-icon" className='w-[100px] h-[100px]'></img></div>
             </div>
           </div>
         </div>

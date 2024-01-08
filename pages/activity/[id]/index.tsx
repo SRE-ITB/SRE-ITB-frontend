@@ -1,8 +1,9 @@
-import SEO from '@src/components/SEO'
+import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Articles from '@src/contexts/Activity/Article'
 import Footer from '@src/components/Navigation/Footer'
-import Photo from '@src/assets/Images/Activity/TownHall.webp'
+
+import Photo from '@src/assets/Images/Activity/Dummy/TownHall.webp'
 
 const Internal: React.FC = () => {
   const dummyArticles = [

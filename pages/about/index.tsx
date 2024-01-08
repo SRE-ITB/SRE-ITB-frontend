@@ -1,22 +1,22 @@
-import SEO from '@src/components/SEO'
+import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/About/Hero'
 import VisionMission from '@src/contexts/About/VisionMission'
-import AboutUsBanner from '@src/components/Banner/AboutUsBanner'
+import Banner from '@src/contexts/About/Banner'
 import BehindSRE from '@src/contexts/About/BehindSRE'
 import Footer from '@src/components/Navigation/Footer'
 
-const Landing: React.FC = () => {
+const AboutPage: React.FC = () => {
   return (
     <SEO title="SRE ITB | About Us">
       <Navbar />
       <Hero />
       <VisionMission />
-      <AboutUsBanner />
+      <Banner />
       <BehindSRE />
       <Footer />
     </SEO>
   )
 }
 
-export default Landing
+export default AboutPage

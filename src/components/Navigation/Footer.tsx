@@ -3,13 +3,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import Youtube from '@src/components/Navigation/Youtube'
-import FooterImage from '@src/assets/AssetsV2/FooterIllustrationDesktop.svg'
-import logo from '@src/assets/Images/Logo/whiteLogo.webp'
-import instagram from '@src/assets/Images/Socmed/instagram.svg'
-import gmail from '@src/assets/Images/Socmed/gmail.svg'
-import linkedin from '@src/assets/Images/Socmed/linkedin.svg'
-import tiktok from '@src/assets/Images/Socmed/tiktok.svg'
-import youtube from '@src/assets/Images/Socmed/youtube.svg'
+
+import FooterImage from '@src/assets/Images/Navigation/Footer/FooterIllustration.svg'
+import sreLogo from '@src/assets/Images/Navigation/Footer/sreLogo.webp'
+import instagram from '@src/assets/Images/Navigation/Footer/instagram.svg'
+import gmail from '@src/assets/Images/Navigation/Footer/gmail.svg'
+import linkedin from '@src/assets/Images/Navigation/Footer/linkedin.svg'
+import tiktok from '@src/assets/Images/Navigation/Footer/tiktok.svg'
+import youtube from '@src/assets/Images/Navigation/Footer/youtube.svg'
 
 const Footer = (): JSX.Element => {
   interface Contact {
@@ -81,7 +82,7 @@ const Footer = (): JSX.Element => {
       <div className="w-full bg-green0">
         <div className="h-auto w-full flex flex-col justify-center items-center bg-green sm:justify-start sm:flex-row mb-8">
           <div className='sm:pl-8 sm:w-3/5'>
-            <img src={logo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
+            <img src={sreLogo.src} alt="logo" className="sm:h-[240px] sm:w-[290px] sm:px-0 px-[25%]" />
             <div className='font-montserrat text-white mb-[40px] mt-[-20px] text-center sm:text-left sm:ml-[57px] italic text-[20px]'>
               #EnergizingSREITB
             </div>

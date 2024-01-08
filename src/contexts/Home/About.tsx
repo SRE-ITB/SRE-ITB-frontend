@@ -2,10 +2,10 @@ import { useRef } from 'react'
 // import { useInView } from 'framer-motion'
 import Image from 'next/image'
 
-import earth from '@src/assets/Images/Description/earth.png'
-import leaf from '@src/assets/Images/Description/leaf.png'
+import Earth from '@src/assets/Images/Home/About/Earth.png'
+import Leaf from '@src/assets/Images/Illustration/Leaf.png'
 
-const Description = (): JSX.Element => {
+const About = (): JSX.Element => {
   const ref = useRef(null)
   // const isInView = useInView(ref, { once: true })
 
@@ -21,7 +21,7 @@ const Description = (): JSX.Element => {
         >
           <div className="w-[225px] xl:w-[350px] h-[225px] xl:h-[350px]">
             <Image
-              src={earth}
+              src={Earth}
               alt="earth-icon"
               layout="responsive"
               placeholder='blur'
@@ -83,10 +83,10 @@ const Description = (): JSX.Element => {
         </div>
       </div>
       <div className="relative w-full flex justify-center md:justify-end md:mr-[14vw]">
-        <img src={leaf.src} alt="leaf-icon" className="w-[80px] h-[80px]" />
+        <img src={Leaf.src} alt="leaf-icon" className="w-[80px] h-[80px]" />
       </div>
     </section>
   )
 }
 
-export default Description
+export default About

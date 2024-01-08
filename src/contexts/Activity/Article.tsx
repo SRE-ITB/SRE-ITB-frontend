@@ -1,4 +1,4 @@
-import leafBlack from '@src/assets/AssetsV2/DaunHitam.png'
+import Leaf from '@src/assets/Images/Illustration/LeafBlack.png'
 
 interface Documentation {
   title: string
@@ -19,7 +19,7 @@ interface Activity {
 const Articles = ({ thumbnail, title, date, description, type, documentation }: Activity): JSX.Element => {
   return (
     <div className='font-montserrat'>
-      <img src={thumbnail} alt='foto' className='w-full h-[27vw] sm:h-[17vw] object-cover' />
+      <img src={thumbnail} alt='thumbnail' className='w-full h-[27vw] sm:h-[17vw] object-cover' />
       <div className='absolute inset-0 bg-black opacity-50 w-full h-[27vw] sm:h-[17vw]'></div>
 
       <div className='py-[1.5vw] border-b-[0.2vw] flex px-[3vw] items-center text-[8px] sm:text-[15px] lg:text-[20px] font-light'>
@@ -42,7 +42,7 @@ const Articles = ({ thumbnail, title, date, description, type, documentation }: 
 
       <div className='px-[8vw] py-[5vw]'>
         <p className='text-[12px] sm:text-[17px] lg:text-[25px] text-justify indent-[35px] lg:indent-[70px]'>{description}</p>
-        <img src={leafBlack.src} alt='daun-hitam' className='mx-auto w-[10vw] mt-[5vw] col-start-2' />
+        <img src={Leaf.src} alt='leaf' className='mx-auto w-[10vw] mt-[5vw] col-start-2' />
       </div>
 
       <div className='w-full h-[0.3vw] bg-black opacity-10'></div>

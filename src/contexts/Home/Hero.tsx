@@ -1,5 +1,6 @@
-import Header from '@src/assets/Images/Jumbotron/HeaderEnh.webp'
 import Image from 'next/image'
+
+import Header from '@src/assets/Images/Home/Hero/Header.webp'
 
 const Hero = (): JSX.Element => {
   return (
@@ -7,7 +8,7 @@ const Hero = (): JSX.Element => {
       <div className='relative w-full h-full'>
         <Image
           src={Header}
-          alt='Header'
+          alt='header'
           placeholder='blur'
           layout='fill'
           objectFit='cover'

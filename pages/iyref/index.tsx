@@ -1,4 +1,4 @@
-import SEO from '@src/components/SEO'
+import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/IYREF/Hero'
 import Desc from '@src/contexts/IYREF/Desc'

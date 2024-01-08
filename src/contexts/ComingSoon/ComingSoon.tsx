@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Header from '@src/assets/Images/Comingsoon/header.webp'
-import leaf from '@src/assets/Images/Comingsoon/leaf.png'
+import Header from '@src/assets/Images/ComingSoon/Header.webp'
+import Leaf from '@src/assets/Images/Illustration/LeafWhite.png'
 
 const Hero = (): JSX.Element => {
   return (
@@ -10,7 +10,7 @@ const Hero = (): JSX.Element => {
       <div className='relative w-full h-full'>
         <Image
           src={Header}
-          alt='Coming Soon'
+          alt='Header'
           layout='fill'
           objectFit='cover'
           placeholder='blur'
@@ -25,7 +25,7 @@ const Hero = (): JSX.Element => {
               We&apos;re cooking up something extraordinary behind the scenes. Stay tuned for a grand reveal that will redefine your experience. Our team is working tirelessly to bring you innovation, creativity, and a touch of magic.
             </h2>
             <div className="translate-y-[10vw] flex justify-center">
-              <img src={leaf.src} alt="leaf-icon" className="w-[100px] h-[100px]" />
+              <img src={Leaf.src} alt="leaf-icon" className="w-[100px] h-[100px]" />
             </div>
           </div>
         </div>
