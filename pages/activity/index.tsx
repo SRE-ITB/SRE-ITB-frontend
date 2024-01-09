@@ -1,5 +1,7 @@
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
+import Hero from '@src/contexts/Activity/Hero'
+import InternalProgram from '@src/contexts/Activity/InternalProgram'
 // import Articles from '@src/contexts/Activity/Article'
 // import Photo from '@src/assets/Images/Activity/TownHall.webp'
 import Footer from '@src/components/Navigation/Footer'
@@ -28,6 +30,8 @@ const Internal: React.FC = () => {
       {/* {dummyArticles.map((article) => (
         <Articles key={article.id} {...article} />
       ))} */}
+      <Hero />
+      <InternalProgram />
       <Footer />
     </SEO>
   )
