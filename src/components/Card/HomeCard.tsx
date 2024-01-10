@@ -9,7 +9,8 @@ const HomeCard: React.FC<{ image: any, title: string, desc: string }> = ({
   return (
     <div
       className="relative bg-gradient-to-r from-green5 to-green8 w-auto h-[500px] rounded-xl overflow-hidden mb-[10px] mx-[5%] font-montserrat"
-      style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}>
+      // style={{ filter: 'drop-shadow(0px 5px 1px rgba(0, 0, 0, 0.25))' }}
+      >
       <div className="h-[350px] relative">
         <Image
           src={image}

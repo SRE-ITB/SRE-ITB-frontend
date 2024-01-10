@@ -56,8 +56,10 @@ const Footer = (): JSX.Element => {
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
 
+  const isActivityPage = router.pathname === '/activity'
+
   return (
-    <footer className="flex flex-col overflow-x-hidden">
+    <footer className={`flex flex-col overflow-x-hidden ${isActivityPage ? 'bg-[#F0F1F4]' : ''}`}>
       <div className='flex flex-col w-[101%]'>
         <Image
           src={FooterImage}
