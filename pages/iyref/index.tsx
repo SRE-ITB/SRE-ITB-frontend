@@ -3,6 +3,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/IYREF/Hero'
 import Desc from '@src/contexts/IYREF/Desc'
 import Session from '@src/contexts/IYREF/Session'
+import Topics from '@src/contexts/IYREF/Topics'
 
 const Internal: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const Internal: React.FC = () => {
       <Hero />
       <Desc />
       <Session />
+      <Topics />
     </SEO>
   )
 }
