@@ -3,6 +3,10 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/IYREF/Hero'
 import Desc from '@src/contexts/IYREF/Desc'
 import Session from '@src/contexts/IYREF/Session'
+import Submission from '@src/contexts/IYREF/Submission'
+import Time from '@src/contexts/IYREF/Time'
+import Speakers from '@src/contexts/IYREF/Speakers'
+import Footer from '@src/components/Navigation/Footer'
 
 const Internal: React.FC = () => {
   return (
@@ -11,6 +15,10 @@ const Internal: React.FC = () => {
       <Hero />
       <Desc />
       <Session />
+      <Submission />
+      <Time />
+      <Speakers />
+      <Footer />
     </SEO>
   )
 }
