@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-import Header from '@src/assets/Images/Activity/Hero/Header.webp'
+import Header from '@src/assets/Images/Activity/Hero/Header.png'
 
 const Hero = (): JSX.Element => {
   const handleScroll = (sectionId: string): void => {
@@ -31,7 +31,7 @@ const Hero = (): JSX.Element => {
       <div className='relative w-full h-full'>
         <Image
           src={Header}
-          alt='Our Activity'
+          alt='Our Program'
           layout='fill'
           objectFit='cover'
           placeholder='blur'
@@ -40,7 +40,7 @@ const Hero = (): JSX.Element => {
         <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
           <div className='font-montserrat text-center md:text-left text-white sm:px-0 px-[6vw]'>
             <h1 className='italic xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px]'>
-              Our Activity
+              Our Program
             </h1>
             <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px]'>
               {isWideScreen
