@@ -20,7 +20,7 @@ interface CarouselProps {
   contents: Content[]
 }
 
-const ActivityCarousel: React.FC<CarouselProps> = ({ contents }) => {
+const ActivityCarousel = ({ contents }: CarouselProps): JSX.Element => {
   const router = useRouter()
   const [slidesPerView, setSlidesPerView] = useState(3)
 

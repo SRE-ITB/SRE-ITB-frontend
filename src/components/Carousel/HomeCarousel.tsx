@@ -18,7 +18,7 @@ interface CarouselProps {
   contents: Content[]
 }
 
-const HomeCarousel: React.FC<CarouselProps> = ({ contents }) => {
+const HomeCarousel = ({ contents }: CarouselProps): JSX.Element => {
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   useEffect(() => {

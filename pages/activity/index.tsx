@@ -1,10 +1,8 @@
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/Activity/Hero'
-import InternalProgram from '@src/contexts/Activity/InternalProgram'
-import ExternalProgram from '@src/contexts/Activity/ExternalProgram'
-import LearningProgram from '@src/contexts/Activity/LearningProgram'
-import Project from '@src/contexts/Activity/project'
+import Programs from '@src/contexts/Activity/Programs'
+
 import InternalProgram1 from '@src/assets/Images/Activity/InternalProgram/welcomingParty.jpg'
 import ExternalProgram1 from '@src/assets/Images/Activity/ExternalProgram/Career talks (1).jpg'
 import ExternalProgram2 from '@src/assets/Images/Activity/ExternalProgram/visit to necsc (1).jpg'
@@ -33,7 +31,7 @@ import Footer from '@src/components/Navigation/Footer'
 //   }
 // ]
 
-const Internal: React.FC = () => {
+const Activity = (): JSX.Element => {
   const dummyArticles = [
     {
       id: 1,
@@ -278,19 +276,16 @@ const Internal: React.FC = () => {
 
   ]
   return (
-    <SEO title="SRE ITB | Latest Update">
+    <SEO title="SRE ITB | Activity">
       <Navbar />
       {/* {dummyArticles.map((article) => (
         <Articles key={article.id} {...article} />
       ))} */}
       <Hero />
-      <InternalProgram dummyArticles={dummyArticles} />
-      <ExternalProgram dummyArticles={dummyArticles} />
-      <LearningProgram dummyArticles={dummyArticles} />
-      <Project dummyArticles={dummyArticles} />
+      <Programs dummyArticles={dummyArticles} />
       <Footer />
     </SEO>
   )
 }
 
-export default Internal
+export default Activity

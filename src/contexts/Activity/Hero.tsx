@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-import Header from '@src/assets/Images/Activity/Hero/Header.png'
+import Header from '@src/assets/Images/Activity/Hero/Header.webp'
 
 const Hero = (): JSX.Element => {
   const handleScroll = (sectionId: string): void => {
     const section = document.getElementById(sectionId)
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 110,
+        top: section.offsetTop - 80,
         behavior: 'smooth'
       })
     }

@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import '@src/components/Carousel/LatestUpdateCarousel.css'
+import '@src/components/Carousel/Carousel.css'
 import '@src/styles/global.css'
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {

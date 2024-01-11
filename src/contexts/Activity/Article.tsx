@@ -41,7 +41,7 @@ const Articles = ({ thumbnail, title, date, description, type, documentation }: 
       </div>
 
       <div className='px-[8vw] py-[5vw]'>
-        <p className='text-[12px] sm:text-[17px] lg:text-[25px] text-justify indent-[35px] lg:indent-[70px]'>{description}</p>
+        <p className='text-[12px] sm:text-[15px] lg:text-[20px] text-justify indent-[35px] lg:indent-[70px]'>{description}</p>
         <img src={Leaf.src} alt='leaf' className='mx-auto w-[10vw] mt-[5vw] col-start-2' />
       </div>
 
