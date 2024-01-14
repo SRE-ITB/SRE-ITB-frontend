@@ -120,7 +120,18 @@ function MobileNav ({
   menuList: Menu[]
   page: string
 }): JSX.Element {
-  const isDesktopSize = window.innerWidth > 1024
+  const [isDesktopSize, setIsDesktopSize] = useState(true)
+
+  useEffect(() => {
+    const updateWindowSize = (): void => {
+      setIsDesktopSize(window.innerWidth > 1024)
+    }
+    updateWindowSize()
+    window.addEventListener('resize', updateWindowSize)
+    return () => {
+      window.removeEventListener('resize', updateWindowSize)
+    }
+  }, [])
   return (
     <div
       className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-green5 transform ${
