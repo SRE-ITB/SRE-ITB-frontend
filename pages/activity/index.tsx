@@ -31,7 +31,7 @@ import Footer from '@src/components/Navigation/Footer'
 //   }
 // ]
 
-const Activity = (): JSX.Element => {
+const ActivityPage = (): JSX.Element => {
   const dummyArticles = [
     {
       id: 1,
@@ -288,4 +288,4 @@ const Activity = (): JSX.Element => {
   )
 }
 
-export default Activity
+export default ActivityPage

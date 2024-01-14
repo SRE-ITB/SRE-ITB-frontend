@@ -14,7 +14,7 @@ import LearningProgram2 from '@src/assets/Images/Activity/Learning/SkillTraining
 import Project1 from '@src/assets/Images/Activity/Project/PVInstallation.jpg'
 import Project2 from '@src/assets/Images/Activity/Project/SREmpathy (2).jpg'
 
-const Article = (): JSX.Element => {
+const ArticlePage = (): JSX.Element => {
   const dummyArticles = [
     {
       id: 1,
@@ -276,4 +276,4 @@ const Article = (): JSX.Element => {
   }
 }
 
-export default Article
+export default ArticlePage

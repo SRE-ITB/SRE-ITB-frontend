@@ -9,9 +9,9 @@ import Time from '@src/contexts/IYREF/Time'
 import Speakers from '@src/contexts/IYREF/Speakers'
 import Footer from '@src/components/Navigation/Footer'
 
-const Internal: React.FC = () => {
+const REFWONPage = (): JSX.Element => {
   return (
-    <SEO title="SRE ITB | IYREF">
+    <SEO title="SRE ITB | REFWON">
       <Navbar />
       <Hero />
       <Desc />
@@ -25,4 +25,4 @@ const Internal: React.FC = () => {
   )
 }
 
-export default Internal
+export default REFWONPage

@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 
+import ToggleButton from '@src/components/Button/Toggle'
+
 import ArrowDownIcon from '@src/components/Icon/ArrowDownIcon'
 import sreLogo from '@src/assets/Images/Navigation/Navbar/sreLogo.png'
 import IyrefLogo from '@src/assets/Images/Navigation/Navbar/iyrefLogo.png'
@@ -32,12 +34,20 @@ const MENU_LIST: Menu[] = [
     href: '/student'
   },
   {
-    text: 'IYREF',
-    href: '/iyref'
-  },
-  {
     text: 'Merchandise',
     href: '/merchandise'
+  },
+  {
+    text: 'REFWON',
+    href: '/iyref/refwon'
+  },
+  {
+    text: 'Comvis',
+    href: '/iyref/comvis'
+  },
+  {
+    text: 'Summit',
+    href: '/iyref/summit'
   }
 ]
 
@@ -97,24 +107,31 @@ function MobileNav ({
   open,
   setOpen,
   dropdownIdx,
-  setDropdownIdx
+  setDropdownIdx,
+  handleToggle,
+  menuList,
+  page
 }: {
   open: boolean
   setOpen: Dispatch<SetStateAction<boolean>>
   dropdownIdx: number
   setDropdownIdx: Dispatch<SetStateAction<number>>
+  handleToggle: (isChecked: boolean) => void
+  menuList: Menu[]
+  page: string
 }): JSX.Element {
+  const isDesktopSize = window.innerWidth > 1024
   return (
     <div
       className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-green5 transform ${
         open ? '-translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out`}>
       <div className="flex flex-col h-screen justify-center">
-        {MENU_LIST.map((menu, idx) => {
+        {menuList.map((menu, idx) => {
           return (
             <div
               key={idx}
-              className="w-40 mx-auto"
+              className="w-40 text-center mx-auto"
               onClick={() => {
                 setDropdownIdx(dropdownIdx === idx ? -1 : idx)
               }}>
@@ -155,6 +172,13 @@ function MobileNav ({
             </div>
           )
         })}
+        {isDesktopSize
+          ? null
+          : (
+            <div className='flex justify-center mt-[15px] px-6 mx-2'>
+              <ToggleButton state={page === 'iyref'} onToggle={handleToggle} />
+            </div>
+            )}
       </div>
     </div>
   )
@@ -164,9 +188,31 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
   const [open, setOpen] = useState(false)
   const [dropdownIdx, setDropdownIdx] = useState(-1)
   const [isNavbarSolid, setIsNavbarSolid] = useState(false)
+  const [menuList, setMenuList] = useState(MENU_LIST)
 
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
+  const iyrefPage = router.pathname.split('/')[2]
+
+  useEffect(() => {
+    if (page === 'iyref') {
+      setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] === 'iyref'))
+    } else {
+      setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] !== 'iyref'))
+    }
+  }, [page])
+
+  const handleToggle = (isChecked: boolean): void => {
+    if (isChecked) {
+      setTimeout(() => {
+        void router.push('/iyref/refwon')
+      }, 200)
+    } else {
+      setTimeout(() => {
+        void router.push('/')
+      }, 200)
+    }
+  }
 
   useEffect(() => {
     const handleScroll = (): void => {
@@ -198,6 +244,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
           setOpen={setOpen}
           dropdownIdx={dropdownIdx}
           setDropdownIdx={setDropdownIdx}
+          handleToggle={handleToggle}
+          menuList={menuList}
+          page={page}
         />
           <div className="w-[70px] sm:w-[90px] ml-[30px] sm:ml-[5vw] flex items-center">
           {page === 'iyref'
@@ -233,12 +282,12 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
             />
           </div>
           <div className="hidden lg:flex">
-            {MENU_LIST.map((menu, idx) => (
+            {menuList.map((menu, idx) => (
               <div key={idx} className="relative inline-flex items-center mt-[-7px]">
                 <a
                   className={`${'active px-6 mx-2 py-8'} ${
                     menu.contents ? 'peer' : 'inline-block'
-                  } text-[#FFFFFF] hover:opacity-80 cursor-pointer`}
+                  } text-white hover:opacity-80 cursor-pointer`}
                   href={menu.href}>
                   <div
                     className={`${
@@ -246,8 +295,10 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 1 && page === 'about') ||
                       (idx === 2 && page === 'activity') ||
                       (idx === 3 && page === 'student') ||
-                      (idx === 4 && page === 'iyref') ||
-                      (idx === 5 && page === 'merchandise')
+                      (idx === 4 && page === 'merchandise') ||
+                      (idx === 0 && iyrefPage === 'refwon') ||
+                      (idx === 1 && iyrefPage === 'comvis') ||
+                      (idx === 2 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''
                     } inline-flex items-center`}>
@@ -264,6 +315,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                     )}
               </div>
             ))}
+            <div className='inline-flex items-center mt-[-7px] px-6 mx-2'>
+              <ToggleButton state={page === 'iyref'} onToggle={handleToggle} />
+            </div>
           </div>
         </div>
       </div>

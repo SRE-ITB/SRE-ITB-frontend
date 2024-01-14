@@ -6,7 +6,7 @@ import Banner from '@src/contexts/About/Banner'
 import BehindSRE from '@src/contexts/About/BehindSRE'
 import Footer from '@src/components/Navigation/Footer'
 
-const AboutPage: React.FC = () => {
+const AboutPage = (): JSX.Element => {
   return (
     <SEO title="SRE ITB | About Us">
       <Navbar />

@@ -6,7 +6,7 @@ import Banner from '@src/contexts/Home/Banner'
 import Activity from '@src/contexts/Home/Activity'
 import Footer from '@src/components/Navigation/Footer'
 
-const HomePage: React.FC = () => {
+const HomePage = (): JSX.Element => {
   return (
     <SEO title="SRE ITB">
       <Navbar />
