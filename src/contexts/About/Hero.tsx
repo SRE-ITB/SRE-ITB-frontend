@@ -39,10 +39,10 @@ const Hero = (): JSX.Element => {
         <div className='w-full h-full opacity-50 bg-[#000000]'></div>
         <div className='absolute inset-0 justify-center items-center md:items-start flex flex-col md:ml-[15vw]'>
           <div className='font-montserrat text-center md:text-left text-white sm:px-0 px-[6vw]'>
-            <h1 className='italic xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px]'>
+            <h1 className='italic xl:text-[48px] md:text-[40px] text-[32px] font-bold leading-[60px] animate__animated animate__fadeInUp'>
               About Us
             </h1>
-            <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px]'>
+            <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px] animate__animated animate__fadeInUp'>
               {isWideScreen
                 ? (
                 <>
@@ -54,7 +54,7 @@ const Hero = (): JSX.Element => {
                     'A youth organization that focused in Renewable Energy sector.'
                   )}
             </h2>
-            <h3 className='italic font-normal text-[18px] mt-[30px]'>
+            <h3 className='italic font-normal text-[18px] mt-[30px] animate__animated animate__fadeInUp'>
               #RElevatingSREITB
             </h3>
             <button

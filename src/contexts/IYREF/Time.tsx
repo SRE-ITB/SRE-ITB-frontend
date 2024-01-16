@@ -17,7 +17,7 @@ const Time = (): JSX.Element => {
             REFWON will be held via Zoom Meeting on
           </h3>
           <h2 className="font-extrabold text-[32px] md:text-[48px] lg:text-[64px]">
-            February 16th 2024
+            February 17th 2024
           </h2>
         </div>
       </div>
