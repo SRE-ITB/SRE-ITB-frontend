@@ -3,14 +3,14 @@ import { useRouter } from 'next/router'
 import Carousel from '@src/components/Carousel/HomeCarousel'
 
 // Assets
-import ExternalEvent from '@src/assets/Images/Home/Activity/ExternalEvents.webp'
-import CareerTalks from '@src/assets/Images/Home/Activity/CareerTalks.webp'
-import REProject from '@src/assets/Images/Home/Activity/REProject.webp'
-import REview from '@src/assets/Images/Home/Activity/REview.webp'
-import SocialProject from '@src/assets/Images/Home/Activity/SocialProject.webp'
-import Gathering from '@src/assets/Images/Home/Activity/Gathering.webp'
-import SkillTraining from '@src/assets/Images/Home/Activity/SkillTraining.webp'
-import CompanyVisit from '@src/assets/Images/Home/Activity/CompanyVisit.webp'
+import ExternalEvent from '@src/assets/Images/About/Hero/Header.webp'
+import CareerTalks from '@src/assets/Images/Activity/ExternalProgram/CareerTalks.webp'
+import REProject from '@src/assets/Images/Activity/Project/REProject.webp'
+import REview from '@src/assets/Images/Activity/LearningProgram/REview.webp'
+import SocialProject from '@src/assets/Images/Activity/Project/SocialProject.webp'
+import Gathering from '@src/assets/Images/Activity/InternalProgram/Gathering.webp'
+import SkillTraining from '@src/assets/Images/Activity/LearningProgram/SkillTraining.webp'
+import CompanyVisit from '@src/assets/Images/Activity/ExternalProgram/CompanyVisit.webp'
 
 const Activity = (): JSX.Element => {
   const router = useRouter()
