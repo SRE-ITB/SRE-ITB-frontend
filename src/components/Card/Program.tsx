@@ -2,12 +2,13 @@ import Image from 'next/image'
 import ActivityCarousel from '@src/components/Carousel/ActivityCarousel'
 
 interface ProgramProps {
-  dummyArticles: Array<{
+  articles: Array<{
     id: number
-    thumbnail: string
+    thumbnail: any
     title: string
     date: Date
     caption: string
+    desc: string
     description: string
     type: string
     documentation: Array<{ url: string, title: string }>
@@ -15,25 +16,26 @@ interface ProgramProps {
   title: string
   caption: string
   desc: string
-  image: any
+  thumbnail: any
   type: string
 }
 
 const Program = ({
-  dummyArticles,
+  articles,
   title,
   caption,
   desc,
-  image,
+  thumbnail,
   type
 }: ProgramProps): JSX.Element => {
-  const contents = dummyArticles
+  const contents = articles
     .filter((article) => article.type === type)
     .map((article) => ({
       id: article.id,
-      image: `${article.thumbnail}`,
+      thumbnail: `${article.thumbnail}`,
       title: article.title,
-      desc: article.caption
+      caption: article.caption,
+      description: article.description
     }))
 
   return (
@@ -42,7 +44,7 @@ const Program = ({
         <div className='z-30 shadow bg-white w-11/12 h-11/12 rounded-[10px] m-auto mt-[5vw] flex flex-col items-center py-16 lg:py-7 px-8 space-y-7 lg:space-y-10'>
             <div className='lg:flex-row flex flex-col lg:items-start items-center lg:gap-[5vw] gap-[50px]'>
               <div className='w-[70vw] h-[70vw] md:w-[400px] md:h-[400px] relative flex-shrink-0'>
-                  <Image src={image} alt={title} layout="fill" objectFit="cover" placeholder='blur' />
+                  <Image src={thumbnail} alt={title} layout="fill" objectFit="cover" placeholder='blur' />
               </div>
               <div className="font-montserrat">
                   <h1 className='text-center lg:text-left font-gradient font-extrabold text-[28px] lg:text-[36px] xl:text-[48px]'>{title}</h1>

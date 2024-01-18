@@ -11,9 +11,10 @@ SwiperCore.use([Autoplay, Pagination, Navigation])
 
 interface Content {
   id: number
-  image: any
+  thumbnail: any
   title: string
-  desc: string
+  caption: string
+  description: string
 }
 
 interface CarouselProps {
@@ -69,7 +70,7 @@ const ActivityCarousel = ({ contents }: CarouselProps): JSX.Element => {
       >
         {contents.map((item, index) => (
           <SwiperSlide key={index}>
-            <Card id={item.id} image={item.image} title={item.title} desc={item.desc} onClick={async () => await handleCardClick(item.id)} />
+            <Card id={item.id} thumbnail={item.thumbnail} title={item.title} caption={item.caption} description={item.description} onClick={async () => await handleCardClick(item.id)} />
           </SwiperSlide>
         ))}
         <div className="swiper-pagination custom-pagination"></div>
