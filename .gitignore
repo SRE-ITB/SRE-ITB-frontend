@@ -26,5 +26,6 @@ yarn-error.log*
 .env.production.local
 .husky/
 .husky/pre-commit
+.env
 
 .next
