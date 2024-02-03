@@ -42,6 +42,24 @@ const MENU_LIST: Menu[] = [
     href: '/iyref/refwon'
   },
   {
+    text: 'Competitions',
+    href: '/iyref/compe/bcc',
+    contents: [
+      {
+        text: 'Business Case Competition',
+        href: '/iyref/compe/bcc'
+      },
+      {
+        text: 'Business Plan Competition',
+        href: '/iyref/compe/bpc'
+      },
+      {
+        text: 'National Essay Competition',
+        href: '/iyref/compe/nec'
+      }
+    ]
+  },
+  {
     text: 'Comvis',
     href: '/iyref/comvis'
   },
@@ -94,7 +112,7 @@ function HoverDropdown ({
       {contents.map((content, idx) => (
         <a
           key={idx}
-          className="px-5 py-3 hover:bg-green text-green hover:text-white font-bold cursor-pointer"
+          className="px-5 py-3 hover:bg-green5 text-green2 hover:text-white font-bold cursor-pointer"
           href={content.href}>
           {content.text}
         </a>
@@ -308,8 +326,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
-                      (idx === 1 && iyrefPage === 'comvis') ||
-                      (idx === 2 && iyrefPage === 'summit')
+                      (idx === 1 && iyrefPage === 'compe') ||
+                      (idx === 2 && iyrefPage === 'comvis') ||
+                      (idx === 3 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''
                     } inline-flex items-center`}>
