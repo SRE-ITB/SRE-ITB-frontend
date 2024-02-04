@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import PottedPlant from '@src/assets/Images/IYREF/Submission/potted_plant.svg'
+import PottedPlant from '@src/assets/Images/IYREF/REFWON/Submission/potted_plant.svg'
 import Link from 'next/link'
 
 const Submission = (): JSX.Element => {

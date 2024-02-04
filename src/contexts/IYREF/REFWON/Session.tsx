@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-import Vector1 from '@src/assets/Images/IYREF/Session/Vector1.svg'
-import Vector2 from '@src/assets/Images/IYREF/Session/Vector2.svg'
-import Butterfly from '@src/assets/Images/IYREF/Session/Butterfly.svg'
+import Vector1 from '@src/assets/Images/IYREF/REFWON/Session/Vector1.svg'
+import Vector2 from '@src/assets/Images/IYREF/REFWON/Session/Vector2.svg'
+import Butterfly from '@src/assets/Images/IYREF/REFWON/Session/Butterfly.svg'
 
 const Session = (): JSX.Element => {
   return (

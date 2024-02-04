@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import Sess1 from '@src/assets/Images/IYREF/Topics/Sess1.svg'
-import Sess2 from '@src/assets/Images/IYREF/Topics/Sess2.svg'
-import Plant from '@src/assets/Images/IYREF/Topics/Plant.svg'
-import Butterfly from '@src/assets/Images/IYREF/Topics/Butterfly.svg'
-import Gradient from '@src/assets/Images/IYREF/Topics/Gradient.svg'
-import Plant2 from '@src/assets/Images/IYREF/Topics/Plant2.svg'
+import Sess1 from '@src/assets/Images/IYREF/REFWON/Topics/Sess1.svg'
+import Sess2 from '@src/assets/Images/IYREF/REFWON/Topics/Sess2.svg'
+import Plant from '@src/assets/Images/IYREF/REFWON/Topics/Plant.svg'
+import Butterfly from '@src/assets/Images/IYREF/REFWON/Topics/Butterfly.svg'
+import Gradient from '@src/assets/Images/IYREF/REFWON/Topics/Gradient.svg'
+import Plant2 from '@src/assets/Images/IYREF/REFWON/Topics/Plant2.svg'
 
 const Topics = (): JSX.Element => {
   return (

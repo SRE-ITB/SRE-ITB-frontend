@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Header from '@src/assets/Images/IYREF/Hero/Header.webp'
+import Header from '@src/assets/Images/IYREF/REFWON/Hero/Header.webp'
 
 const Hero = (): JSX.Element => {
   return (

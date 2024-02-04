@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Background from '@src/assets/Images/IYREF/Time/background.svg'
+import Background from '@src/assets/Images/IYREF/REFWON/Time/background.svg'
 
 const Time = (): JSX.Element => {
   return (
