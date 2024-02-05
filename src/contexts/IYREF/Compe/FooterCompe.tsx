@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
 import Image from 'next/image'
 import Link from 'next/link'
 
