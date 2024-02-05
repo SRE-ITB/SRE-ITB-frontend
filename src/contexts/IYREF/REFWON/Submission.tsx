@@ -14,7 +14,7 @@ const Submission = (): JSX.Element => {
           We look forward to receiving your hands-on submission.
         </h3>
       </div>
-      <Link href="/">
+      <Link href="https://docs.google.com/forms/d/e/1FAIpQLSf6TvXEmBwaP9h2G8wXBC3mPgbz5LLX4kX7Roa2q1Ekzf207w/viewform?usp=sharing">
         <button className="border-[2px] border-green8 font-bold bg-green8 hover:bg-white rounded-full text-white duration-75 hover:text-green8 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px] z-[10]">
           Submission Form
         </button>

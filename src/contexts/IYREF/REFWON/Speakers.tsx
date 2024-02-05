@@ -69,7 +69,7 @@ const Speakers = (): JSX.Element => {
       </div>
       <div className="w-[338px] md:w-full text-[16px] md:text-[20px] lg:text-[24px] font-montserrat font-light flex flex-col gap-6 items-center text-center">
         <h3>Tell us about the positive moments you&apos;ve had with us!</h3>
-        <Link href="/">
+        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdQLF44zXD2DeGJ1OTdI-bccdSBRjSc4UU8YhkraeCAcNiUjQ/viewform?usp=sharing">
           <button className="border-[2px] border-green8 font-bold bg-green8 hover:bg-white rounded-sm text-white duration-75 hover:text-green8 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px]">
             Feedback
           </button>
