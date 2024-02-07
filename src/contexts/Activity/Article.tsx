@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Leaf from '@src/assets/Images/Illustration/LeafBlack.png'
 
 interface Documentation {
@@ -19,7 +21,9 @@ interface Activity {
 const Articles = ({ thumbnail, title, date, description, type, documentation }: Activity): JSX.Element => {
   return (
     <div className='font-montserrat'>
-      <img src={thumbnail} alt='thumbnail' className='w-full h-[27vw] sm:h-[17vw] object-cover' />
+      <div className='w-full h-[27vw] sm:h-[17vw] relative'>
+        <Image src={thumbnail} alt='thumbnail' layout='fill' objectFit='cover'/>
+      </div>
       <div className='absolute inset-0 bg-black opacity-50 w-full h-[27vw] sm:h-[17vw]'></div>
 
       <div className='py-[1.5vw] border-b-[0.2vw] flex px-[3vw] items-center text-[8px] sm:text-[15px] lg:text-[20px] font-light'>

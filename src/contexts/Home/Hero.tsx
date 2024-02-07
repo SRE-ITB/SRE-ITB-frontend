@@ -39,14 +39,15 @@ const Hero = (): JSX.Element => {
             <h3 className='italic font-normal text-[18px] mt-[30px] animate__animated animate__fadeInUp'>
               #RElevatingSREITB
             </h3>
-            <a href="#">
+            {/* INGET INI YG DIUBAH, KL EROR */}
+            <div>
               <button
                 onClick={handleJoinClick}
                 className='font-extrabold mt-[50px] outline outline-2 text-[#FFFFFF] xl:text-[24px] md:text-[22px] text-[20px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer animate-bounce'
               >
                 Join Us
               </button>
-            </a>
+            </div>
             {showAlert && (
               <AlertBox isConfirm={false} content={'We’re sorry, registration for SRE ITB 2023/24 has been closed!'} onConfirm={handleConfirm} />
             )}

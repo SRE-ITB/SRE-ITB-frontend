@@ -1,11 +1,11 @@
 import Image from 'next/image'
 
-import Sess1 from '@src/assets/Images/IYREF/Topics/Sess1.svg'
-import Sess2 from '@src/assets/Images/IYREF/Topics/Sess2.svg'
-import Plant from '@src/assets/Images/IYREF/Topics/Plant.svg'
-import Butterfly from '@src/assets/Images/IYREF/Topics/Butterfly.svg'
-import Gradient from '@src/assets/Images/IYREF/Topics/Gradient.svg'
-import Plant2 from '@src/assets/Images/IYREF/Topics/Plant2.svg'
+import Sess1 from '@src/assets/Images/IYREF/REFWON/Topics/Sess_1.jpg'
+import Sess2 from '@src/assets/Images/IYREF/REFWON/Topics/Sess_2.jpg'
+import Plant from '@src/assets/Images/IYREF/REFWON/Topics/Plant.svg'
+import Butterfly from '@src/assets/Images/IYREF/REFWON/Topics/Butterfly.svg'
+import Gradient from '@src/assets/Images/IYREF/REFWON/Topics/Gradient.svg'
+import Plant2 from '@src/assets/Images/IYREF/REFWON/Topics/Plant2.svg'
 
 const Topics = (): JSX.Element => {
   return (
@@ -24,8 +24,8 @@ const Topics = (): JSX.Element => {
       </h2>
       <div className='lg:flex lg:gap-[5vw]'>
         <div className='border-2 bg-white border-green8 rounded-lg mb-[40px] lg:mb-0 shadow-xl lg:w-1/2'>
-          <div className='flex justify-center my-[30px] lg:mb-[50px]'>
-            <Image src={Sess1} alt="sess1-logo" className=''/>
+          <div className='flex justify-center my-[30px] lg:mb-[30px]'>
+            <Image src={Sess1} alt="sess1-logo" className='rounded-full' width={200} height={200} />
           </div>
           <h4 className='text-center mb-[20px] px-[5vw] text-[17px] md:text-[19px] xl:text-[22px]'>
             <span className='font-bold text-[20px] md:text-[24px] xl:text-[28px]'>First Session</span><br></br>
@@ -33,8 +33,8 @@ const Topics = (): JSX.Element => {
           </h4>
         </div>
         <div className='border-2 bg-white border-green8 rounded-lg shadow-xl lg:w-1/2'>
-          <div className='flex justify-center my-[30px] lg:mb-[50px]'>
-            <Image src={Sess2} alt="sess2-logo" className=''/>
+          <div className='flex justify-center my-[30px] lg:mb-[30px]'>
+            <Image src={Sess2} alt="sess2-logo" className='rounded-full' width={200} height={200} />
           </div>
           <h4 className='text-center mb-[20px] px-[5vw] text-[17px] md:text-[19px] xl:text-[22px]'>
             <span className='font-bold text-[20px] md:text-[24px] xl:text-[28px]'>Second Session</span><br></br>

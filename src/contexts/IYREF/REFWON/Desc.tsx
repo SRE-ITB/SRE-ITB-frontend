@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import Plant from '@src/assets/Images/IYREF/Desc/Plant.svg'
+import Plant from '@src/assets/Images/IYREF/REFWON/Desc/Plant.svg'
 
 const Desc = (): JSX.Element => {
   return (
