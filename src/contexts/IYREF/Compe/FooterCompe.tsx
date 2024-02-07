@@ -36,13 +36,20 @@ const FooterCompe = ({ contacts }: FooterCompeProps): JSX.Element => {
           </div>
         </div>
         {/* Contact Person */}
-        <div className="w-full h-auto flex flex-col justify-between gap-6 items-center text-white">
+        <div className="w-screen h-auto flex flex-col justify-between gap-6 items-center text-white">
           <h2 className="text-[28px] lg:text-[32px] font-bold">
             CONTACT PERSON
           </h2>
-          <div className="w-full flex flex-col justify-between gap-3 items-center text-center">
+          <div className="w-full flex flex-col justify-between gap-3 items-center text-center px-[10px]">
             {contacts.map((contact, index) => (
-              <p key={index}>{contact}</p>
+              <div key={index}>
+                <p>
+                  {contact.split('(')[0]}
+                </p>
+                <p>
+                  ( {contact.split('(')[1]}
+                </p>
+              </div>
             ))}
           </div>
         </div>

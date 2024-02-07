@@ -55,7 +55,7 @@ const Events = ({ webinar, coaching }: EventsProps): JSX.Element => {
             {webinar.title}
           </h2>
           <br />
-          <p className="text-green11 text-[12px] lg:text-[20px]">
+          <p className="text-green11 text-[14px] lg:text-[20px]">
             {webinar.desc}
           </p>
           <br />
@@ -92,7 +92,7 @@ const Events = ({ webinar, coaching }: EventsProps): JSX.Element => {
             {coaching.title}
           </h2>
           <br />
-          <p className="text-green11 text-[12px] lg:text-[20px]">
+          <p className="text-green11 text-[14px] lg:text-[20px]">
             {coaching.desc}
           </p>
           <br />
