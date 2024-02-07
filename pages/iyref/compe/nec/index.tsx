@@ -4,6 +4,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/NEC/Hero'
+import Theme from '@src/contexts/IYREF/NEC/Theme'
 
 interface WebinarProps {
   title: string
@@ -50,6 +51,7 @@ const NECPage = (): JSX.Element => {
     <SEO title="SRE ITB | NEC">
       <Navbar />
       <Hero />
+      <Theme/>
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[
