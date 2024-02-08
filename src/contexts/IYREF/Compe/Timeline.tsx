@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
-import Pot from '@src/assets/Images/IYREF/Compe/Timeline/pot.svg'
+import Pot from '@src/assets/Images/IYREF/Compe/Timeline/Pot.svg'
 
 interface TimelineProps {
   timeline: LineProps[]
