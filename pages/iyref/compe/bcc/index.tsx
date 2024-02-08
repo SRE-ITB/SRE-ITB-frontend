@@ -6,6 +6,8 @@ import TImeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
+import Hero from '@src/contexts/IYREF/BCC/Hero'
+import Theme from '@src/contexts/IYREF/BCC/Theme'
 
 interface TimelineProps {
   timeline: LineProps[]
@@ -136,7 +138,8 @@ const BCCPage = (): JSX.Element => {
   return (
     <SEO title="SRE ITB | BCC">
       <Navbar />
-      <Comingsoon />
+      <Hero />
+      <Theme />
       <TImeline timeline={timeline.timeline} />
       <Stages stages={stages} />
       <Events webinar={webinar} coaching={coaching} />

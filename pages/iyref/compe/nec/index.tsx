@@ -1,9 +1,10 @@
 /* eslint-disable @typescript-eslint/comma-dangle */
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import Comingsoon from '@src/contexts/ComingSoon/ComingSoon'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
+import Hero from '@src/contexts/IYREF/NEC/Hero'
+import Theme from '@src/contexts/IYREF/NEC/Theme'
 
 interface WebinarProps {
   title: string
@@ -49,7 +50,8 @@ const NECPage = (): JSX.Element => {
   return (
     <SEO title="SRE ITB | NEC">
       <Navbar />
-      <Comingsoon />
+      <Hero />
+      <Theme/>
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[
