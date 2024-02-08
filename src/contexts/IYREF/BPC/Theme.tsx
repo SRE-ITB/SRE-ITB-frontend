@@ -13,17 +13,17 @@ import Hexagon from '@src/assets/Images/IYREF/Compe/Hexagon.png'
 
 const Theme = (): JSX.Element => {
   return (
-    <div className='font-montserrat h-auto flex flex-col justify-center items-center overflow-x-hidden'>
-        <div className="w-[250px] hidden lg:block top-[1380px] right-[70px] absolute">
+    <div className='font-montserrat h-auto flex flex-col justify-center items-center overflow-x-hidden mt-[100px] lg:mt-[200px]'>
+        <div className="w-[250px] hidden lg:block top-[1580px] right-[70px] absolute">
             <Image src={Bird1} alt="bird1" className="" />
         </div>
-        <div className="w-[300px] top-[900px] lg:top-[920px] absolute left-0 z-0">
+        <div className="w-[300px] top-[1000px] lg:top-[1120px] absolute left-0 z-0">
             <Image src={Leaves} alt="leaves" className="" />
         </div>
-        <div className="w-[280px] hidden lg:block top-[1850px] right-[100px] absolute">
+        <div className="w-[280px] hidden lg:block top-[2050px] right-[100px] absolute">
             <Image src={Hexagon} alt="hexagon" className="" />
         </div>
-        <div className="w-[70px] lg:w-[340px] top-[3180px] lg:top-[2420px] lg:left-[80px] absolute">
+        <div className="w-[70px] lg:w-[340px] top-[3250px] lg:top-[2620px] lg:left-[80px] absolute">
             <Image src={Bird2} alt="bird2" className="" />
         </div>
         <ThemeComp

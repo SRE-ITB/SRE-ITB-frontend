@@ -4,6 +4,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/BCC/Hero'
+import Theme from '@src/contexts/IYREF/BCC/Theme'
 
 interface WebinarProps {
   title: string
@@ -51,6 +52,7 @@ const BCCPage = (): JSX.Element => {
     <SEO title="SRE ITB | BCC">
       <Navbar />
       <Hero />
+      <Theme />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[
