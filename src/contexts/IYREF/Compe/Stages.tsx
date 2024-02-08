@@ -34,7 +34,7 @@ Card.propTypes = {
 const Stages = ({ stages }: StagesProps): JSX.Element => {
   return (
     <div className='overflow-x-hidden font-montserrat'>
-        <div className='relative w-screen bg-gradient p-[5vw] mt-[12vh] xl:mt-[-4vh] text-center items-center text-white'>
+        <div className='relative w-screen bg-gradient p-[5vw] text-center items-center text-white'>
             <h1 className='font-bold text-[28px] xl:text-[48px] p-[3vw]'>{stages.title}</h1>
             <p className='px-[6vw] text-[12px] xl:text-[16px] mt-[4vh]'>{stages.desc}</p>
             <div className='grid grid-cols-1 xl:grid-cols-3 gap-[4vh] mx-[4vw] mt-[8vh]'>

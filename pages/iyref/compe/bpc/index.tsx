@@ -4,6 +4,7 @@ import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
+import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/BPC_hero.png'
 
@@ -22,6 +23,15 @@ interface ThemeProps {
   benefits: Array<{
     title: string
     contents?: string[]
+  }>
+}
+
+interface TimelineProps {
+  timeline: Array<{
+    title: string
+    desc: string
+    startDate: string
+    endDate: string
   }>
 }
 
@@ -57,11 +67,75 @@ const BPCPage = (): JSX.Element => {
     ]
   }
 
+  const timeline: TimelineProps = {
+    timeline: [{
+      title: '24 Feb - 9 Mar 2024',
+      desc: 'Open Registration',
+      startDate: '2024-02-24',
+      endDate: '2024-03-09'
+    },
+    {
+      title: '10 - 24 March 2024',
+      desc: 'BMC Submission',
+      startDate: '2024-03-10',
+      endDate: '2024-03-24'
+    },
+    {
+      title: '22 March 2024',
+      desc: 'Coaching Session 1',
+      startDate: '2024-03-22',
+      endDate: '2024-03-22'
+    },
+    {
+      title: '1 April 2024',
+      desc: 'Semifinalist Announcement',
+      startDate: '2024-04-01',
+      endDate: '2024-04-01'
+    },
+    {
+      title: '2 - 4 April 2024',
+      desc: 'Semifinalist Registration',
+      startDate: '2024-04-02',
+      endDate: '2024-04-04'
+    },
+    {
+      title: '5 - 22 April 2024',
+      desc: 'Business Proposal Submission',
+      startDate: '2024-04-05',
+      endDate: '2024-04-22'
+    },
+    {
+      title: '18 April 2024',
+      desc: 'Coaching Session 2',
+      startDate: '2024-04-18',
+      endDate: '2024-04-18'
+    },
+    {
+      title: '7 May 2024',
+      desc: 'Finalist Announcement',
+      startDate: '2024-05-07',
+      endDate: '2024-05-07'
+    },
+    {
+      title: '8 - 17 May 2024',
+      desc: 'Pitch Deck Submission',
+      startDate: '2024-05-08',
+      endDate: '2024-05-17'
+    },
+    {
+      title: '18 May 2024',
+      desc: 'Pitching and Awarding',
+      startDate: '2024-05-18',
+      endDate: '2024-05-18'
+    }]
+  }
+
   return (
     <SEO title="SRE ITB | BPC">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
+      <Timeline {...timeline} />
     </SEO>
   )
 }

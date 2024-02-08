@@ -2,7 +2,7 @@ import { StaticImageData } from 'next/image'
 
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import TImeline from '@src/contexts/IYREF/Compe/Timeline'
+import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
@@ -30,12 +30,12 @@ interface ThemeProps {
 }
 
 interface TimelineProps {
-  timeline: LineProps[]
-}
-
-interface LineProps {
-  title: string
-  desc: string
+  timeline: Array<{
+    title: string
+    desc: string
+    startDate: string
+    endDate: string
+  }>
 }
 
 interface CompeProps {
@@ -96,47 +96,70 @@ const BCCPage = (): JSX.Element => {
   }
 
   const timeline: TimelineProps = {
-    timeline: [{
-      title: '24 Feb - 9 Mar 2024',
-      desc: 'Open Registration'
-    },
-    {
-      title: '9 March 2024',
-      desc: 'Free Webinar'
-    },
-    {
-      title: '17 March 2024',
-      desc: 'Case Distribution'
-    },
-    {
-      title: '17 - 31 March 2024',
-      desc: 'Preliminary Phase (Executive Summary)'
-    },
-    {
-      title: '17 - 19 April 2024',
-      desc: 'Semifinal Registration'
-    },
-    {
-      title: '17 Apr - 1 May 2024',
-      desc: 'Semifinal Phase (Proposal)'
-    },
-    {
-      title: '28 April 2024',
-      desc: 'Coaching 1'
-    },
-    {
-      title: '10 - 17 May 2024',
-      desc: 'Final Phase (Pitch Deck)'
-    },
-    {
-      title: '15 May 2024',
-      desc: 'Coaching 2'
-    },
-    {
-      title: '18 May 2024',
-      desc: 'Pitching and Awarding'
-    }]
+    timeline: [
+      {
+        title: '24 Feb - 9 Mar 2024',
+        desc: 'Open Registration',
+        startDate: '2024-02-24',
+        endDate: '2024-03-09'
+      },
+      {
+        title: '9 March 2024',
+        desc: 'Free Webinar',
+        startDate: '2024-03-09',
+        endDate: '2024-03-09'
+      },
+      {
+        title: '17 March 2024',
+        desc: 'Case Distribution',
+        startDate: '2024-03-17',
+        endDate: '2024-03-17'
+      },
+      {
+        title: '17 - 31 March 2024',
+        desc: 'Preliminary Phase (Executive Summary)',
+        startDate: '2024-03-17',
+        endDate: '2024-03-31'
+      },
+      {
+        title: '17 - 19 April 2024',
+        desc: 'Semifinal Registration',
+        startDate: '2024-04-17',
+        endDate: '2024-04-19'
+      },
+      {
+        title: '17 Apr - 1 May 2024',
+        desc: 'Semifinal Phase (Proposal)',
+        startDate: '2024-04-17',
+        endDate: '2024-05-01'
+      },
+      {
+        title: '28 April 2024',
+        desc: 'Coaching 1',
+        startDate: '2024-04-28',
+        endDate: '2024-04-28'
+      },
+      {
+        title: '10 - 17 May 2024',
+        desc: 'Final Phase (Pitch Deck)',
+        startDate: '2024-05-10',
+        endDate: '2024-05-17'
+      },
+      {
+        title: '15 May 2024',
+        desc: 'Coaching 2',
+        startDate: '2024-05-15',
+        endDate: '2024-05-15'
+      },
+      {
+        title: '18 May 2024',
+        desc: 'Pitching and Awarding',
+        startDate: '2024-05-18',
+        endDate: '2024-05-18'
+      }
+    ]
   }
+
   const stages: CompeProps = {
     title: 'Business Case Competition',
     desc: 'The IYREF Business Case Competition 2024 is divided into three main stages: Preliminary, Semifinal, and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
@@ -184,7 +207,7 @@ const BCCPage = (): JSX.Element => {
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
-      <TImeline timeline={timeline.timeline} />
+      <Timeline {...timeline} />
       <Stages stages={stages} />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe

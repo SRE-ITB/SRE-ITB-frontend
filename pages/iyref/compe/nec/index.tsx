@@ -6,6 +6,7 @@ import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
+import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/NEC_hero.png'
 
@@ -47,6 +48,15 @@ interface CoachingProps {
   exclusive: string
 }
 
+interface TimelineProps {
+  timeline: Array<{
+    title: string
+    desc: string
+    startDate: string
+    endDate: string
+  }>
+}
+
 const NECPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'National Essay',
@@ -82,6 +92,69 @@ const NECPage = (): JSX.Element => {
     ]
   }
 
+  const timeline: TimelineProps = {
+    timeline: [{
+      title: 'February 2024',
+      desc: 'NEC Goes to School and University',
+      startDate: '2024-02-01',
+      endDate: '2024-02-29'
+    },
+    {
+      title: '24 Feb - 9 Mar 2024',
+      desc: 'Registation and Abstract Submission',
+      startDate: '2024-02-24',
+      endDate: '2024-03-09'
+    },
+    {
+      title: '3 April 2024',
+      desc: 'Top 50 Finalist Announcement',
+      startDate: '2024-04-03',
+      endDate: '2024-04-03'
+    },
+    {
+      title: '3 - 5 April 2024',
+      desc: 'Top 50 Finalist Registration',
+      startDate: '2024-04-03',
+      endDate: '2024-04-05'
+    },
+    {
+      title: '5 April 2024',
+      desc: 'Webinar: How to Write an Essay',
+      startDate: '2024-04-05',
+      endDate: '2024-04-05'
+    },
+    {
+      title: '16 - 22 April 2024',
+      desc: 'Essay Submission',
+      startDate: '2024-04-16',
+      endDate: '2024-04-22'
+    },
+    {
+      title: '5 May 2024',
+      desc: 'Top 5 Finalist Announcement',
+      startDate: '2024-05-05',
+      endDate: '2024-05-05'
+    },
+    {
+      title: '7 May 2024',
+      desc: 'TM and Coaching Session',
+      startDate: '2024-05-07',
+      endDate: '2024-05-07'
+    },
+    {
+      title: '11 - 14 May 2024',
+      desc: 'Pitch Deck Submission',
+      startDate: '2024-05-11',
+      endDate: '2024-05-14'
+    },
+    {
+      title: '18 May 2024',
+      desc: 'Pitching and Awarding',
+      startDate: '2024-05-18',
+      endDate: '2024-05-18'
+    }]
+  }
+
   const webinar: WebinarProps = {
     title: 'Webinar : How to Write an Essay',
     desc: 'This webinar is organized as an effort to provide a comprehensive understanding of research essay writing with a focus on the overarching them "The Role of Youth in Advancing Renewable Energy Initiatives." Carrying the webinar theme "How to Write an Essay" the objective is not only to provide guidance on essay writing principles but also to offer insights into the concepts and benefits of renewable energy.',
@@ -107,6 +180,7 @@ const NECPage = (): JSX.Element => {
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
+      <Timeline {...timeline} />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[

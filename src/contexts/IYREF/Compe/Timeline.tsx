@@ -3,62 +3,65 @@ import PropTypes from 'prop-types'
 import Pot from '@src/assets/Images/IYREF/Compe/Timeline/Pot.svg'
 
 interface TimelineProps {
-  timeline: LineProps[]
+  timeline: Array<{
+    title: string
+    desc: string
+    startDate: string
+    endDate: string
+  }>
 }
 
-interface LineProps {
-  title: string
-  desc: string
-}
+const Timeline = ({ timeline }: TimelineProps): JSX.Element => {
+  const date = new Date()
+  const day = date.getDate()
+  const month = date.getMonth() + 1
+  const year = date.getFullYear()
+  const currentDate = `${year}-${month < 10 ? '0' : ''}${month}-${day < 10 ? '0' : ''}${day}`
 
-const Timeline = ({ title, desc }: LineProps): JSX.Element => {
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const isDateInRange = (currentDate: string | number | Date, startDate: string | number | Date, endDate: string | number | Date) => {
+    const currentDateObj = new Date(currentDate)
+    const startDateObj = new Date(startDate)
+    const endDateObj = new Date(endDate)
+
+    return currentDateObj >= startDateObj && currentDateObj <= endDateObj
+  }
+
   return (
-      <div className='flex mt-[3.6vh]'>
-          <div className='absolute ml-[0.8vw] mt-[-10vh] xl:mt-[-12vh] bg-green8 h-[12vh] xl:h-[16vh] w-[0.2vw]'></div>
-          <div className='mt-[1.3vh] h-[1.8vw] aspect-square bg-green8 rounded-full'></div>
-          <div className='ml-[3vw]'>
-              <p className='text-transparent font-bold bg-clip-text bg-green8 text-[18px] xl:text-[24px]'>{title}</p>
-              <p className='text-transparent bg-clip-text bg-green1 text-[16px] xl:text-[22px]'>{desc}</p>
-          </div>
+    <div className='overflow-x-hidden font-montserrat relative'>
+      <div className="md:grid grid-cols-2 gap-[8vw] p-[5vw] pb-0">
+        <p className="row-start-1 col-start-1 text-transparent font-bold bg-clip-text ml-auto md:mr-[3vw] text-center bg-gradient-to-r from-green1 to-green8 text-[36px] md:text-[64px]">Timeline</p>
+        <div className='row-start-1 col-start-2 mt-[4vh] md:mt-0 ml-[5vw] md:ml-0 relative mb-[10vw]'>
+        {timeline.map((timeline, index) => {
+          const isInRange = isDateInRange(currentDate, timeline.startDate, timeline.endDate)
+
+          return (
+            <div key={index} className='flex relative items-center'>
+              <div className='w-5 h-5 aspect-square bg-green8 rounded-full'></div>
+              <div className={`ml-[3vw] p-5 ${isInRange ? 'bg-green8 rounded-r-xl' : ''}`}>
+                <p className={`text-transparent font-bold bg-clip-text text-[18px] md:text-[24px] ${isInRange ? 'text-[#FFFFFF]' : 'text-green8'}`}>{timeline.title}</p>
+                <p className='text-transparent bg-clip-text bg-green1 text-[16px] md:text-[22px]'>{timeline.desc}</p>
+              </div>
+            </div>
+          )
+        })}
+          <div className='absolute h-full w-[4px] ml-[8px] bg-green8 top-0 rounded-full'></div>
+        </div>
       </div>
-  )
-}
-Timeline.propTypes = {
-  title: PropTypes.string.isRequired,
-  desc: PropTypes.string.isRequired
-}
-
-const IYREF = ({ timeline }: TimelineProps): JSX.Element => {
-  return (
-    <div className='overflow-x-hidden font-montserrat'>
-      <div className="xl:grid grid-cols-2 gap-[8vw] p-[5vw] pb-0">
-        <p className="row-start-1 col-start-1 text-transparent font-bold bg-clip-text ml-auto xl:mr-[3vw] text-center bg-gradient-to-r from-green1 to-green8 text-[36px] md:text-[64px] xl:text-[82px]">Timeline</p>
+      <div className='hidden md:block absolute w-[35vw] max-w-[600px] bottom-0'>
         <Image
-          className='col-start-1 h-[60vw] mt-[25vw] row-start-1 hidden xl:block'
           src={Pot}
           alt="Pot-Image"
         />
-        <div className='row-start-1 col-start-2 mt-[4vh] xl:mt-0 ml-[5vw] xl:ml-0'>
-            {timeline.map((line, index) => (
-              <div key={index} className='flex mt-[3.6vh]'>
-                <div className='absolute ml-[0.8vw] mt-[-10vh] xl:mt-[-12vh] bg-green8 h-[12vh] xl:h-[16vh] w-[0.2vw]'></div>
-                <div className='mt-[1.3vh] h-[1.8vw] aspect-square bg-green8 rounded-full'></div>
-                <div className='ml-[3vw]'>
-                  <p className='text-transparent font-bold bg-clip-text bg-green8 text-[18px] xl:text-[24px]'>{line.title}</p>
-                  <p className='text-transparent bg-clip-text bg-green1 text-[16px] xl:text-[22px]'>{line.desc}</p>
-                </div>
-              </div>
-            ))}
-        </div>
       </div>
     </div>
   )
 }
-IYREF.propTypes = {
+Timeline.propTypes = {
   timeline: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired
   })).isRequired
 }
 
-export default IYREF
+export default Timeline
