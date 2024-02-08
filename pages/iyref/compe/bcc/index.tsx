@@ -1,13 +1,22 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
+import { StaticImageData } from 'next/image'
+
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import Comingsoon from '@src/contexts/ComingSoon/ComingSoon'
 import TImeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
-import Hero from '@src/contexts/IYREF/BCC/Hero'
+import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/BCC/Theme'
+
+import Background from '@src/assets/Images/IYREF/Compe/Hero/BCC_hero.png'
+
+interface HeroProps {
+  title: string
+  desc: string
+  background: StaticImageData
+  linkRegister: string
+}
 
 interface TimelineProps {
   timeline: LineProps[]
@@ -51,6 +60,13 @@ interface CoachingProps {
 }
 
 const BCCPage = (): JSX.Element => {
+  const hero: HeroProps = {
+    title: 'Business Case',
+    desc: 'The Business Case Competition (BCC) within IYREF is designed for diploma (D3 and D4) and undergraduate (S1) students. Participants submit an executive summary, proposal, and pitch deck focusing on the theme "Innovation to Reach The Implementation of Renewable Energies in Industry 5.0". The goal is to encourage innovative business strategies that accelerate renewable energy adoption, contributing to the sustainable vision of Net Zero Emission 2060.',
+    background: Background,
+    linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSdVMr8gEIEFNNrbBfo_CmwFJYd4tfcAiETtunL6UREzKp-kAg/viewform'
+  }
+
   const timeline: TimelineProps = {
     timeline: [{
       title: '24 Feb - 9 Mar 2024',
@@ -112,7 +128,7 @@ const BCCPage = (): JSX.Element => {
         subtitle: 'Pitch Deck Submission & Pitching',
         desc: 'The top 5 teams with the highest scores will progress to the final stage and are required to submit a pitch deck as a pitching aid during the presentation by the 5 finalists. The pitching session will be conducted offline at the Ganesha campus of the Bandung Institute of Technology, and the top 5 finalists must be present on May 18, 2024.'
       }
-    ],
+    ]
   }
   const webinar: WebinarProps = {
     title:
@@ -122,7 +138,7 @@ const BCCPage = (): JSX.Element => {
     time: 'Time : 12.00 WIB - END',
     place: 'Place : Zoom Meeting',
     speaker: 'Speaker : TBA',
-    free: 'Only for BCC IYREF Participants',
+    free: 'Only for BCC IYREF Participants'
   }
 
   const coaching: CoachingProps = {
@@ -132,13 +148,13 @@ const BCCPage = (): JSX.Element => {
     time: 'Time : 18.30 WIB - END',
     place: 'Place : Zoom Meeting',
     speaker: '',
-    exclusive: 'Only for BCC semi finalists and finalists',
+    exclusive: 'Only for BCC semi finalists and finalists'
   }
 
   return (
     <SEO title="SRE ITB | BCC">
       <Navbar />
-      <Hero />
+      <Hero {...hero} />
       <Theme />
       <TImeline timeline={timeline.timeline} />
       <Stages stages={stages} />
@@ -146,7 +162,7 @@ const BCCPage = (): JSX.Element => {
       <FooterCompe
         contacts={[
           'Angelline Grace Olivia (ID Line : 95kitsch )',
-          'Dzakiy Muhammad Urwah (ID Line : dzakiy1235)',
+          'Dzakiy Muhammad Urwah (ID Line : dzakiy1235)'
         ]}
       />
     </SEO>
