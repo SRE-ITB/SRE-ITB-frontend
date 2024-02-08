@@ -2,10 +2,10 @@
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
-import Bird1 from '@src/assets/Images/IYREF/Compe/Events/bird_1.svg'
-import Bird2 from '@src/assets/Images/IYREF/Compe/Events/bird_2.svg'
+import Bird1 from '@src/assets/Images/IYREF/Compe/Illustration/bird_1.svg'
+import Bird2 from '@src/assets/Images/IYREF/Compe/Illustration/bird_2.svg'
 import PottedPlant from '@src/assets/Images/IYREF/Compe/Events/potted_plant.svg'
-import Leaves from '@src/assets/Images/IYREF/Compe/Events/transparent_leaves.svg'
+import Leaves from '@src/assets/Images/IYREF/Compe/Illustration/Leaves.svg'
 
 interface WebinarProps {
   title: string
