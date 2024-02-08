@@ -5,7 +5,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
-import Theme from '@src/contexts/IYREF/NEC/Theme'
+import Theme from '@src/contexts/IYREF/Compe/Theme'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/NEC_hero.png'
 
@@ -14,6 +14,17 @@ interface HeroProps {
   desc: string
   background: StaticImageData
   linkRegister: string
+}
+
+interface ThemeProps {
+  type: string
+  theme: string
+  subtheme?: string[]
+  addText: string
+  benefits: Array<{
+    title: string
+    contents?: string[]
+  }>
 }
 
 interface WebinarProps {
@@ -43,6 +54,34 @@ const NECPage = (): JSX.Element => {
     background: Background,
     linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSdEx3AVzFTUBXJ5srlhFawP_v9Q7i9a3265MHYAw9Y_oSfGIA/closedform'
   }
+
+  const theme: ThemeProps = {
+    type: 'NEC',
+    theme: 'The Role of Youth in Advancing Renewable Energy Initiatives',
+    subtheme: [
+      'Energy Intermittency',
+      'Inclusivity in Energy Access',
+      'Integration of Renewable Energy in Youth Curriculum'
+    ],
+    addText: 'All competition participants are eligible for a complimentary review of their abstract by professional judges',
+    benefits: [
+      {
+        title: 'For Top 50 finalist',
+        contents: [
+          'FREE Webinar Session : How To Write an Essay',
+          'E-Certificates for all participants'
+        ]
+      },
+      {
+        title: 'For Top 5 Finalist',
+        contents: [
+          'All Top 50’s Benefits',
+          'EXCLUSIVE Coaching Session : How To Pitch'
+        ]
+      }
+    ]
+  }
+
   const webinar: WebinarProps = {
     title: 'Webinar : How to Write an Essay',
     desc: 'This webinar is organized as an effort to provide a comprehensive understanding of research essay writing with a focus on the overarching them "The Role of Youth in Advancing Renewable Energy Initiatives." Carrying the webinar theme "How to Write an Essay" the objective is not only to provide guidance on essay writing principles but also to offer insights into the concepts and benefits of renewable energy.',
@@ -67,7 +106,7 @@ const NECPage = (): JSX.Element => {
     <SEO title="SRE ITB | NEC">
       <Navbar />
       <Hero {...hero} />
-      <Theme/>
+      <Theme {...theme} />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[

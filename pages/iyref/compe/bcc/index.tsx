@@ -7,7 +7,7 @@ import Stages from '@src/contexts/IYREF/Compe/Stages'
 import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
-import Theme from '@src/contexts/IYREF/BCC/Theme'
+import Theme from '@src/contexts/IYREF/Compe/Theme'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/BCC_hero.png'
 
@@ -16,6 +16,17 @@ interface HeroProps {
   desc: string
   background: StaticImageData
   linkRegister: string
+}
+
+interface ThemeProps {
+  type: string
+  theme: string
+  subtheme?: string[]
+  addText: string
+  benefits: Array<{
+    title: string
+    contents?: string[]
+  }>
 }
 
 interface TimelineProps {
@@ -65,6 +76,23 @@ const BCCPage = (): JSX.Element => {
     desc: 'The Business Case Competition (BCC) within IYREF is designed for diploma (D3 and D4) and undergraduate (S1) students. Participants submit an executive summary, proposal, and pitch deck focusing on the theme "Innovation to Reach The Implementation of Renewable Energies in Industry 5.0". The goal is to encourage innovative business strategies that accelerate renewable energy adoption, contributing to the sustainable vision of Net Zero Emission 2060.',
     background: Background,
     linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSdVMr8gEIEFNNrbBfo_CmwFJYd4tfcAiETtunL6UREzKp-kAg/viewform'
+  }
+
+  const theme: ThemeProps = {
+    type: 'BCC',
+    theme: 'Innovation to Reach The Implementation of Renewable Energies in Industry 5.0',
+    addText: 'Register for FREE and Enjoy the Benefits',
+    benefits: [
+      {
+        title: 'FREE WEBINAR “Navigating BCC Strategies for Successful Pitch Deck Development”'
+      },
+      {
+        title: '2 EXCLUSIVE COACHING SESSIONS'
+      },
+      {
+        title: 'E-CERTIFICATES FOR ALL PARTICIPANTS'
+      }
+    ]
   }
 
   const timeline: TimelineProps = {
@@ -155,7 +183,7 @@ const BCCPage = (): JSX.Element => {
     <SEO title="SRE ITB | BCC">
       <Navbar />
       <Hero {...hero} />
-      <Theme />
+      <Theme {...theme} />
       <TImeline timeline={timeline.timeline} />
       <Stages stages={stages} />
       <Events webinar={webinar} coaching={coaching} />
