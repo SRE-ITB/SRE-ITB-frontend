@@ -27,5 +27,3 @@ yarn-error.log*
 .husky/
 .husky/pre-commit
 .env
-
-.next
