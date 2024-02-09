@@ -69,18 +69,17 @@ const BPCPage = (): JSX.Element => {
     addText: '',
     benefits: [
       {
-        title: 'For Top 50 finalist',
+        title: 'For all participants',
         contents: [
-          'FREE Coaching Session for Each Phase',
-          'EXCLUSIVE Coaching Session with Remarkable Coach',
-          'FREE PASS to IYREF Grand Summit'
+          'Free coaching session in each phase',
+          'E-certificate'
         ]
       },
       {
         title: 'For Top 5 Finalist',
         contents: [
-          'All Top 50’s Benefits',
-          'E-Certificates for all participants'
+          'Exclusive 1-on-1 coaching session and mock-up presentation with experienced mentor',
+          'Free pass to IYREF Grand Summit'
         ]
       }
     ]

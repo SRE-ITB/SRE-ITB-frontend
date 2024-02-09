@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
+import { useRouter } from 'next/router'
 
 interface HeroProps {
   title: string
@@ -20,6 +21,9 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
       window.removeEventListener('resize', handleResize)
     }
   }, [])
+
+  const router = useRouter()
+  const page = router.pathname.split('compe/')[1]
 
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
@@ -57,7 +61,7 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
                 <button
                 className='font-normal mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer animate-bounce'
                 >
-                  Join Now
+                  Join Now {page === 'bpc' ? '(FREE)' : ''}
                 </button>
               </a>
             </div>

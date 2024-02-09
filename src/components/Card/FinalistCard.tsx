@@ -12,7 +12,7 @@ const FinalistCard = ({ title, contents }: FinalistCardProps): JSX.Element => {
             {title}
         </h3>
         {contents.map((content, index) => (
-          <div key={index} className='relative mb-2 h-[60px] w-full bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[5%] rounded-[10px] flex items-center justify-center drop-shadow'>
+          <div key={index} className='relative mb-2 py-[15px] w-full bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[5%] rounded-[10px] flex items-center justify-center drop-shadow'>
               <p className='font-montserrat text-[17px] text-white px-[30px] text-center font-medium'>
                 {content}
               </p>
