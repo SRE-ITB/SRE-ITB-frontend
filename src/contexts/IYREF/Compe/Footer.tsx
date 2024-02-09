@@ -4,14 +4,17 @@ import Link from 'next/link'
 import Leaves from '@src/assets/Images/IYREF/Compe/Footer/leaves.svg'
 import Stars from '@src/assets/Images/IYREF/Compe/Footer/stars.svg'
 
-interface FooterCompeProps {
+interface FooterProps {
   contacts: string[]
+  registerLink: string
+  guidebookLink: string
+  events: boolean
 }
 
-const FooterCompe = ({ contacts }: FooterCompeProps): JSX.Element => {
+const Footer = ({ contacts, registerLink, guidebookLink, events }: FooterProps): JSX.Element => {
   return (
     <div className="overflow-hidden flex flex-col items-center justify-center relative">
-      <section className="w-[175vw] h-[850px] lg:h-[1300px] bg-green8 flex flex-col justify-between items-center rounded-t-[50%] font-montserrat py-40 lg:py-52">
+      <section className={`w-[175vw] h-[850px] lg:h-[1300px] bg-green8 flex flex-col justify-between items-center font-montserrat py-40 lg:py-52 ${events ? 'rounded-t-[50%]' : ''}`}>
         {/* Register Yourself */}
         <div className="flex flex-col justify-between items-center w-full h-[227px] lg:h-[310px]">
           <div className="flex flex-col justify-between items-center text-center text-white">
@@ -23,12 +26,12 @@ const FooterCompe = ({ contacts }: FooterCompeProps): JSX.Element => {
             </h1>
           </div>
           <div className="flex flex-col lg:flex-row justify-evenly gap-5">
-            <Link href="/">
+            <Link href={registerLink}>
               <button className="border-[2px] border-white font-semibold bg-white hover:-translate-y-1 rounded-xl text-green8 duration-75 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px]">
                 Register Now
               </button>
             </Link>
-            <Link href="/">
+            <Link href={guidebookLink}>
               <button className="border-[2px] border-white font-semibold bg-green8 hover:-translate-y-1 rounded-xl text-white duration-75 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px]">
                 Download Guidebook
               </button>
@@ -40,14 +43,14 @@ const FooterCompe = ({ contacts }: FooterCompeProps): JSX.Element => {
           <h2 className="text-[28px] lg:text-[32px] font-bold">
             CONTACT PERSON
           </h2>
-          <div className="w-full flex flex-col justify-between gap-3 items-center text-center px-[10px]">
+          <div className="w-full flex flex-col justify-between gap-3 items-center text-center px-[15px]">
             {contacts.map((contact, index) => (
               <div key={index}>
                 <p>
                   {contact.split('(')[0]}
                 </p>
                 <p>
-                  ( {contact.split('(')[1]}
+                  ({contact.split('(')[1]}
                 </p>
               </div>
             ))}
@@ -64,4 +67,4 @@ const FooterCompe = ({ contacts }: FooterCompeProps): JSX.Element => {
   )
 }
 
-export default FooterCompe
+export default Footer

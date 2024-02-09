@@ -2,12 +2,12 @@ import type { StaticImageData } from 'next/image'
 
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
-import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
+import Events from '@src/contexts/IYREF/Compe/Event'
+import Footer from '@src/contexts/IYREF/Compe/Footer'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/NEC_hero.png'
 
@@ -68,12 +68,19 @@ interface TimelineProps {
   }>
 }
 
+interface FooterProps {
+  contacts: string[]
+  registerLink: string
+  guidebookLink: string
+  events: boolean
+}
+
 const NECPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'National Essay',
     desc: 'The National Essay Competition (NEC) within IYREF targets high school and university students, focusing on essay and pitch deck submissions. Its aim is to enhance problem-solving skills, specifically in renewable energy. Participants explore the theme "The Role of Youth in Advancing Renewable Energy Initiatives," with sub-themes like "Energy Intermittency," "Inclusivity in Energy Access," and "Integration of Renewable Energy in Youth Curriculum."',
     background: Background,
-    linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSdEx3AVzFTUBXJ5srlhFawP_v9Q7i9a3265MHYAw9Y_oSfGIA/closedform'
+    linkRegister: 'https://bit.ly/RegistrationNEC2024'
   }
 
   const theme: ThemeProps = {
@@ -208,6 +215,16 @@ const NECPage = (): JSX.Element => {
     exclusive: 'Only for NEC 2024 finalists'
   }
 
+  const footer: FooterProps = {
+    contacts: [
+      'Jessica (ID Line : jessicaabdiman)',
+      'Andrea (WA : 087776108222)'
+    ],
+    registerLink: 'https://bit.ly/RegistrationNEC2024',
+    guidebookLink: 'https://bit.ly/GuidebookNEC2024',
+    events: true
+  }
+
   return (
     <SEO title="SRE ITB | NEC">
       <Navbar />
@@ -216,12 +233,7 @@ const NECPage = (): JSX.Element => {
       <Timeline {...timeline} />
       <Stages {...stages} />
       <Events webinar={webinar} coaching={coaching} />
-      <FooterCompe
-        contacts={[
-          'Jessica (id line : jessicaabdiman)',
-          'Andrea (WA : 087776108222)'
-        ]}
-      />
+      <Footer {...footer} />
     </SEO>
   )
 }

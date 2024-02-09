@@ -34,13 +34,13 @@ interface EventsProps {
 
 const Events = ({ webinar, coaching }: EventsProps): JSX.Element => {
   return (
-    <section className="h-[1800px] lg:h-[2000px] relative flex flex-col justify-between items-center py-[150px] font-montserrat">
+    <section className="h-auto relative flex flex-col items-center font-montserrat py-[10vw]">
       {/* Images */}
       <div className="w-[100px] lg:w-[300px] top-[40px] lg:right-[20vw] absolute">
         <Image src={Bird1} alt="plant" className="" />
       </div>
-      <div className="w-[340px] right-0 top-[500px] lg:top-[220px] absolute">
-        <Image src={Leaves} alt="plant" className="" />
+      <div className="w-[340px] right-0 top-[500px] lg:top-[220px] absolute flex justify-end">
+        <Image src={Leaves} alt="plant" className="transform -scale-x-100" />
       </div>
       <div className="w-[400px] hidden lg:block bottom-[-150px] left-[10vw] absolute">
         <Image src={PottedPlant} alt="plant" className="" />
@@ -49,9 +49,9 @@ const Events = ({ webinar, coaching }: EventsProps): JSX.Element => {
         <Image src={Bird2} alt="plant" className="" />
       </div>
       {/* Webinar */}
-      <div className="w-[80vw] h-[700px] flex flex-col items-center lg:items-start justify-evenly text-center lg:text-left">
+      <div className="w-[80vw] h-auto flex flex-col items-center lg:items-start justify-evenly text-center lg:text-left">
         <div className="w-[350px] lg:w-[600px] flex flex-col items-center lg:items-start justify-evenly">
-          <h2 className="text-[28px] lg:text-[48px] font-bold font-gradient">
+          <h2 className="text-[28px] lg:text-[48px] font-bold font-gradient leading-[30px] lg:leading-[50px]">
             {webinar.title}
           </h2>
           <br />
@@ -86,9 +86,9 @@ const Events = ({ webinar, coaching }: EventsProps): JSX.Element => {
         </div>
       </div>
       {/* Coaching */}
-      <div className="w-[80vw] h-[700px] flex flex-col items-center lg:items-end justify-evenly text-center lg:text-right">
+      <div className="w-[80vw] h-auto flex flex-col items-center lg:items-end justify-evenly text-center lg:text-right mt-[5vw]">
         <div className="w-[350px] lg:w-[600px] flex flex-col items-center lg:items-end justify-evenly">
-          <h2 className="text-[28px] lg:text-[48px] font-bold font-gradient">
+          <h2 className="text-[28px] lg:text-[48px] font-bold font-gradient leading-[30px] lg:leading-[50px]">
             {coaching.title}
           </h2>
           <br />

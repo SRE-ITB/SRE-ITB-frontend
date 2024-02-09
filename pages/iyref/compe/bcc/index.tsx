@@ -4,7 +4,7 @@ import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
-import FooterCompe from '@src/contexts/IYREF/Compe/FooterCompe'
+import Footer from '@src/contexts/IYREF/Compe/Footer'
 import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
@@ -68,12 +68,19 @@ interface CoachingProps {
   exclusive: string
 }
 
+interface FooterProps {
+  contacts: string[]
+  registerLink: string
+  guidebookLink: string
+  events: boolean
+}
+
 const BCCPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'Business Case',
     desc: 'The Business Case Competition (BCC) within IYREF is designed for diploma (D3 and D4) and undergraduate (S1) students. Participants submit an executive summary, proposal, and pitch deck focusing on the theme "Innovation to Reach The Implementation of Renewable Energies in Industry 5.0". The goal is to encourage innovative business strategies that accelerate renewable energy adoption, contributing to the sustainable vision of Net Zero Emission 2060.',
     background: Background,
-    linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSdVMr8gEIEFNNrbBfo_CmwFJYd4tfcAiETtunL6UREzKp-kAg/viewform'
+    linkRegister: 'https://bit.ly/RegisterBCCIYREF24'
   }
 
   const theme: ThemeProps = {
@@ -201,6 +208,16 @@ const BCCPage = (): JSX.Element => {
     exclusive: 'Only for BCC semi finalists and finalists'
   }
 
+  const footer: FooterProps = {
+    contacts: [
+      'Angelline Grace Olivia (ID Line : 95kitsch)',
+      'Dzakiy Muhammad Urwah (ID Line : dzakiy1235)'
+    ],
+    registerLink: 'https://bit.ly/RegisterBCCIYREF24',
+    guidebookLink: 'https://bit.ly/GuidebookBCCIYREF24',
+    events: true
+  }
+
   return (
     <SEO title="SRE ITB | BCC">
       <Navbar />
@@ -209,12 +226,7 @@ const BCCPage = (): JSX.Element => {
       <Timeline {...timeline} />
       <Stages {...stages} />
       <Events webinar={webinar} coaching={coaching} />
-      <FooterCompe
-        contacts={[
-          'Angelline Grace Olivia (ID Line : 95kitsch )',
-          'Dzakiy Muhammad Urwah (ID Line : dzakiy1235)'
-        ]}
-      />
+      <Footer {...footer} />
     </SEO>
   )
 }

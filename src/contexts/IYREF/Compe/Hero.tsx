@@ -57,7 +57,7 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
                 <button
                 className='font-normal mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer animate-bounce'
                 >
-                  Register
+                  Join Now
                 </button>
               </a>
             </div>

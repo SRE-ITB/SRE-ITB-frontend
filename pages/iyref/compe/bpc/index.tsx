@@ -6,6 +6,7 @@ import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
+import Footer from '@src/contexts/IYREF/Compe/Footer'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/BPC_hero.png'
 
@@ -46,12 +47,19 @@ interface StagesProps {
   }>
 }
 
+interface FooterProps {
+  contacts: string[]
+  registerLink: string
+  guidebookLink: string
+  events: boolean
+}
+
 const BPCPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'Business Plan',
     desc: 'The IYREF Business Plan Competition by SRE ITB targets diploma (D3/D4) and undergraduate (S1) students, fostering creativity, innovation, and entrepreneurial skills. It includes stages like Business Model Canvas development, business proposal preparation, and pitch deck presentations. Ideas are evaluated by experts. The theme is "Pioneering Eco-Entrepreneurs for a Brighter Future," with sub-themes like "Digital Technology," "Agriculture," "Transportation and Mobility," "Clean Energy," and "Service Industry."',
     background: Background,
-    linkRegister: 'https://docs.google.com/forms/d/e/1FAIpQLSeEvS0M5Bh-NW19aJ0BKOUSMMzUtxXiasdpQA4QjwUlvcdGuQ/viewform'
+    linkRegister: 'https://bit.ly/RegistrationBPCIYREF2024'
   }
 
   const theme: ThemeProps = {
@@ -163,6 +171,16 @@ const BPCPage = (): JSX.Element => {
     ]
   }
 
+  const footer: FooterProps = {
+    contacts: [
+      'Talita Lestari (WA : 087728380711 | Email : talitaalestari@gmail.com)',
+      'Rahmania Afradiella (WA : 082120827559 | Email : afradiella.alifah@gmail.com)'
+    ],
+    registerLink: 'https://bit.ly/RegistrationBPCIYREF2024',
+    guidebookLink: 'https://bit.ly/GuidebookBPCIYREF2024',
+    events: false
+  }
+
   return (
     <SEO title="SRE ITB | BPC">
       <Navbar />
@@ -170,6 +188,7 @@ const BPCPage = (): JSX.Element => {
       <Theme {...theme} />
       <Timeline {...timeline} />
       <Stages {...stages} />
+      <Footer {...footer} />
     </SEO>
   )
 }
