@@ -38,16 +38,14 @@ interface TimelineProps {
   }>
 }
 
-interface CompeProps {
+interface StagesProps {
   title: string
   desc: string
-  cards: CardProps[]
-}
-
-interface CardProps {
-  title: string
-  subtitle: string
-  desc: string
+  cards: Array<{
+    title: string
+    subtitle: string
+    desc: string
+  }>
 }
 
 interface WebinarProps {
@@ -160,7 +158,7 @@ const BCCPage = (): JSX.Element => {
     ]
   }
 
-  const stages: CompeProps = {
+  const stages: StagesProps = {
     title: 'Business Case Competition',
     desc: 'The IYREF Business Case Competition 2024 is divided into three main stages: Preliminary, Semifinal, and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
     cards: [
@@ -181,6 +179,7 @@ const BCCPage = (): JSX.Element => {
       }
     ]
   }
+
   const webinar: WebinarProps = {
     title:
       'Webinar “Navigating BCC Strategies for Successful Pitch Deck Development”',
@@ -208,7 +207,7 @@ const BCCPage = (): JSX.Element => {
       <Hero {...hero} />
       <Theme {...theme} />
       <Timeline {...timeline} />
-      <Stages stages={stages} />
+      <Stages {...stages} />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[

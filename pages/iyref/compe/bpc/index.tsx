@@ -5,6 +5,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
+import Stages from '@src/contexts/IYREF/Compe/Stages'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/BPC_hero.png'
 
@@ -32,6 +33,16 @@ interface TimelineProps {
     desc: string
     startDate: string
     endDate: string
+  }>
+}
+
+interface StagesProps {
+  title: string
+  desc: string
+  cards: Array<{
+    title: string
+    subtitle: string
+    desc: string
   }>
 }
 
@@ -130,12 +141,35 @@ const BPCPage = (): JSX.Element => {
     }]
   }
 
+  const stages: StagesProps = {
+    title: 'Business Plan Competition',
+    desc: 'The Business Plan Competition in IYREF 2024 is divided into three main stages: Preliminary, Semifinal, and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
+    cards: [
+      {
+        title: 'Preliminary Stage',
+        subtitle: 'Business Model Canvas',
+        desc: 'Participants are required to create a business model canvas from the proposed business idea. Participants will be given time within the time frame. After that, participants will submit and will be assessed by the assessor to be selected for the semifinal round.'
+      },
+      {
+        title: 'Semifinal Phase',
+        subtitle: 'Business Proposal',
+        desc: 'Participants are required to submit a full business plan based on the theme and subtheme of participants’ choices.'
+      },
+      {
+        title: 'Final Stage',
+        subtitle: 'Pitch Deck Submission & Pitching',
+        desc: 'Committee will provide the chance for the top 5 finalists to present their business ideas in front of various judges.'
+      }
+    ]
+  }
+
   return (
     <SEO title="SRE ITB | BPC">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
       <Timeline {...timeline} />
+      <Stages {...stages} />
     </SEO>
   )
 }

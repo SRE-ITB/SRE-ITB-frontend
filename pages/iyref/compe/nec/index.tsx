@@ -7,6 +7,7 @@ import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
+import Stages from '@src/contexts/IYREF/Compe/Stages'
 
 import Background from '@src/assets/Images/IYREF/Compe/Hero/NEC_hero.png'
 
@@ -25,6 +26,16 @@ interface ThemeProps {
   benefits: Array<{
     title: string
     contents?: string[]
+  }>
+}
+
+interface StagesProps {
+  title: string
+  desc: string
+  cards: Array<{
+    title: string
+    subtitle: string
+    desc: string
   }>
 }
 
@@ -155,6 +166,28 @@ const NECPage = (): JSX.Element => {
     }]
   }
 
+  const stages: StagesProps = {
+    title: 'National Essay Competition',
+    desc: 'The National Essay Competition in IYREF 2024 is divided into three main stages: Preliminary, Semifinal, and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
+    cards: [
+      {
+        title: 'Registration and Preliminary Stage',
+        subtitle: 'Abstract Submission',
+        desc: 'The initial phase of NEC requires participants to submit an abstract of the essay designed by each team. The submitted abstract should contain content that aligns with the content specified in the abstract section of the full essay.'
+      },
+      {
+        title: 'Re-registration and Semifinal Stage',
+        subtitle: 'Full Essay Submission',
+        desc: 'After undergoing judging and scoring phases by the panel of judges, a total of 50 teams with the highest scores will advance to the semifinal stage and are required to submit a full essay. Teams that qualify for the semifinal stage must proceed with the competition and are not allowed to withdraw for any reason. During the semifinal stage, a re-registration process will take place, and participants must pay a re-registration fee of IDR 150,000.00.'
+      },
+      {
+        title: 'Final Stage',
+        subtitle: 'Pitch Deck Submission',
+        desc: 'The full essays submitted by 50 teams will undergo a judging and scoring process by appointed judges. The top 5 teams with the highest scores will progress to the final stage and are required to submit a pitch deck as a pitching aid during the presentation by the 5 finalists. The pitching session will be conducted offline at the Ganesha campus of the Bandung Institute of Technology, and the top 5 finalists must be present on May 18, 2024.'
+      }
+    ]
+  }
+
   const webinar: WebinarProps = {
     title: 'Webinar : How to Write an Essay',
     desc: 'This webinar is organized as an effort to provide a comprehensive understanding of research essay writing with a focus on the overarching them "The Role of Youth in Advancing Renewable Energy Initiatives." Carrying the webinar theme "How to Write an Essay" the objective is not only to provide guidance on essay writing principles but also to offer insights into the concepts and benefits of renewable energy.',
@@ -181,6 +214,7 @@ const NECPage = (): JSX.Element => {
       <Hero {...hero} />
       <Theme {...theme} />
       <Timeline {...timeline} />
+      <Stages {...stages} />
       <Events webinar={webinar} coaching={coaching} />
       <FooterCompe
         contacts={[

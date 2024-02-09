@@ -6,7 +6,7 @@ interface ThemeCardProps {
 
 const ThemeCard = ({ text }: ThemeCardProps): JSX.Element => {
   return (
-    <div className='z-10 relative w-[380px] h-[150px] sm:h-[170px] bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[2%] rounded-[10px] flex items-center justify-center drop-shadow mb-10'>
+    <div className='z-10 relative w-[380px] py-[5vw] max-h-[200px] bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[2%] rounded-[10px] flex items-center justify-center drop-shadow mb-10'>
         <p className='font-montserrat text-[20px] text-white px-5 text-center font-medium'>
             {text}
         </p>
