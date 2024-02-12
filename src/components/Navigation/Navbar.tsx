@@ -39,7 +39,7 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'REFWON',
-    href: '/iyref/refwon'
+    href: '/iyref'
   },
   {
     text: 'Competitions',
@@ -47,15 +47,15 @@ const MENU_LIST: Menu[] = [
     contents: [
       {
         text: 'Business Case Competition',
-        href: '/iyref/compe/bcc'
+        href: '/iyref/bcc'
       },
       {
         text: 'Business Plan Competition',
-        href: '/iyref/compe/bpc'
+        href: '/iyref/bpc'
       },
       {
         text: 'National Essay Competition',
-        href: '/iyref/compe/nec'
+        href: '/iyref/nec'
       }
     ]
   },
@@ -234,7 +234,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
   const handleToggle = (isChecked: boolean): void => {
     if (isChecked) {
       setTimeout(() => {
-        void router.push('/iyref/refwon')
+        void router.push('/iyref')
       }, 200)
     } else {
       setTimeout(() => {
