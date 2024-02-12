@@ -2,18 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/en-US/404": "pages/en-US/404.html",
-  "/en-US/500": "pages/en-US/500.html",
-  "/en-US/student": "pages/en-US/student.html",
-  "/en-US/iyref/summit": "pages/en-US/iyref/summit.html",
-  "/en-US/iyref/refwon": "pages/en-US/iyref/refwon.html",
-  "/en-US/merchandise": "pages/en-US/merchandise.html",
-  "/en-US/iyref/comvis": "pages/en-US/iyref/comvis.html",
-  "/en-US/iyref/compe/bpc": "pages/en-US/iyref/compe/bpc.html",
-  "/en-US/iyref/compe/nec": "pages/en-US/iyref/compe/nec.html",
-  "/en-US/about": "pages/en-US/about.html",
-  "/en-US/iyref/compe/bcc": "pages/en-US/iyref/compe/bcc.html",
-  "/en-US/activity/[id]": "pages/en-US/activity/[id].html",
-  "/en-US": "pages/en-US.html",
-  "/en-US/activity": "pages/en-US/activity.html"
+  "/": "pages/index.js",
+  "/iyref": "pages/iyref.js",
+  "/iyref/bcc": "pages/iyref/bcc.js"
 }
