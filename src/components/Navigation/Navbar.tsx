@@ -43,7 +43,7 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'Competitions',
-    href: '/iyref/compe/bcc',
+    href: '/iyref/bcc',
     contents: [
       {
         text: 'Business Case Competition',
