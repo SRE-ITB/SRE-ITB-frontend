@@ -219,7 +219,7 @@ const BCCPage = (): JSX.Element => {
   }
 
   return (
-    <SEO title="SRE ITB | BCC">
+    <SEO title="IYREF | BCC">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />

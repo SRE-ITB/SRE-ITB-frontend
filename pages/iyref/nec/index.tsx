@@ -226,7 +226,7 @@ const NECPage = (): JSX.Element => {
   }
 
   return (
-    <SEO title="SRE ITB | NEC">
+    <SEO title="IYREF | NEC">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />

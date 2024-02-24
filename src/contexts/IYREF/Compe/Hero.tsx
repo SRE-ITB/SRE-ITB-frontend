@@ -23,7 +23,7 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
   }, [])
 
   const router = useRouter()
-  const page = router.pathname.split('compe/')[1]
+  const page = router.pathname.split('iyref/')[1]
 
   return (
     <div className='h-screen flex flex-col justify-center items-center overflow-x-hidden'>
@@ -56,7 +56,7 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
             <h2 className='xl:text-[20px] md:text-[16px] text-[13px] px-[10vw] mt-[30px] animate__animated animate__fadeInUp'>
               {desc}
             </h2>
-            <div className="translate-y-[15px] flex justify-center">
+            <div className="translate-y-[15px] flex flex-col justify-center">
               <a href={linkRegister} target='_blank' rel='noreferrer'>
                 <button
                 className='font-normal mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer animate-bounce'
@@ -64,6 +64,15 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
                   Join Now {page === 'bpc' ? '(FREE)' : ''}
                 </button>
               </a>
+              { page === 'bcc' && (
+                <a href='https://bit.ly/WebinarBCCIYREF2024' target='_blank' rel='noreferrer'>
+                  <button
+                  className='font-normal mt-[10px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer'
+                  >
+                    Join Webinar
+                  </button>
+                </a>
+              )}
             </div>
           </div>
         </div>

@@ -181,7 +181,7 @@ const BPCPage = (): JSX.Element => {
   }
 
   return (
-    <SEO title="SRE ITB | BPC">
+    <SEO title="IYREF ITB | BPC">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
