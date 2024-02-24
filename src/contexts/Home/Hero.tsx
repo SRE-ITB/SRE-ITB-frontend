@@ -34,7 +34,7 @@ const Hero = (): JSX.Element => {
               Renewable Energy
             </h1>
             <h2 className='italic xl:text-[24px] md:text-[22px] font-normal text-[20px] animate__animated animate__fadeInUp'>
-              Institut Teknologi Bandung.
+              Institut Teknologi Bandung
             </h2>
             <h3 className='italic font-normal text-[18px] mt-[30px] animate__animated animate__fadeInUp'>
               #RElevatingSREITB
