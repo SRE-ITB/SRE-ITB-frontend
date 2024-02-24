@@ -1,8 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Company from '@src/assets/Images/IYREF/Comvis/About/company.svg'
-import Green1 from '@src/assets/Images/IYREF/Comvis/About/green1.svg'
-import Green2 from '@src/assets/Images/IYREF/Comvis/About/green2.svg'
+import Green from '@src/assets/Images/IYREF/Comvis/About/green.svg'
 import PottedPlant from '@src/assets/Images/IYREF/Comvis/About/potted_plant.svg'
 import Leaves from '@src/assets/Images/IYREF/Comvis/About/leaves.svg'
 import Bird1 from '@src/assets/Images/IYREF/Comvis/About/bird_1.svg'
@@ -39,12 +38,11 @@ const About = (): JSX.Element => {
                 </div>
             </div>
         </div>
-        <div className='absolute top-[950px] sm:top-[870px] md:top-[550px] xl:top-[440px] z-0'>
+        <div className='absolute top-[950px] sm:top-[870px] md:top-[550px] xl:top-[440px] w-[105vw] z-0'>
             <Image
-                src={Green1}
+                src={Green}
                 alt='Green1'
-                width={1545}
-                height={370}
+                className='flex'
             />
         </div>
         <div className="w-[140px] md:w-[175px] lg:w-[200px] xl:w-[280px] left-0 top-[1050px] sm:top-[1000px] md:top-[720px] lg:top-[680px] xl:top-[650px] absolute z-30">
@@ -79,12 +77,10 @@ const About = (): JSX.Element => {
             </div>
         </div>
         <div className='h-[110px] sm:h-[150px] md:h-[180px] lg:h-[230px] xl:h-[280px]'></div>
-        <div className='absolute bottom-0 z-0'>
+        <div className='absolute bottom-0 z-0 w-[105vw] rotate-180'>
             <Image
-                src={Green2}
+                src={Green}
                 alt='Green2'
-                width={1545}
-                height={370}
             />
         </div>
     </div>

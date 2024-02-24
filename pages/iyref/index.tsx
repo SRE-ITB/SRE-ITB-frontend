@@ -11,7 +11,7 @@ import Footer from '@src/components/Navigation/Footer'
 
 const REFWONPage = (): JSX.Element => {
   return (
-    <SEO title="SRE ITB | REFWON">
+    <SEO title="IYREF | REFWON">
       <Navbar />
       <Hero />
       <Desc />

@@ -4,7 +4,7 @@ import Comingsoon from '@src/contexts/ComingSoon/ComingSoon'
 
 const SummitPage = (): JSX.Element => {
   return (
-    <SEO title="SRE ITB | Summit">
+    <SEO title="IYREF | Summit">
       <Navbar />
       <Comingsoon />
     </SEO>
