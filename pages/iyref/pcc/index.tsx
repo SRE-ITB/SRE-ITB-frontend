@@ -5,7 +5,7 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
 import Footer from '@src/contexts/IYREF/Compe/Footer'
-import Events from '@src/contexts/IYREF/Compe/Event'
+// import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 
@@ -48,25 +48,25 @@ interface StagesProps {
   }>
 }
 
-interface WebinarProps {
-  title: string
-  desc: string
-  date: string
-  time: string
-  place: string
-  speaker: string
-  free: string
-}
+// interface WebinarProps {
+//   title: string
+//   desc: string
+//   date: string
+//   time: string
+//   place: string
+//   speaker: string
+//   free: string
+// }
 
-interface CoachingProps {
-  title: string
-  desc: string
-  date: string
-  time: string
-  place: string
-  speaker: string
-  exclusive: string
-}
+// interface CoachingProps {
+//   title: string
+//   desc: string
+//   date: string
+//   time: string
+//   place: string
+//   speaker: string
+//   exclusive: string
+// }
 
 interface FooterProps {
   contacts: string[]
@@ -164,27 +164,6 @@ const PCCPage = (): JSX.Element => {
     ]
   }
 
-  const webinar: WebinarProps = {
-    title:
-      'TBA',
-    desc: 'TBA',
-    date: 'TBA',
-    time: 'TBA',
-    place: 'TBA',
-    speaker: 'TBA',
-    free: 'TBA'
-  }
-
-  const coaching: CoachingProps = {
-    title: 'TBA',
-    desc: 'TBA',
-    date: 'TBA',
-    time: 'TBA',
-    place: 'TBA',
-    speaker: 'TBA',
-    exclusive: 'TBA'
-  }
-
   const footer: FooterProps = {
     contacts: [
       'TBA',
@@ -202,7 +181,7 @@ const PCCPage = (): JSX.Element => {
       <Theme {...theme} />
       <Timeline {...timeline} />
       <Stages {...stages} />
-      <Events webinar={webinar} coaching={coaching} />
+      {/* <Events webinar={webinar} coaching={coaching} /> */}
       <Footer {...footer} />
     </SEO>
   )
