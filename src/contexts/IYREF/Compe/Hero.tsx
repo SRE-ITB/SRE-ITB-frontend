@@ -38,17 +38,17 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
         <div className='w-full h-full opacity-30 bg-[#000000]'></div>
         <div className='absolute inset-0 justify-center items-center flex flex-col'>
           <div className='font-montserrat text-center text-white'>
-            <h1 className='xl:text-[48px] md:text-[38px] text-[28px] font-bold leading-[40px] md:leading-[60px] animate__animated animate__fadeInUp'>
+            <h1 className='xl:text-[48px] md:text-[38px] text-[28px] font-bold leading-[40px] md:leading-[60px] px-5 animate__animated animate__fadeInUp'>
             {
               isWideScreen
                 ? (
                 <>
-                  {title} Competition<br />IYREF 2024
+                  {title} Competition<br />{page === 'pcc' ? 'IYREF 2024 x New Energy Nexus' : 'IYREF 2024'}
                 </>
                   )
                 : (
                 <>
-                  {title} <br />Competition IYREF 2024
+                  {title} <br />Competition {page === 'pcc' ? 'IYREF 2024 x New Energy Nexus' : 'IYREF 2024'}
                 </>
                   )
             }

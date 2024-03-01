@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 
 import ThemeCard from '@src/components/Card/ThemeCard'
 import FinalistCard from '@src/components/Card/FinalistCard'
@@ -21,6 +22,9 @@ interface ThemeProps {
 }
 
 const Theme = ({ type, theme, subtheme, addText, benefits }: ThemeProps): JSX.Element => {
+  const router = useRouter()
+  const page = router.pathname.split('iyref/')[1]
+
   return (
     <div className='relative font-montserrat h-auto flex flex-col justify-center items-center overflow-y-hidden'>
       <div className='relative w-full z-10 mt-20'>
@@ -49,7 +53,7 @@ const Theme = ({ type, theme, subtheme, addText, benefits }: ThemeProps): JSX.El
               Total Competition Prize Up To
           </h2>
           <p className='font-gradient text-[48px] md:text-[72px] lg:text-[96px] text-center font-bold leading-[50px] sm:leading-normal'>
-              IDR 30.000.000
+              {page === 'pcc' ? 'IDR 14.000.000' : 'IDR 30.000.000'}
           </p>
       </div>
       <div className='mb-[100px] lg:mb-[300px] px-[5vw] w-full relative'>

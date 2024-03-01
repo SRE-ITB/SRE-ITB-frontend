@@ -56,6 +56,10 @@ const MENU_LIST: Menu[] = [
       {
         text: 'National Essay Competition',
         href: '/iyref/nec'
+      },
+      {
+        text: 'Policy Case Competition',
+        href: '/iyref/pcc'
       }
     ]
   },
