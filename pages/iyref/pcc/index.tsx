@@ -8,7 +8,7 @@ import Footer from '@src/contexts/IYREF/Compe/Footer'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 
-import Background from '@src/assets/Images/IYREF/Compe/Hero/BCC_hero.png'
+import Background from '@src/assets/Images/IYREF/Compe/Hero/PCC_hero.jpg'
 
 interface HeroProps {
   title: string
@@ -20,6 +20,7 @@ interface HeroProps {
 interface ThemeProps {
   type: string
   theme: string
+  themeDesc?: string
   subtheme?: string[]
   addText: string
   benefits: Array<{
@@ -65,6 +66,7 @@ const PCCPage = (): JSX.Element => {
   const theme: ThemeProps = {
     type: 'PCC',
     theme: 'New Energy Nexus Indonesia',
+    themeDesc: 'New Energy Nexus works to support the development of ecosystems that can support the needs of not only innovators, startups, and entrepreneurs, but also other stakeholders in the clean energy and climate solutions sectors.',
     addText: 'Go register your team if you meet the eligibilities below',
     benefits: [
       {

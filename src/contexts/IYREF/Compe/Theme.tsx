@@ -13,6 +13,7 @@ import Hexagon from '@src/assets/Images/IYREF/Compe/Events/Hexagon.svg'
 interface ThemeProps {
   type: string
   theme: string
+  themeDesc?: string
   subtheme?: string[]
   addText: string
   benefits: Array<{
@@ -21,7 +22,7 @@ interface ThemeProps {
   }>
 }
 
-const Theme = ({ type, theme, subtheme, addText, benefits }: ThemeProps): JSX.Element => {
+const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemeProps): JSX.Element => {
   const router = useRouter()
   const page = router.pathname.split('iyref/')[1]
 
@@ -29,12 +30,29 @@ const Theme = ({ type, theme, subtheme, addText, benefits }: ThemeProps): JSX.El
     <div className='relative font-montserrat h-auto flex flex-col justify-center items-center overflow-y-hidden'>
       <div className='relative w-full z-10 mt-20'>
         <div className='my-[50px] space-y-3 mx-[10vw]'>
-          <h2 className='text-green11 text-center text-[16px]'>
-            {type} IYREF 2024&apos;s THEME
-          </h2>
-          <p className='font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal'>
+          { page !== 'pcc'
+            ? (
+                <p className='text-green11 text-center text-[16px]'>
+                  {type} IYREF 2024&apos;s THEME
+                </p>
+              )
+            : (
+                ''
+              )
+          }
+          <h2 className='font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal'>
             &quot;{theme}&quot;
-          </p>
+          </h2>
+          { page === 'pcc'
+            ? (
+                <h3 className='text-center font-semibold text-[16px]'>
+                  {themeDesc}
+                </h3>
+              )
+            : (
+                ''
+              )
+          }
         </div>
         <div className='flex-wrap flex mt-[10px] justify-center mb-[5vw] mx-[10vw] z-10'>
           { subtheme?.map((text: string, index: React.Key | null | undefined) => (
