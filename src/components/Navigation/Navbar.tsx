@@ -56,12 +56,12 @@ const MENU_LIST: Menu[] = [
       {
         text: 'National Essay Competition',
         href: '/iyref/nec'
-      },
-      {
-        text: 'Policy Case Competition',
-        href: '/iyref/pcc'
       }
     ]
+  },
+  {
+    text: 'PCC',
+    href: '/iyref/pcc'
   },
   {
     text: 'Comvis',
@@ -331,8 +331,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
                       (idx === 1 && iyrefPage === 'compe') ||
-                      (idx === 2 && iyrefPage === 'comvis') ||
-                      (idx === 3 && iyrefPage === 'summit')
+                      (idx === 2 && iyrefPage === 'pcc') ||
+                      (idx === 3 && iyrefPage === 'comvis') ||
+                      (idx === 4 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''
                     } inline-flex items-center`}>

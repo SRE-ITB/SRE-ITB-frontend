@@ -5,7 +5,6 @@ import Navbar from '@src/components/Navigation/Navbar'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
 import Footer from '@src/contexts/IYREF/Compe/Footer'
-// import Events from '@src/contexts/IYREF/Compe/Event'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 
@@ -48,26 +47,6 @@ interface StagesProps {
   }>
 }
 
-// interface WebinarProps {
-//   title: string
-//   desc: string
-//   date: string
-//   time: string
-//   place: string
-//   speaker: string
-//   free: string
-// }
-
-// interface CoachingProps {
-//   title: string
-//   desc: string
-//   date: string
-//   time: string
-//   place: string
-//   speaker: string
-//   exclusive: string
-// }
-
 interface FooterProps {
   contacts: string[]
   registerLink: string
@@ -78,36 +57,30 @@ interface FooterProps {
 const PCCPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'Policy Case',
-    desc: 'Policy Case Competition (PCC) is a collaboration event by IYREF 2024 and a clean energy funding start-up, New Energy Nexus Indonesia. Participants will analyze real-world issues, focusing specifically on energy transition policy by formulating strategic policies, conduct research, and present recommendations to expert judges. This competition offers a unique opportunity to showcase policy-making skills, collaborate with peers, and contribute to shaping effective solutions for the challenges of energy transition.',
+    desc: 'A policy case competition encourages young people to think critically, analytically, and creatively to present solution papers on study cases from each province about energy transition. Participants, organized into teams, develop a comprehensive policy solution to address a particular real-world problem or issue.',
     background: Background,
     linkRegister: 'https://bit.ly/RegisterPCCIYREF24'
   }
 
   const theme: ThemeProps = {
     type: 'PCC',
-    theme: 'TBA',
-    addText: 'Go register your team if you are diploma / university students in: West Java (excluding…)',
+    theme: 'New Energy Nexus Indonesia',
+    addText: 'Go register your team if you meet the eligibilities below',
     benefits: [
       {
-        title: 'Exclusive intimate coaching session for the semifinalist'
+        title: 'University students (Bachelor/Master degree) from West Java, excluding Depok & Bekasi (Students from these two cities can register for the competition held in DKI Jakarta)'
       },
       {
-        title: 'Free policy-making workshop with policy experts'
+        title: 'Aged 18-30 years old'
       },
       {
-        title: 'E-certificate for all participants'
+        title: 'Have interest in policy-making related to energy transition'
       }
     ]
   }
 
   const timeline: TimelineProps = {
     timeline: [
-      {
-        title: '21 March 2024',
-        desc: 'Instagram Showcase',
-        startDate: '2024-03-21',
-        endDate: '2024-03-21'
-      },
       {
         title: '21 Mar - 17 Apr 2024',
         desc: 'Registration',
@@ -171,7 +144,7 @@ const PCCPage = (): JSX.Element => {
     ],
     registerLink: 'https://bit.ly/RegisterPCCIYREF24',
     guidebookLink: 'https://bit.ly/GuidebookPCCIYREF24',
-    events: true
+    events: false
   }
 
   return (
@@ -181,7 +154,6 @@ const PCCPage = (): JSX.Element => {
       <Theme {...theme} />
       <Timeline {...timeline} />
       <Stages {...stages} />
-      {/* <Events webinar={webinar} coaching={coaching} /> */}
       <Footer {...footer} />
     </SEO>
   )
