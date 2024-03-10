@@ -4,8 +4,7 @@
     "paths": {
       "@src/*": [
         "./src/*"
-      ],
-      "react": [ "./node_modules/@types/react" ]
+      ]
     },
     "target": "es5",
     "lib": [
