@@ -2,6 +2,19 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/en-US/404": "pages/en-US/404.html",
+  "/en-US/500": "pages/en-US/500.html",
+  "/en-US/iyref": "pages/en-US/iyref.html",
+  "/en-US/iyref/pcc": "pages/en-US/iyref/pcc.html",
+  "/en-US/iyref/summit": "pages/en-US/iyref/summit.html",
+  "/en-US/iyref/refwon": "pages/en-US/iyref/refwon.html",
+  "/en-US/merchandise": "pages/en-US/merchandise.html",
+  "/en-US/student": "pages/en-US/student.html",
+  "/en-US/iyref/comvis": "pages/en-US/iyref/comvis.html",
+  "/en-US/about": "pages/en-US/about.html",
+  "/en-US/iyref/bpc": "pages/en-US/iyref/bpc.html",
+  "/en-US/iyref/bcc": "pages/en-US/iyref/bcc.html",
+  "/en-US/activity/[id]": "pages/en-US/activity/[id].html",
+  "/en-US": "pages/en-US.html",
+  "/en-US/activity": "pages/en-US/activity.html"
 }
