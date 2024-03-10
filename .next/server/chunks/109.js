@@ -206,20 +206,21 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
                         className: "font-montserrat text-center text-white",
                         children: [
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                className: "xl:text-[48px] md:text-[38px] text-[28px] font-bold leading-[40px] md:leading-[60px] animate__animated animate__fadeInUp",
+                                className: "xl:text-[48px] md:text-[38px] text-[28px] font-bold leading-[40px] md:leading-[60px] px-5 animate__animated animate__fadeInUp",
                                 children: isWideScreen ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
                                     children: [
                                         title,
                                         " Competition",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                        "IYREF 2024"
+                                        page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
                                     ]
                                 }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
                                     children: [
                                         title,
                                         " ",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                        "Competition IYREF 2024"
+                                        "Competition ",
+                                        page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
                                     ]
                                 })
                             }),
@@ -273,8 +274,11 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(580);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(580);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 const Card = ({ title , subtitle , desc  })=>{
@@ -297,11 +301,13 @@ const Card = ({ title , subtitle , desc  })=>{
     });
 };
 Card.propTypes = {
-    title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-    subtitle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-    desc: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
+    title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+    subtitle: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+    desc: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired)
 };
 const Stages = ({ title , desc , cards  })=>{
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_1__.useRouter)();
+    const page = router.pathname.split("iyref/")[1];
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
         className: "overflow-x-hidden font-montserrat",
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -316,7 +322,7 @@ const Stages = ({ title , desc , cards  })=>{
                     children: desc
                 }),
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                    className: "grid grid-cols-1 xl:grid-cols-3 gap-[4vh] mx-[4vw] mt-[5vw]",
+                    className: `grid grid-cols-1 gap-[4vh] mx-[4vw] mt-[5vw] ${page === "pcc" ? "xl:grid-cols-2" : "xl:grid-cols-3"}`,
                     children: cards.map((card)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Card, {
                             title: card.title,
                             subtitle: card.subtitle,
@@ -328,12 +334,12 @@ const Stages = ({ title , desc , cards  })=>{
     });
 };
 Stages.propTypes = {
-    title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-    desc: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-    cards: prop_types__WEBPACK_IMPORTED_MODULE_1___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_1___default().shape({
-        title: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-        subtitle: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired),
-        desc: (prop_types__WEBPACK_IMPORTED_MODULE_1___default().string.isRequired)
+    title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+    desc: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+    cards: prop_types__WEBPACK_IMPORTED_MODULE_2___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_2___default().shape({
+        title: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+        subtitle: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired),
+        desc: (prop_types__WEBPACK_IMPORTED_MODULE_2___default().string.isRequired)
     })).isRequired
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Stages);
@@ -357,6 +363,8 @@ var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: ./node_modules/next/image.js
 var next_image = __webpack_require__(5675);
 var image_default = /*#__PURE__*/__webpack_require__.n(next_image);
+// EXTERNAL MODULE: external "next/router"
+var router_ = __webpack_require__(1853);
 ;// CONCATENATED MODULE: ./src/components/Card/ThemeCard.tsx
 
 
@@ -412,7 +420,10 @@ var Leaves = __webpack_require__(7199);
 
 
 
-const Theme = ({ type , theme , subtheme , addText , benefits  })=>{
+
+const Theme = ({ type , theme , subtheme , addText , benefits , themeDesc  })=>{
+    const router = (0,router_.useRouter)();
+    const page = router.pathname.split("iyref/")[1];
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: "relative font-montserrat h-auto flex flex-col justify-center items-center overflow-y-hidden",
         children: [
@@ -422,21 +433,25 @@ const Theme = ({ type , theme , subtheme , addText , benefits  })=>{
                     /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
                         className: "my-[50px] space-y-3 mx-[10vw]",
                         children: [
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h2", {
+                            page !== "pcc" ? /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
                                 className: "text-green11 text-center text-[16px]",
                                 children: [
                                     type,
                                     " IYREF 2024's THEME"
                                 ]
-                            }),
-                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("p", {
+                            }) : "",
+                            /*#__PURE__*/ (0,jsx_runtime_.jsxs)("h2", {
                                 className: "font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal",
                                 children: [
                                     '"',
                                     theme,
                                     '"'
                                 ]
-                            })
+                            }),
+                            page === "pcc" ? /*#__PURE__*/ jsx_runtime_.jsx("h3", {
+                                className: "text-center font-semibold text-[16px]",
+                                children: themeDesc
+                            }) : ""
                         ]
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("div", {
@@ -472,7 +487,7 @@ const Theme = ({ type , theme , subtheme , addText , benefits  })=>{
                     }),
                     /*#__PURE__*/ jsx_runtime_.jsx("p", {
                         className: "font-gradient text-[48px] md:text-[72px] lg:text-[96px] text-center font-bold leading-[50px] sm:leading-normal",
-                        children: "IDR 30.000.000"
+                        children: page === "pcc" ? "IDR 14.000.000" : "IDR 30.000.000"
                     })
                 ]
             }),
@@ -606,7 +621,7 @@ const Timeline = ({ timeline  })=>{
                 ]
             }),
             /*#__PURE__*/ jsx_runtime_.jsx("div", {
-                className: "hidden md:block absolute w-[35vw] max-w-[600px] bottom-0",
+                className: "hidden md:block absolute w-[35vw] max-w-[450px] bottom-0",
                 children: /*#__PURE__*/ jsx_runtime_.jsx((image_default()), {
                     src: Pot,
                     alt: "Pot-Image"
