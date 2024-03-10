@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
 import ThemeCard from '@src/components/Card/ThemeCard'
 import FinalistCard from '@src/components/Card/FinalistCard'
@@ -13,7 +12,6 @@ import Hexagon from '@src/assets/Images/IYREF/Compe/Events/Hexagon.svg'
 interface ThemeProps {
   type: string
   theme: string
-  themeDesc?: string
   subtheme?: string[]
   addText: string
   benefits: Array<{
@@ -22,37 +20,17 @@ interface ThemeProps {
   }>
 }
 
-const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemeProps): JSX.Element => {
-  const router = useRouter()
-  const page = router.pathname.split('iyref/')[1]
-
+const Theme = ({ type, theme, subtheme, addText, benefits }: ThemeProps): JSX.Element => {
   return (
     <div className='relative font-montserrat h-auto flex flex-col justify-center items-center overflow-y-hidden'>
       <div className='relative w-full z-10 mt-20'>
         <div className='my-[50px] space-y-3 mx-[10vw]'>
-          { page !== 'pcc'
-            ? (
-                <p className='text-green11 text-center text-[16px]'>
-                  {type} IYREF 2024&apos;s THEME
-                </p>
-              )
-            : (
-                ''
-              )
-          }
-          <h2 className='font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal'>
-            &quot;{theme}&quot;
+          <h2 className='text-green11 text-center text-[16px]'>
+            {type} IYREF 2024&apos;s THEME
           </h2>
-          { page === 'pcc'
-            ? (
-                <h3 className='text-center font-semibold text-[16px]'>
-                  {themeDesc}
-                </h3>
-              )
-            : (
-                ''
-              )
-          }
+          <p className='font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal'>
+            &quot;{theme}&quot;
+          </p>
         </div>
         <div className='flex-wrap flex mt-[10px] justify-center mb-[5vw] mx-[10vw] z-10'>
           { subtheme?.map((text: string, index: React.Key | null | undefined) => (
@@ -71,7 +49,7 @@ const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemePro
               Total Competition Prize Up To
           </h2>
           <p className='font-gradient text-[48px] md:text-[72px] lg:text-[96px] text-center font-bold leading-[50px] sm:leading-normal'>
-              {page === 'pcc' ? 'IDR 14.000.000' : 'IDR 30.000.000'}
+              IDR 30.000.000
           </p>
       </div>
       <div className='mb-[100px] lg:mb-[300px] px-[5vw] w-full relative'>

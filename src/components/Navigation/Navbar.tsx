@@ -39,11 +39,11 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'REFWON',
-    href: '/iyref/refwon'
+    href: '/iyref'
   },
   {
     text: 'Competitions',
-    href: '/iyref',
+    href: '/iyref/bcc',
     contents: [
       {
         text: 'Business Case Competition',
@@ -55,17 +55,7 @@ const MENU_LIST: Menu[] = [
       },
       {
         text: 'National Essay Competition',
-        href: '/iyref'
-      }
-    ]
-  },
-  {
-    text: 'NEX STEP',
-    href: '/iyref/pcc',
-    contents: [
-      {
-        text: 'Policy Case Competition',
-        href: '/iyref/pcc'
+        href: '/iyref/nec'
       }
     ]
   },
@@ -231,7 +221,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
 
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
-  const iyrefPage = router.pathname.split('/')[2] || 'nec'
+  const iyrefPage = router.pathname.split('/')[2]
 
   useEffect(() => {
     if (page === 'iyref') {
@@ -320,7 +310,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
               }`}
             />
           </div>
-          <div className="hidden xl:flex">
+          <div className="hidden lg:flex">
             {menuList.map((menu, idx) => (
               <div key={idx} className="relative inline-flex items-center mt-[-7px]">
                 <a
@@ -336,10 +326,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
-                      (idx === 1 && (iyrefPage === 'bpc' || (page === 'iyref' && iyrefPage === 'nec') || iyrefPage === 'bcc')) ||
-                      (idx === 2 && iyrefPage === 'pcc') ||
-                      (idx === 3 && iyrefPage === 'comvis') ||
-                      (idx === 4 && iyrefPage === 'summit')
+                      (idx === 1 && iyrefPage === 'compe') ||
+                      (idx === 2 && iyrefPage === 'comvis') ||
+                      (idx === 3 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''
                     } inline-flex items-center`}>

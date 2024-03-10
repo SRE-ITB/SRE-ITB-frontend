@@ -48,7 +48,7 @@ const Timeline = ({ timeline }: TimelineProps): JSX.Element => {
           <div className='absolute h-full w-[4px] ml-[8px] bg-green8 top-0 rounded-full'></div>
         </div>
       </div>
-      <div className='hidden md:block absolute w-[35vw] max-w-[450px] bottom-0'>
+      <div className='hidden md:block absolute w-[35vw] max-w-[600px] bottom-0'>
         <Image
           src={Pot}
           alt="Pot-Image"

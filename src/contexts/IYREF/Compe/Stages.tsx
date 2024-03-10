@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import PropTypes from 'prop-types'
 
 interface StagesProps {
@@ -27,15 +26,12 @@ Card.propTypes = {
 }
 
 const Stages = ({ title, desc, cards }: StagesProps): JSX.Element => {
-  const router = useRouter()
-  const page = router.pathname.split('iyref/')[1]
-
   return (
     <div className='overflow-x-hidden font-montserrat'>
         <div className='relative w-screen bg-gradient p-[5vw] pb-[10vw] text-center items-center text-white'>
             <h1 className='font-bold text-[28px] xl:text-[48px] p-[3vw]'>{title}</h1>
             <p className='px-[6vw] text-[15px] xl:text-[20px] mt-[4vh]'>{desc}</p>
-            <div className={`grid grid-cols-1 gap-[4vh] mx-[4vw] mt-[5vw] ${page === 'pcc' ? 'xl:grid-cols-2' : 'xl:grid-cols-3'}`}>
+            <div className='grid grid-cols-1 xl:grid-cols-3 gap-[4vh] mx-[4vw] mt-[5vw]'>
                 {cards.map((card) =>
                   <Card key={card.title} title={card.title} subtitle={card.subtitle} desc={card.desc} />
                 )}
