@@ -39,11 +39,11 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'REFWON',
-    href: '/iyref'
+    href: '/iyref/refwon'
   },
   {
     text: 'Competitions',
-    href: '/iyref/bcc',
+    href: '/iyref',
     contents: [
       {
         text: 'Business Case Competition',
@@ -55,13 +55,19 @@ const MENU_LIST: Menu[] = [
       },
       {
         text: 'National Essay Competition',
-        href: '/iyref/nec'
+        href: '/iyref'
       }
     ]
   },
   {
-    text: 'PCC',
-    href: '/iyref/pcc'
+    text: 'NEX STEP',
+    href: '/iyref/pcc',
+    contents: [
+      {
+        text: 'Policy Case Competition',
+        href: '/iyref/pcc'
+      }
+    ]
   },
   {
     text: 'Comvis',
@@ -225,7 +231,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
 
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
-  const iyrefPage = router.pathname.split('/')[2]
+  const iyrefPage = router.pathname.split('/')[2] || 'nec'
 
   useEffect(() => {
     if (page === 'iyref') {
@@ -314,7 +320,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
               }`}
             />
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden xl:flex">
             {menuList.map((menu, idx) => (
               <div key={idx} className="relative inline-flex items-center mt-[-7px]">
                 <a
@@ -330,7 +336,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
-                      (idx === 1 && iyrefPage === 'compe') ||
+                      (idx === 1 && (iyrefPage === 'bpc' || (page === 'iyref' && iyrefPage === 'nec') || iyrefPage === 'bcc')) ||
                       (idx === 2 && iyrefPage === 'pcc') ||
                       (idx === 3 && iyrefPage === 'comvis') ||
                       (idx === 4 && iyrefPage === 'summit')
