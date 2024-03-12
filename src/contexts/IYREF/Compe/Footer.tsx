@@ -5,7 +5,7 @@ import Leaves from '@src/assets/Images/IYREF/Compe/Footer/leaves.svg'
 import Stars from '@src/assets/Images/IYREF/Compe/Footer/stars.svg'
 
 interface FooterProps {
-  contacts: string[]
+  contacts?: string[]
   registerLink: string
   guidebookLink: string
   events: boolean
@@ -39,12 +39,13 @@ const Footer = ({ contacts, registerLink, guidebookLink, events }: FooterProps):
           </div>
         </div>
         {/* Contact Person */}
+        { contacts && (
         <div className="w-screen h-auto flex flex-col justify-between gap-6 items-center text-white">
           <h2 className="text-[28px] lg:text-[32px] font-bold">
             CONTACT PERSON
           </h2>
           <div className="w-full flex flex-col justify-between gap-3 items-center text-center px-[15px]">
-            {contacts.map((contact, index) => (
+            {contacts?.map((contact, index) => (
               <div key={index}>
                 <p>
                   {contact.split('(')[0]}
@@ -56,6 +57,9 @@ const Footer = ({ contacts, registerLink, guidebookLink, events }: FooterProps):
             ))}
           </div>
         </div>
+        )}
+
+        {/* Illustration */}
         <div className="w-[40px] lg:w-[70px] top-[60px] lg:top-[150px] right-[24vw] absolute">
           <Image src={Stars} alt="plant" className="" />
         </div>
