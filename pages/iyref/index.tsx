@@ -77,7 +77,7 @@ interface FooterProps {
 
 const NECPage = (): JSX.Element => {
   const hero: HeroProps = {
-    title: 'National Essay',
+    title: 'National Essay Competition',
     desc: 'The National Essay Competition (NEC) within IYREF targets high school and university students, focusing on essay and pitch deck submissions. Its aim is to enhance problem-solving skills, specifically in renewable energy. Participants explore the theme "The Role of Youth in Advancing Renewable Energy Initiatives," with sub-themes like "Energy Intermittency," "Inclusivity in Energy Access," and "Integration of Renewable Energy in Youth Curriculum."',
     background: Background,
     linkRegister: 'https://bit.ly/RegistrationNEC2024'

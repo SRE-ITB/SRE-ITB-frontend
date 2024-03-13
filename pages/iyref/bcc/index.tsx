@@ -77,7 +77,7 @@ interface FooterProps {
 
 const BCCPage = (): JSX.Element => {
   const hero: HeroProps = {
-    title: 'Business Case',
+    title: 'Business Case Competition',
     desc: 'The Business Case Competition (BCC) within IYREF is designed for diploma (D3 and D4) and undergraduate (S1) students. Participants submit an executive summary, proposal, and pitch deck focusing on the theme "Innovation to Reach The Implementation of Renewable Energies in Industry 5.0". The goal is to encourage innovative business strategies that accelerate renewable energy adoption, contributing to the sustainable vision of Net Zero Emission 2060.',
     background: Background,
     linkRegister: 'https://bit.ly/RegisterBCCIYREF24'

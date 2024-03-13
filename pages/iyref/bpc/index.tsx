@@ -56,7 +56,7 @@ interface FooterProps {
 
 const BPCPage = (): JSX.Element => {
   const hero: HeroProps = {
-    title: 'Business Plan',
+    title: 'Business Plan Competition',
     desc: 'The IYREF Business Plan Competition by SRE ITB targets diploma (D3/D4) and undergraduate (S1) students, fostering creativity, innovation, and entrepreneurial skills. It includes stages like Business Model Canvas development, business proposal preparation, and pitch deck presentations. Ideas are evaluated by experts. The theme is "Pioneering Eco-Entrepreneurs for a Brighter Future," with sub-themes like "Digital Technology," "Agriculture," "Transportation and Mobility," "Clean Energy," and "Service Industry."',
     background: Background,
     linkRegister: 'https://bit.ly/RegistrationBPCIYREF2024'

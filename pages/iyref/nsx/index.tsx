@@ -8,7 +8,7 @@ import Stages from '@src/contexts/IYREF/Compe/Stages'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 
-import Background from '@src/assets/Images/IYREF/Compe/Hero/PCC_hero.jpg'
+import Background from '@src/assets/Images/IYREF/Compe/Hero/NSX_hero.jpg'
 
 interface HeroProps {
   title: string
@@ -54,16 +54,16 @@ interface StagesProps {
 //   events: boolean
 // }
 
-const PCCPage = (): JSX.Element => {
+const NSXPage = (): JSX.Element => {
   const hero: HeroProps = {
-    title: 'Policy Case',
-    desc: 'A policy case competition encourages young people to think critically, analytically, and creatively to present solution papers on study cases from each province about energy transition. Participants, organized into teams, develop a comprehensive policy solution to address a particular real-world problem or issue.',
+    title: 'NEX STEP XChange',
+    desc: 'The NEX Sustainable Energy Policy XChange (NEX STEP Xchange) is a collaboration program by New Energy Nexus Indonesia and SRE ITB, designed to provide platforms for young individuals to actively engage and contribute to the development of policies that promote the energy transition in Indonesia. NEX STEP XChange embodies the essential role of the youth as our next generation in driving policy changes crucial for Indonesia’s energy transition.',
     background: Background,
     linkRegister: ''
   }
 
   const theme: ThemeProps = {
-    type: 'PCC',
+    type: 'NSX',
     theme: 'New Energy Nexus Indonesia',
     themeDesc: 'New Energy Nexus works to support the development of ecosystems that can support the needs of not only innovators, startups, and entrepreneurs, but also other stakeholders in the clean energy and climate solutions sectors.',
     addText: 'Go register your team if you meet the eligibilities below',
@@ -76,6 +76,9 @@ const PCCPage = (): JSX.Element => {
       },
       {
         title: 'Have interest in policy-making related to energy transition'
+      },
+      {
+        title: 'Note that only one master degree student is allowed in each team'
       }
     ]
   }
@@ -114,7 +117,7 @@ const PCCPage = (): JSX.Element => {
       },
       {
         title: '18 May 2024',
-        desc: 'Workshop, Pitching, and Awarding',
+        desc: 'Pitching and Awarding',
         startDate: '2024-05-18',
         endDate: '2024-05-18'
       }
@@ -139,13 +142,13 @@ const PCCPage = (): JSX.Element => {
   }
 
   // const footer: FooterProps = {
-  //   registerLink: 'https://bit.ly/RegisterPCCIYREF24',
-  //   guidebookLink: 'https://bit.ly/GuidebookPCCIYREF24',
+  //   registerLink: 'https://bit.ly/RegisterNSXIYREF24',
+  //   guidebookLink: 'https://bit.ly/GuidebookNSXIYREF24',
   //   events: false
   // }
 
   return (
-    <SEO title="IYREF | PCC">
+    <SEO title="IYREF | NSX">
       <Navbar />
       <Hero {...hero} />
       <Theme {...theme} />
@@ -156,4 +159,4 @@ const PCCPage = (): JSX.Element => {
   )
 }
 
-export default PCCPage
+export default NSXPage
