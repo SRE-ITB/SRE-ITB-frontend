@@ -61,11 +61,11 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'NEX STEP',
-    href: '/iyref/nsx',
+    href: '/iyref/pcc',
     contents: [
       {
         text: 'NEX STEP XChange',
-        href: '/iyref/nsx'
+        href: '/iyref/pcc'
       },
       {
         text: 'Policy Workshop',
@@ -166,7 +166,7 @@ function MobileNav ({
   }, [])
   return (
     <div
-      className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-green5 transform ${
+      className={`fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen xl:hidden bg-green5 transform ${
         open ? '-translate-x-0' : '-translate-x-full'
       } transition-transform duration-300 ease-in-out`}>
       <div className="flex flex-col h-screen justify-center">
@@ -304,7 +304,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
           <div
             className={`${
               open ? 'fixed right-0' : ''
-            } right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden mt-[30px]`}
+            } right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer xl:hidden mt-[30px]`}
             onClick={() => {
               setOpen(!open)
             }}>
@@ -341,7 +341,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
                       (idx === 1 && (iyrefPage === 'bpc' || (page === 'iyref' && iyrefPage === 'nec') || iyrefPage === 'bcc')) ||
-                      (idx === 2 && iyrefPage === 'nsx') ||
+                      (idx === 2 && (iyrefPage === 'pcc' || iyrefPage === 'pw')) ||
                       (idx === 3 && iyrefPage === 'comvis') ||
                       (idx === 4 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'

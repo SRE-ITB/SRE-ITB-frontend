@@ -43,12 +43,12 @@ const Hero = ({ title, desc, background, linkRegister }: HeroProps): JSX.Element
               isWideScreen
                 ? (
                 <>
-                  {title}<br />{page === 'nsx' ? 'IYREF 2024 x New Energy Nexus Indonesia' : 'IYREF 2024'}
+                  {title}<br />{page === 'pcc' ? 'IYREF 2024 x New Energy Nexus Indonesia' : 'IYREF 2024'}
                 </>
                   )
                 : (
                 <>
-                  {title} <br /> {page === 'nsx' ? 'IYREF 2024 x New Energy Nexus Indonesia' : 'IYREF 2024'}
+                  {title} <br /> {page === 'pcc' ? 'IYREF 2024 x New Energy Nexus Indonesia' : 'IYREF 2024'}
                 </>
                   )
             }
