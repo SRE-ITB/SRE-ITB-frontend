@@ -30,7 +30,7 @@ const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemePro
     <div className='relative font-montserrat h-auto flex flex-col justify-center items-center overflow-y-hidden'>
       <div className='relative w-full z-10 mt-20'>
         <div className='my-[50px] space-y-3 mx-[10vw]'>
-          { page !== 'pcc'
+          { page !== 'nsx'
             ? (
                 <p className='text-green11 text-center text-[16px]'>
                   {type} IYREF 2024&apos;s THEME
@@ -43,7 +43,7 @@ const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemePro
           <h2 className='font-gradient text-[24px] lg:text-[30px] xl:text-[32px] text-center font-bold px-5 lg:px-0 leading-[30px] sm:leading-normal'>
             &quot;{theme}&quot;
           </h2>
-          { page === 'pcc'
+          { page === 'nsx'
             ? (
                 <h3 className='text-center font-semibold text-[16px]'>
                   {themeDesc}
@@ -71,7 +71,7 @@ const Theme = ({ type, theme, subtheme, addText, benefits, themeDesc }: ThemePro
               Total Competition Prize Up To
           </h2>
           <p className='font-gradient text-[48px] md:text-[72px] lg:text-[96px] text-center font-bold leading-[50px] sm:leading-normal'>
-              {page === 'pcc' ? 'IDR 14.000.000' : 'IDR 30.000.000'}
+              {page === 'nsx' ? 'IDR 14.000.000' : 'IDR 30.000.000'}
           </p>
       </div>
       <div className='mb-[100px] lg:mb-[300px] px-[5vw] w-full relative'>

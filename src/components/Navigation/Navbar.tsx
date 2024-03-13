@@ -61,11 +61,15 @@ const MENU_LIST: Menu[] = [
   },
   {
     text: 'NEX STEP',
-    href: '/iyref/pcc',
+    href: '/iyref/nsx',
     contents: [
       {
-        text: 'Policy Case Competition',
-        href: '/iyref/pcc'
+        text: 'NEX STEP XChange',
+        href: '/iyref/nsx'
+      },
+      {
+        text: 'Policy Workshop',
+        href: '/iyref/pw'
       }
     ]
   },
@@ -337,7 +341,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 4 && page === 'merchandise') ||
                       (idx === 0 && iyrefPage === 'refwon') ||
                       (idx === 1 && (iyrefPage === 'bpc' || (page === 'iyref' && iyrefPage === 'nec') || iyrefPage === 'bcc')) ||
-                      (idx === 2 && iyrefPage === 'pcc') ||
+                      (idx === 2 && iyrefPage === 'nsx') ||
                       (idx === 3 && iyrefPage === 'comvis') ||
                       (idx === 4 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
