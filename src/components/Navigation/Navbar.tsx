@@ -166,7 +166,7 @@ function MobileNav ({
 
   useEffect(() => {
     const updateWindowSize = (): void => {
-      setIsDesktopSize(window.innerWidth > 1024)
+      setIsDesktopSize(window.innerWidth > 1280)
     }
     updateWindowSize()
     window.addEventListener('resize', updateWindowSize)
