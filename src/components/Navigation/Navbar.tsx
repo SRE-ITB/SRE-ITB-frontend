@@ -64,7 +64,7 @@ const MENU_LIST: Menu[] = [
     href: '/iyref/pcc',
     contents: [
       {
-        text: 'NEX STEP XChange',
+        text: 'Policy Case Competition',
         href: '/iyref/pcc'
       },
       {
