@@ -38,12 +38,26 @@ const MENU_LIST: Menu[] = [
     href: '/merchandise'
   },
   {
-    text: 'REFWON',
-    href: '/iyref/refwon'
+    text: 'Home',
+    href: '/iyref'
+  },
+  {
+    text: 'Pre-Event',
+    href: '/iyref/comvis',
+    contents: [
+      {
+        text: 'REFWON',
+        href: '/iyref/refwon'
+      },
+      {
+        text: 'ComVis',
+        href: '/iyref/comvis'
+      }
+    ]
   },
   {
     text: 'Competitions',
-    href: '/iyref',
+    href: '/iyref/bcc',
     contents: [
       {
         text: 'Business Case Competition',
@@ -55,7 +69,7 @@ const MENU_LIST: Menu[] = [
       },
       {
         text: 'National Essay Competition',
-        href: '/iyref'
+        href: '/iyref/nec'
       }
     ]
   },
@@ -72,10 +86,6 @@ const MENU_LIST: Menu[] = [
         href: '/iyref/pw'
       }
     ]
-  },
-  {
-    text: 'Comvis',
-    href: '/iyref/comvis'
   },
   {
     text: 'Summit',
@@ -235,7 +245,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
 
   const router = useRouter()
   const page = router.pathname.split('/')[1] || 'home'
-  const iyrefPage = router.pathname.split('/')[2] || 'nec'
+  const iyrefPage = router.pathname.split('/')[2] || 'home'
 
   useEffect(() => {
     if (page === 'iyref') {
@@ -339,10 +349,10 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 2 && page === 'activity') ||
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'merchandise') ||
-                      (idx === 0 && iyrefPage === 'refwon') ||
-                      (idx === 1 && (iyrefPage === 'bpc' || (page === 'iyref' && iyrefPage === 'nec') || iyrefPage === 'bcc')) ||
-                      (idx === 2 && (iyrefPage === 'pcc' || iyrefPage === 'pw')) ||
-                      (idx === 3 && iyrefPage === 'comvis') ||
+                      (idx === 0 && iyrefPage === 'home') ||
+                      (idx === 1 && (iyrefPage === 'refwon' || iyrefPage === 'comvis')) ||
+                      (idx === 2 && (iyrefPage === 'bpc' || iyrefPage === 'nec' || iyrefPage === 'bcc')) ||
+                      (idx === 3 && (iyrefPage === 'pcc' || iyrefPage === 'pw')) ||
                       (idx === 4 && iyrefPage === 'summit')
                         ? 'rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold'
                         : ''

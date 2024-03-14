@@ -3,22 +3,42 @@ import Image from 'next/image'
 import Leaves from '@src/assets/Images/IYREF/Ongoing/leaves.svg'
 import Leaves2 from '@src/assets/Images/IYREF/Ongoing/leaves2.svg'
 import Birds from '@src/assets/Images/IYREF/Ongoing/birds.svg'
-import Footer from '@src/assets/Images/Navigation/Footer/FooterIllustration.svg'
+import Mountain from '@src/assets/Images/IYREF/Ongoing/mountain.svg'
 
-const Ongoing = (): JSX.Element => {
+interface OnGoingProps {
+  events: EventsProps[]
+}
+
+interface EventsProps {
+  title: string
+  href: string
+}
+
+const Ongoing = ({ events }: OnGoingProps): JSX.Element => {
   return (
-    <div className='font-monstserrat h-screen flex flex-col justify-center items-center overflow-x-hidden overflow-y-hidden bg-gradient'>
-      <div className='w-full flex sm:mt-[15vw]'>
-        <div className='mt-[10vw] ml-[10vw]'><Image src={Birds}/></div>
-        <div className='ml-auto'><Image src={Leaves2} height={200}/></div>
+    <div className='font-monstserrat relative h-screen flex flex-col justify-center items-center overflow-x-hidden overflow-y-hidden bg-gradient'>
+      <div className='w-full sm:px-[15vw] px-[10vw]'>
+        <div className='w-full text-white bg-white bg-opacity-10 rounded-xl flex flex-col items-center p-10'>
+          <div className='font-normal text-[20px] md:text-[25px] mb-7'>On Going Events</div>
+          {events.map((event, index) => (
+            <div key={index} className='font-semibold mt-3 text-[25px] md:text-[30px] hover:translate-y-[-5px] transition-all ease-in-out w-fit'>
+              <a href={event.href} className=''>{event.title}</a>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className='text-white p-[5vw] bg-white bg-opacity-10 rounded-xl inline-block sm:mt-[-3vw]'>
-        <div className='font-normal text-[24px] sm:text-[32px]'>On Going Events</div>
-        <div className='font-medium text-[24px] sm:text-[36px] mt-[5vw]'>Business Plan Competition IYREF 2024</div>
+
+      <div className='absolute top-[10vw] left-[20vw]'>
+        <Image src={Birds} />
       </div>
-      <div className='w-full flex mt-[15vw] sm:mt-[-2vw]'>
-        <div><Image src={Leaves} height={250}/></div>
-        <div className='-rotate-[12deg] relative translate-x-[18vw] mt-[2vw]'><Image src={Footer}/></div>
+      <div className='absolute top-0 right-0'>
+        <Image src={Leaves2} />
+      </div>
+      <div className='absolute bottom-0 left-0 flex'>
+        <Image src={Leaves}/>
+      </div>
+      <div className='absolute right-0 bottom-0 flex'>
+        <Image src={Mountain}/>
       </div>
     </div>
   )
