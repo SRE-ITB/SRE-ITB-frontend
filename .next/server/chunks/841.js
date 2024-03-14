@@ -240,6 +240,10 @@ const MENU_LIST = [
             {
                 text: "Policy Case Competition",
                 href: "/iyref/pcc"
+            },
+            {
+                text: "Policy Workshop",
+                href: "/iyref/pw"
             }
         ]
     },
@@ -288,7 +292,7 @@ function MobileNav({ open , setOpen , dropdownIdx , setDropdownIdx , handleToggl
         };
     }, []);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        className: `fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen lg:hidden bg-green5 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`,
+        className: `fixed overflow-y-auto top-0 left-0 z-10 h-screen w-screen xl:hidden bg-green5 transform ${open ? "-translate-x-0" : "-translate-x-full"} transition-transform duration-300 ease-in-out`,
         children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
             className: "flex flex-col h-screen justify-center",
             children: [
@@ -418,7 +422,7 @@ const Navbar = ({ e  })=>{
                     className: "flex fixed z-20 w-full justify-end",
                     children: [
                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                            className: `${open ? "fixed right-0" : ""} right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer lg:hidden mt-[30px]`,
+                            className: `${open ? "fixed right-0" : ""} right-0 top-0 mr-[15px] z-50 flex flex-col w-10 h-6 justify-between cursor-pointer xl:hidden mt-[30px]`,
                             onClick: ()=>{
                                 setOpen(!open);
                             },
@@ -444,7 +448,7 @@ const Navbar = ({ e  })=>{
                                                 className: `${"active px-6 mx-2 py-8"} ${menu.contents ? "peer" : "inline-block"} text-white hover:opacity-80 cursor-pointer`,
                                                 href: menu.href,
                                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "student" || idx === 4 && page === "merchandise" || idx === 0 && iyrefPage === "refwon" || idx === 1 && (iyrefPage === "bpc" || page === "iyref" && iyrefPage === "nec" || iyrefPage === "bcc") || idx === 2 && iyrefPage === "pcc" || idx === 3 && iyrefPage === "comvis" || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
+                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "student" || idx === 4 && page === "merchandise" || idx === 0 && iyrefPage === "refwon" || idx === 1 && (iyrefPage === "bpc" || page === "iyref" && iyrefPage === "nec" || iyrefPage === "bcc") || idx === 2 && (iyrefPage === "pcc" || iyrefPage === "pw") || idx === 3 && iyrefPage === "comvis" || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
                                                     children: [
                                                         menu.text,
                                                         menu.contents ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_src_components_Icon_ArrowDownIcon__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {

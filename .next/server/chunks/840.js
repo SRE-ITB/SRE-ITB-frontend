@@ -90,7 +90,6 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
                                 children: isWideScreen ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
                                     children: [
                                         title,
-                                        " Competition",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
                                         page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
                                     ]
@@ -99,7 +98,7 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
                                         title,
                                         " ",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                        "Competition ",
+                                        " ",
                                         page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
                                     ]
                                 })
