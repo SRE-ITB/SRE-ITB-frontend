@@ -64,8 +64,8 @@ const PCCPage = (): JSX.Element => {
 
   const theme: ThemeProps = {
     type: 'PCC',
-    theme: 'NEX STEP XChange',
-    themeDesc: 'The NEX Sustainable Energy Policy XChange (NEX STEP Xchange) is a collaboration program by New Energy Nexus Indonesia and SRE ITB, designed to provide platforms for young individuals to actively engage and contribute to the development of policies that promote the energy transition in Indonesia. NEX STEP XChange embodies the essential role of the youth as our next generation in driving policy changes crucial for Indonesia’s energy transition.',
+    theme: 'IYREF 2024 x NEX STEP XChange',
+    themeDesc: 'IYREF 2024 x NEX STEP XChange is a collaboration program by New Energy Nexus Indonesia and SRE ITB, designed to provide platforms for young individuals to actively engage and contribute to the development of policies that promote the energy transition in Indonesia. NEX STEP XChange embodies the essential role of the youth as our next generation in driving policy changes crucial for Indonesia’s energy transition.',
     addText: 'Go register your team if you meet the eligibilities below',
     benefits: [
       {
