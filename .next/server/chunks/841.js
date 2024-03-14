@@ -212,12 +212,26 @@ const MENU_LIST = [
         href: "/merchandise"
     },
     {
-        text: "REFWON",
-        href: "/iyref/refwon"
+        text: "Home",
+        href: "/iyref"
+    },
+    {
+        text: "Pre-Event",
+        href: "/iyref/comvis",
+        contents: [
+            {
+                text: "REFWON",
+                href: "/iyref/refwon"
+            },
+            {
+                text: "ComVis",
+                href: "/iyref/comvis"
+            }
+        ]
     },
     {
         text: "Competitions",
-        href: "/iyref",
+        href: "/iyref/bcc",
         contents: [
             {
                 text: "Business Case Competition",
@@ -229,7 +243,7 @@ const MENU_LIST = [
             },
             {
                 text: "National Essay Competition",
-                href: "/iyref"
+                href: "/iyref/nec"
             }
         ]
     },
@@ -246,10 +260,6 @@ const MENU_LIST = [
                 href: "/iyref/pw"
             }
         ]
-    },
-    {
-        text: "Comvis",
-        href: "/iyref/comvis"
     },
     {
         text: "Summit",
@@ -283,7 +293,7 @@ function MobileNav({ open , setOpen , dropdownIdx , setDropdownIdx , handleToggl
     const { 0: isDesktopSize , 1: setIsDesktopSize  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(true);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         const updateWindowSize = ()=>{
-            setIsDesktopSize(window.innerWidth > 1024);
+            setIsDesktopSize(window.innerWidth > 1280);
         };
         updateWindowSize();
         window.addEventListener("resize", updateWindowSize);
@@ -350,7 +360,7 @@ const Navbar = ({ e  })=>{
     const { 0: menuList , 1: setMenuList  } = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(MENU_LIST);
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     const page = router.pathname.split("/")[1] || "home";
-    const iyrefPage = router.pathname.split("/")[2] || "nec";
+    const iyrefPage = router.pathname.split("/")[2] || "home";
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         if (page === "iyref") {
             setMenuList(MENU_LIST.filter((item)=>item.href.split("/")[1] === "iyref"));
@@ -448,7 +458,7 @@ const Navbar = ({ e  })=>{
                                                 className: `${"active px-6 mx-2 py-8"} ${menu.contents ? "peer" : "inline-block"} text-white hover:opacity-80 cursor-pointer`,
                                                 href: menu.href,
                                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "student" || idx === 4 && page === "merchandise" || idx === 0 && iyrefPage === "refwon" || idx === 1 && (iyrefPage === "bpc" || page === "iyref" && iyrefPage === "nec" || iyrefPage === "bcc") || idx === 2 && (iyrefPage === "pcc" || iyrefPage === "pw") || idx === 3 && iyrefPage === "comvis" || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
+                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "student" || idx === 4 && page === "merchandise" || idx === 0 && iyrefPage === "home" || idx === 1 && (iyrefPage === "refwon" || iyrefPage === "comvis") || idx === 2 && (iyrefPage === "bpc" || iyrefPage === "nec" || iyrefPage === "bcc") || idx === 3 && (iyrefPage === "pcc" || iyrefPage === "pw") || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
                                                     children: [
                                                         menu.text,
                                                         menu.contents ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_src_components_Icon_ArrowDownIcon__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {

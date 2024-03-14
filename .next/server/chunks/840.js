@@ -91,7 +91,7 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
                                     children: [
                                         title,
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                        page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
+                                        page === "pcc" ? "IYREF 2024 x NEX STEP XChange" : "IYREF 2024"
                                     ]
                                 }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
                                     children: [
@@ -99,7 +99,7 @@ const Hero = ({ title , desc , background , linkRegister  })=>{
                                         " ",
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
                                         " ",
-                                        page === "pcc" ? "IYREF 2024 x New Energy Nexus Indonesia" : "IYREF 2024"
+                                        page === "pcc" ? "IYREF 2024 x NEX STEP XChange" : "IYREF 2024"
                                     ]
                                 })
                             }),
