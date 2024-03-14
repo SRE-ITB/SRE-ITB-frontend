@@ -126,7 +126,7 @@ const PCCPage = (): JSX.Element => {
 
   const stages: StagesProps = {
     title: 'Policy Case Competition',
-    desc: 'The IYREF x New Energy Nexus Policy Case Competition 2024 is divided into two main stages: Preliminary and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
+    desc: 'IYREF 2024 x NEX STEP XChange is divided into two main stages: Preliminary and Final Stage. All participants in the respective stages are required to complete and submit documents or other necessary items at each stage.',
     cards: [
       {
         title: 'Preliminary Stage',
