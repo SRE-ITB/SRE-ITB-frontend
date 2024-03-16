@@ -112,13 +112,7 @@ const NECPage = (): JSX.Element => {
 
   const timeline: TimelineProps = {
     timeline: [{
-      title: 'February 2024',
-      desc: 'NEC Goes to School and University',
-      startDate: '2024-02-01',
-      endDate: '2024-02-29'
-    },
-    {
-      title: '24 Feb - 9 Mar 2024',
+      title: '24 Feb - 16 Mar 2024',
       desc: 'Registation and Abstract Submission',
       startDate: '2024-02-24',
       endDate: '2024-03-09'

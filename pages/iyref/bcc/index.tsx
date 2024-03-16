@@ -103,14 +103,14 @@ const BCCPage = (): JSX.Element => {
   const timeline: TimelineProps = {
     timeline: [
       {
-        title: '24 Feb - 9 Mar 2024',
+        title: '24 Feb - 16 Mar 2024',
         desc: 'Open Registration',
         startDate: '2024-02-24',
         endDate: '2024-03-09'
       },
       {
-        title: '9 March 2024',
-        desc: 'Free Webinar',
+        title: '16 March 2024',
+        desc: 'Webinar "BCC 101 and How to Make Pitch Deck"',
         startDate: '2024-03-09',
         endDate: '2024-03-09'
       },
@@ -122,37 +122,37 @@ const BCCPage = (): JSX.Element => {
       },
       {
         title: '17 - 31 March 2024',
-        desc: 'Preliminary Phase (Executive Summary)',
+        desc: 'Executive Summary (Preliminary Phase)',
         startDate: '2024-03-17',
         endDate: '2024-03-31'
       },
       {
         title: '17 - 19 April 2024',
-        desc: 'Semifinal Registration',
+        desc: 'Semifinalist Registration',
         startDate: '2024-04-17',
         endDate: '2024-04-19'
       },
       {
         title: '17 Apr - 1 May 2024',
-        desc: 'Semifinal Phase (Proposal)',
+        desc: 'Proposal (Semifinal Phase)',
         startDate: '2024-04-17',
         endDate: '2024-05-01'
       },
       {
         title: '28 April 2024',
-        desc: 'Coaching 1',
+        desc: 'Coaching Session 1',
         startDate: '2024-04-28',
         endDate: '2024-04-28'
       },
       {
         title: '10 - 17 May 2024',
-        desc: 'Final Phase (Pitch Deck)',
+        desc: 'Pitch Deck (Final Phase)',
         startDate: '2024-05-10',
         endDate: '2024-05-17'
       },
       {
         title: '15 May 2024',
-        desc: 'Coaching 2',
+        desc: 'Coaching Session 2',
         startDate: '2024-05-15',
         endDate: '2024-05-15'
       },
