@@ -87,19 +87,19 @@ const BPCPage = (): JSX.Element => {
 
   const timeline: TimelineProps = {
     timeline: [{
-      title: '24 Feb - 9 Mar 2024',
-      desc: 'Open Registration',
+      title: '24 Feb - 16 Mar 2024',
+      desc: 'Participants Registration',
       startDate: '2024-02-24',
-      endDate: '2024-03-09'
+      endDate: '2024-03-16'
     },
     {
       title: '10 - 24 March 2024',
-      desc: 'BMC Submission',
+      desc: 'BMC Submission (Preliminary Phase)',
       startDate: '2024-03-10',
       endDate: '2024-03-24'
     },
     {
-      title: '22 March 2024',
+      title: '23 March 2024',
       desc: 'Coaching Session 1',
       startDate: '2024-03-22',
       endDate: '2024-03-22'
@@ -112,7 +112,7 @@ const BPCPage = (): JSX.Element => {
     },
     {
       title: '2 - 4 April 2024',
-      desc: 'Semifinalist Registration',
+      desc: 'Semifinalist Registration (Semifinal Phase)',
       startDate: '2024-04-02',
       endDate: '2024-04-04'
     },
@@ -139,6 +139,12 @@ const BPCPage = (): JSX.Element => {
       desc: 'Pitch Deck Submission',
       startDate: '2024-05-08',
       endDate: '2024-05-17'
+    },
+    {
+      title: '14 May 2024',
+      desc: 'Coaching Session 3',
+      startDate: '2024-05-14',
+      endDate: '2024-05-14'
     },
     {
       title: '18 May 2024',

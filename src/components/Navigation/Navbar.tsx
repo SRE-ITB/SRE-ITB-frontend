@@ -349,7 +349,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 2 && page === 'activity') ||
                       (idx === 3 && page === 'student') ||
                       (idx === 4 && page === 'merchandise') ||
-                      (idx === 0 && iyrefPage === 'home') ||
+                      (idx === 0 && (iyrefPage === 'home' && page === 'iyref')) ||
                       (idx === 1 && (iyrefPage === 'refwon' || iyrefPage === 'comvis')) ||
                       (idx === 2 && (iyrefPage === 'bpc' || iyrefPage === 'nec' || iyrefPage === 'bcc')) ||
                       (idx === 3 && (iyrefPage === 'pcc' || iyrefPage === 'pw')) ||

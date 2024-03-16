@@ -36,7 +36,7 @@ const Timeline = ({ timeline }: TimelineProps): JSX.Element => {
           const isInRange = isDateInRange(currentDate, timeline.startDate, timeline.endDate)
 
           return (
-            <div key={index} className='flex relative items-center'>
+            <div key={index} className='flex relative items-center mt-1'>
               <div className='w-5 h-5 aspect-square bg-green8 rounded-full'></div>
               <div className={`ml-[3vw] p-5 ${isInRange ? 'bg-green8 rounded-r-xl' : ''}`}>
                 <p className={`text-transparent font-bold bg-clip-text text-[18px] md:text-[24px] ${isInRange ? 'text-[#FFFFFF]' : 'text-green8'}`}>{timeline.title}</p>
