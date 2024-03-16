@@ -19,11 +19,13 @@ const Ongoing = ({ events }: OnGoingProps): JSX.Element => {
     <div className='font-monstserrat relative h-screen flex flex-col justify-center items-center overflow-x-hidden overflow-y-hidden bg-gradient'>
       <div className='w-full sm:px-[15vw] px-[10vw]'>
         <div className='z-10 w-full text-white bg-white bg-opacity-10 backdrop-blur-[5px] relative rounded-xl flex flex-col items-center p-10'>
-          <div className='font-normal text-[20px] md:text-[25px] mb-7'>On Going Events</div>
+          <h1 className='font-normal text-[20px] md:text-[25px] mb-7'>On Going Events</h1>
           {events.map((event, index) => (
             <a key={index} href={event.href}>
               <button className='font-semibold underline p-2 text-[25px] md:text-[30px] hover:translate-y-[-5px] transition-all ease-in-out w-fit'>
-                {event.title}
+                <h1>
+                  {event.title}
+                </h1>
               </button>
             </a>
           ))}

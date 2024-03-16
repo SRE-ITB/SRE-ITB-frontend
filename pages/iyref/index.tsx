@@ -34,7 +34,7 @@ const onGoingData: OnGoingProps = {
 
 const IYREFPage = (): JSX.Element => {
   return (
-    <SEO title="SRE ITB | IYREF">
+    <SEO title="IYREF">
       <Navbar />
       <Ongoing {...onGoingData} />
     </SEO>
