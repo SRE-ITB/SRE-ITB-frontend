@@ -4,7 +4,7 @@ import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
 import Timeline from '@src/contexts/IYREF/Compe/Timeline'
 import Stages from '@src/contexts/IYREF/Compe/Stages'
-// import Footer from '@src/contexts/IYREF/Compe/Footer'
+import Footer from '@src/contexts/IYREF/Compe/Footer'
 import Hero from '@src/contexts/IYREF/Compe/Hero'
 import Theme from '@src/contexts/IYREF/Compe/Theme'
 
@@ -48,18 +48,19 @@ interface StagesProps {
   }>
 }
 
-// interface FooterProps {
-//   registerLink: string
-//   guidebookLink: string
-//   events: boolean
-// }
+interface FooterProps {
+  contacts: string[]
+  registerLink: string
+  guidebookLink: string
+  events: boolean
+}
 
 const PCCPage = (): JSX.Element => {
   const hero: HeroProps = {
     title: 'Policy Case Competition',
     desc: 'A policy case competition encourages young people to think critically, analytically, and creatively to present solution papers on study cases from each province about energy transition. Participants, organized into teams, develop a comprehensive policy solution to address a particular real-world problem or issue.',
     background: Background,
-    linkRegister: ''
+    linkRegister: 'https://bit.ly/RegistrationPCC2024'
   }
 
   const theme: ThemeProps = {
@@ -86,20 +87,26 @@ const PCCPage = (): JSX.Element => {
   const timeline: TimelineProps = {
     timeline: [
       {
-        title: '21 Mar - 17 Apr 2024',
-        desc: 'Registration',
-        startDate: '2024-03-21',
-        endDate: '2024-04-17'
+        title: '26 Mar - 12 Apr 2024',
+        desc: 'Open Registration',
+        startDate: '2024-03-26',
+        endDate: '2024-04-12'
       },
       {
-        title: '1 May 2024',
-        desc: 'Proposal Submission',
-        startDate: '2024-05-01',
+        title: '18 April 2024',
+        desc: 'Case Distribution',
+        startDate: '2024-04-18',
+        endDate: '2024-04-18'
+      },
+      {
+        title: '18 Apr - 1 May 2024',
+        desc: 'Preliminary Phase',
+        startDate: '2024-04-18',
         endDate: '2024-05-01'
       },
       {
         title: '9 May 2024',
-        desc: 'Finalist Announcement',
+        desc: 'Top 5 Announcement',
         startDate: '2024-05-09',
         endDate: '2024-05-09'
       },
@@ -141,11 +148,15 @@ const PCCPage = (): JSX.Element => {
     ]
   }
 
-  // const footer: FooterProps = {
-  //   registerLink: 'https://bit.ly/RegisterPCCIYREF24',
-  //   guidebookLink: 'https://bit.ly/GuidebookPCCIYREF24',
-  //   events: false
-  // }
+  const footer: FooterProps = {
+    contacts: [
+      'Intan Maudika (WA : 081222218718 / LINE : intanmaudika.p)',
+      'Ridha Pramesthi (WA : 081237872887 / LINE : ridha43pramesthi)'
+    ],
+    registerLink: 'https://bit.ly/RegistrationPCC2024',
+    guidebookLink: 'https://bit.ly/GuidebookPCC2024',
+    events: false
+  }
 
   return (
     <SEO title="IYREF | PCC">
@@ -154,7 +165,7 @@ const PCCPage = (): JSX.Element => {
       <Theme {...theme} />
       <Timeline {...timeline} />
       <Stages {...stages} />
-      {/* <Footer {...footer} /> */}
+      <Footer {...footer} />
     </SEO>
   )
 }
