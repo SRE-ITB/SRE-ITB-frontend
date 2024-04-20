@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Write custom base/ component/ utility styles with `@layer` directive */
+
+@layer base {
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply border-gray-300 focus:border-blue-500 focus:ring-blue-500 rounded-lg shadow-sm;
+  }
+
+  [type='checkbox'],
+  [type='radio'] {
+    @apply border-gray-300 focus:ring-blue-500 h-5 text-blue-600 w-5;
+  }
+
+  [type='checkbox'] {
+    @apply rounded;
+  }
+
+  [type='radio'] {
+    @apply rounded-full;
+  }
+
+  .bg-gradient {
+    @apply bg-gradient-to-r from-[#046669] to-[#89C190];
+  }
+
+  .font-gradient {
+    background: #046669;
+    background: linear-gradient(to right, #046669 0%, #89c190 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-stroke-white {
+    background-image: linear-gradient(90deg, #ffffff, #ffffff);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    letter-spacing: calc(1em / 16);
+  }
+
+  .text-stroke-gradient {
+    background-image: linear-gradient(90deg, #046669, #89c190);
+    background-clip: text;
+    -webkit-text-stroke-color: transparent;
+    -webkit-text-stroke-width: calc(1em / 16);
+    -webkit-background-clip: text;
+    letter-spacing: calc(1em / 16);
+  }
+
+  .white-text-shadow {
+    text-shadow: 0px 0px 25px #89C190; /* Offset horizontal, offset vertikal, blur, dan warna */
+  }
+}
+
+@layer components {
+  .prose :where(code):not(:where([class~='not-prose'] *)) {
+    @apply bg-gray-200 dark:bg-gray-800 dark:text-white font-normal px-1 py-0.5 rounded-md text-sm;
+  }
+
+  .prose :where(code):not(:where([class~='not-prose'] *))::before {
+    content: '';
+  }
+
+  .prose :where(code):not(:where([class~='not-prose'] *))::after {
+    content: '';
+  }
+
+  @font-face {
+    font-family: 'Archivo';
+    src: url('../assets/fonts/Archivo-Black.otf');
+  }
+
+  @font-face {
+    font-family: 'Varela-Round';
+    src: url('../assets/fonts/VarelaRound-Regular.otf');
+  }
+
+  @font-face {
+    font-family: 'Helvatica';
+    src: url('../assets/fonts/Helvetica.otf');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('../assets/fonts/Montserrat-Medium.ttf');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('../assets/fonts/Montserrat-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: url('../assets/fonts/Montserrat-ExtraBold.ttf');
+  }
+
+  @font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../assets/fonts/OpenSans-Bold.ttf');
+  }
+
+  @font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../assets/fonts/OpenSans-Regular.ttf');
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 6px;
+}

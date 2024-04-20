@@ -1,0 +1,18 @@
+.custom-pagination {
+    position: absolute;
+    margin-bottom: 10px;
+}
+
+.custom-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #afafaf;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+    opacity: 0.8;
+    background-color: #0D664C;
+}
+  
