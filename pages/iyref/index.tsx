@@ -14,6 +14,10 @@ interface EventsProps {
 const onGoingData: OnGoingProps = {
   events: [
     {
+      title: 'Company Visit',
+      href: '/iyref/comvis'
+    },
+    {
       title: 'Business Case Competition',
       href: '/iyref/bcc'
     },

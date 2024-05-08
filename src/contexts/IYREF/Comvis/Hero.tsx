@@ -44,10 +44,13 @@ const Hero = (): JSX.Element => {
             }
             </h1>
             <h2 className='xl:text-[20px] md:text-[16px] text-[13px] px-[10vw] mt-[30px] animate__animated animate__fadeInUp'>
-            The Company Visit, scheduled for March 15, 2024, encompasses two main events: the Company Seminar and the Company Tour, both conducted in-person. With a target participation of approximately 20 to 30 students, the number of attendees can be adjusted based on the policies of the hosting company. The Company Seminar aims to provide participants with an in-depth understanding of the industry and the visited company&apos;s vision. On the other hand, the Company Tour offers an exclusive opportunity for students to witness firsthand the company&apos;s operations, thereby enhancing their understanding of the working world. This event not only serves as an informational window into a specific industry but also provides valuable networking opportunities and broadens students&apos; perspectives on the professional sphere.
+              Company Visit is one of Integrated Youth Renewable Energy Festival (IYREF) 2024 events, where participant will get the chance to visit a renewable energy related company to learn more knowledge about renewable energy and alot more  from a real company.
+              <br />
+              <br />
+              By Participating in this Company Visit, participants will escalate their knowledge about Renewable Energy, increase their networking with Professionals, getting a chance to attend Seminar held by SUN Energy, getting an experience inside a renewable energy Company.
             </h2>
             <div className="translate-y-[15px] flex justify-center">
-              <a href={''} target='_blank' rel='noreferrer'>
+              <a href={'https://docs.google.com/forms/d/e/1FAIpQLSdaExMF_VpL6CwqAcMZHOtFt-vvW2OGqY2yuTk7oHFv_JJgsA/viewform'} target='_blank' rel='noreferrer'>
                 <button
                 className='font-normal mt-[50px] outline outline-1 text-[#FFFFFF] xl:text-[20px] md:text-[18px] text-[16px] px-[50px] py-[5px] rounded-full hover:bg-[#169470] hover:text-white transition-all cursor-pointer animate-bounce'
                 >
