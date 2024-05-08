@@ -7,10 +7,11 @@ import Leaves from '@src/assets/Images/IYREF/Comvis/Footer/leaves.svg'
 interface FooterProps {
   contacts: string[]
   registerLink: string
+  feedbackLink: string
   text: string
 }
 
-const Footer = ({ contacts, registerLink, text }: FooterProps): JSX.Element => {
+const Footer = ({ contacts, registerLink, feedbackLink, text }: FooterProps): JSX.Element => {
   return (
     <div className='relative w-auto h-auto flex flex-col items-center justify-center font-montserrat overflow-hidden mt-[-100px]'>
         <div className='w-screen bg-green8 flex flex-col items-center justify-center pt-40 lg:pt-[250px] rounded-t-[50%]'>
@@ -28,6 +29,13 @@ const Footer = ({ contacts, registerLink, text }: FooterProps): JSX.Element => {
                 <Link href={registerLink}>
                     <button className="border-[2px] border-white font-semibold bg-white hover:-translate-y-1 rounded-xl text-green8 duration-75 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px]">
                     Register Now
+                    </button>
+                </Link>
+            </div>
+            <div className="mt-[20px] md:mt-[50px]">
+                <Link href={feedbackLink}>
+                    <button className="border-[2px] border-white font-semibold hover:-translate-y-1 rounded-xl text-white duration-75 w-[225px] lg:w-[275px] h-[45px] lg:h-[65px] text-[16px] lg:text-[20px]">
+                    Feedback
                     </button>
                 </Link>
             </div>

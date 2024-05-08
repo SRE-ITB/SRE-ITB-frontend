@@ -50,17 +50,7 @@ const About = (): JSX.Element => {
                   </div>
                   <div className='relative mb-2 bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[5%] rounded-[10px] flex items-center justify-center drop-shadow px-14 py-10'>
                       <p className='font-montserrat text-[24px] text-white px-[30px] text-center'>
-                          Lanyard
-                      </p>
-                  </div>
-                  <div className='relative mb-2 bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[5%] rounded-[10px] flex items-center justify-center drop-shadow px-14 py-10'>
-                      <p className='font-montserrat text-[24px] text-white px-[30px] text-center'>
-                          Drink
-                      </p>
-                  </div>
-                  <div className='relative mb-2 bg-gradient-to-r from-green7 to-green8 overflow-hidden mx-[5%] rounded-[10px] flex items-center justify-center drop-shadow px-14 py-10'>
-                      <p className='font-montserrat text-[24px] text-white px-[30px] text-center'>
-                          Certificate
+                          E-Certificate
                       </p>
                   </div>
               </div>
