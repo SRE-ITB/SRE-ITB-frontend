@@ -1,12 +1,12 @@
 import SEO from '@src/components/SEO/SEO'
 import Navbar from '@src/components/Navigation/Navbar'
-import Comingsoon from '@src/contexts/ComingSoon/ComingSoon'
+import Hero from '@src/contexts/IYREF/PW/Hero'
 
 const PWPage = (): JSX.Element => {
   return (
     <SEO title="SRE ITB | PW">
       <Navbar />
-      <Comingsoon />
+      <Hero />
     </SEO>
   )
 }
