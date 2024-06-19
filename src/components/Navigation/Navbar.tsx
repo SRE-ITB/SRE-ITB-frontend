@@ -30,6 +30,10 @@ const MENU_LIST: Menu[] = [
     href: '/activity'
   },
   {
+    text: 'Article',
+    href: '/article'
+  },
+  {
     text: 'Student',
     href: '/student'
   },
@@ -347,8 +351,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 0 && page === 'home') ||
                       (idx === 1 && page === 'about') ||
                       (idx === 2 && page === 'activity') ||
-                      (idx === 3 && page === 'student') ||
-                      (idx === 4 && page === 'merchandise') ||
+                      (idx === 3 && page === 'article') ||
+                      (idx === 4 && page === 'student') ||
+                      (idx === 5 && page === 'merchandise') ||
                       (idx === 0 && (iyrefPage === 'home' && page === 'iyref')) ||
                       (idx === 1 && (iyrefPage === 'refwon' || iyrefPage === 'comvis')) ||
                       (idx === 2 && (iyrefPage === 'bpc' || iyrefPage === 'nec' || iyrefPage === 'bcc')) ||
