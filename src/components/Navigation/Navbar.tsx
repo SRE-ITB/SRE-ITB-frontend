@@ -251,13 +251,19 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
   const page = router.pathname.split('/')[1] || 'home'
   const iyrefPage = router.pathname.split('/')[2] || 'home'
 
+  let isSolid = false
+
   useEffect(() => {
     if (page === 'iyref') {
       setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] === 'iyref'))
     } else {
       setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] !== 'iyref'))
     }
-  }, [page])
+
+    if (iyrefPage === 'engineering') {
+      isSolid = true
+    }
+  }, [page, iyrefPage])
 
   const handleToggle = (isChecked: boolean): void => {
     if (isChecked) {
@@ -275,9 +281,13 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
     const handleScroll = (): void => {
       if (window.scrollY !== 0) {
         setIsNavbarSolid(true)
-      } else {
+      } else if (window.scrollY === 0 && !isSolid) {
         setIsNavbarSolid(false)
       }
+    }
+
+    if (isSolid) {
+      setIsNavbarSolid(true)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -285,7 +295,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isSolid])
 
   return (
     <motion.nav

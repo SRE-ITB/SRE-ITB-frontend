@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
@@ -20,12 +19,11 @@ interface CarouselProps {
 }
 
 const BookletCarousel = ({ contents }: CarouselProps): JSX.Element => {
-  const router = useRouter()
   const [slidesPerView, setSlidesPerView] = useState(3)
 
   const handleCardClick = async (link: string): Promise<void> => {
     try {
-      await router.push(`/article/${link}`)
+      window.location.href = 'article/' + link
     } catch (error) {
       console.error('Error:', error)
     }
