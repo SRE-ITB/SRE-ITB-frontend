@@ -33,12 +33,12 @@ const ArticleCard: React.FC<{ image: any, source: string, position: string, para
   }, [isParagraphVisible])
 
   return (
-    <div className='relative mb-[30px] overflow-hidden'>
+    <div className='relative mb-[30px]'>
       <div
-        className="relative flex justify-between items-center w-auto h-auto rounded-xl py-5 px-10 font-montserrat cursor-pointer bg-semiWhite"
+        className="relative flex justify-between items-center w-auto h-auto rounded-xl py-5 px-10 font-montserrat cursor-pointer bg-semiWhite hover:scale-105 transition-transform duration-300 ease-in-out"
         onClick={handleCardClick}
       >
-        <div className="relative text-left">
+        <div className="relative text-left mr-5">
           <h3 className='text-[25px] mb-2'>
             {source}
           </h3>

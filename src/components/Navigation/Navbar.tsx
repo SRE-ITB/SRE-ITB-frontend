@@ -260,7 +260,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
       setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] !== 'iyref'))
     }
 
-    if (iyrefPage === 'engineering') {
+    if (iyrefPage === 'engineering' || iyrefPage === 'consulting' || iyrefPage === 'research' || iyrefPage === 'law-policy' || iyrefPage === 'finance-marketing' || iyrefPage === 'founder') {
       isSolid = true
     }
   }, [page, iyrefPage])
