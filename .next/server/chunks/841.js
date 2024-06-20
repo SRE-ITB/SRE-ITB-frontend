@@ -73,13 +73,39 @@ const ToggleButton = ({ state , onToggle  })=>{
 
 /***/ }),
 
-/***/ 1799:
+/***/ 3801:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(997);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1994);
+
+
+const ArrowDownIcon = ({ color ="black" , ...props })=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_Svg__WEBPACK_IMPORTED_MODULE_1__/* ["default"] */ .Z, {
+        viewBox: "0 0 1024 1024",
+        ...props,
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("path", {
+            d: "M768.686 350.007l-205.471 193.251-205.472-193.251-63.119 59.495 268.591 253.17 268.59-253.17-63.119-59.495z",
+            fill: color
+        })
+    });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ArrowDownIcon);
+
+
+/***/ }),
+
+/***/ 1994:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ Icon_ArrowDownIcon)
+  "Z": () => (/* binding */ Svg)
 });
 
 // EXTERNAL MODULE: external "react/jsx-runtime"
@@ -138,21 +164,6 @@ const Icon = (props)=>{
 };
 /* harmony default export */ const Svg = (Icon);
 
-;// CONCATENATED MODULE: ./src/components/Icon/ArrowDownIcon.tsx
-
-
-const ArrowDownIcon = ({ color ="black" , ...props })=>{
-    return /*#__PURE__*/ jsx_runtime_.jsx(Svg, {
-        viewBox: "0 0 1024 1024",
-        ...props,
-        children: /*#__PURE__*/ jsx_runtime_.jsx("path", {
-            d: "M768.686 350.007l-205.471 193.251-205.472-193.251-63.119 59.495 268.591 253.17 268.59-253.17-63.119-59.495z",
-            fill: color
-        })
-    });
-};
-/* harmony default export */ const Icon_ArrowDownIcon = (ArrowDownIcon);
-
 
 /***/ }),
 
@@ -175,7 +186,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(580);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _src_components_Button_Toggle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8426);
-/* harmony import */ var _src_components_Icon_ArrowDownIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1799);
+/* harmony import */ var _src_components_Icon_ArrowDownIcon__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3801);
 /* harmony import */ var _src_assets_Images_Navigation_Navbar_sreLogo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5047);
 /* harmony import */ var _src_assets_Images_Navigation_Navbar_iyrefLogo_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9287);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([framer_motion__WEBPACK_IMPORTED_MODULE_4__]);
@@ -202,6 +213,10 @@ const MENU_LIST = [
     {
         text: "Activity",
         href: "/activity"
+    },
+    {
+        text: "Article",
+        href: "/article"
     },
     {
         text: "Student",
@@ -361,14 +376,19 @@ const Navbar = ({ e  })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     const page = router.pathname.split("/")[1] || "home";
     const iyrefPage = router.pathname.split("/")[2] || "home";
+    let isSolid = false;
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(()=>{
         if (page === "iyref") {
             setMenuList(MENU_LIST.filter((item)=>item.href.split("/")[1] === "iyref"));
         } else {
             setMenuList(MENU_LIST.filter((item)=>item.href.split("/")[1] !== "iyref"));
         }
+        if (iyrefPage === "engineering" || iyrefPage === "consulting" || iyrefPage === "research" || iyrefPage === "law-policy" || iyrefPage === "finance-marketing" || iyrefPage === "founder") {
+            isSolid = true;
+        }
     }, [
-        page
+        page,
+        iyrefPage
     ]);
     const handleToggle = (isChecked)=>{
         if (isChecked) {
@@ -385,15 +405,20 @@ const Navbar = ({ e  })=>{
         const handleScroll = ()=>{
             if (window.scrollY !== 0) {
                 setIsNavbarSolid(true);
-            } else {
+            } else if (window.scrollY === 0 && !isSolid) {
                 setIsNavbarSolid(false);
             }
         };
+        if (isSolid) {
+            setIsNavbarSolid(true);
+        }
         window.addEventListener("scroll", handleScroll);
         return ()=>{
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [
+        isSolid
+    ]);
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(framer_motion__WEBPACK_IMPORTED_MODULE_4__.motion.nav, {
         className: "fixed flex top-0 w-full justify-center z-50 font-montserrat",
         initial: {
@@ -458,7 +483,7 @@ const Navbar = ({ e  })=>{
                                                 className: `${"active px-6 mx-2 py-8"} ${menu.contents ? "peer" : "inline-block"} text-white hover:opacity-80 cursor-pointer`,
                                                 href: menu.href,
                                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "student" || idx === 4 && page === "merchandise" || idx === 0 && iyrefPage === "home" && page === "iyref" || idx === 1 && (iyrefPage === "refwon" || iyrefPage === "comvis") || idx === 2 && (iyrefPage === "bpc" || iyrefPage === "nec" || iyrefPage === "bcc") || idx === 3 && (iyrefPage === "pcc" || iyrefPage === "pw") || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
+                                                    className: `${idx === 0 && page === "home" || idx === 1 && page === "about" || idx === 2 && page === "activity" || idx === 3 && page === "article" || idx === 4 && page === "student" || idx === 5 && page === "merchandise" || idx === 0 && iyrefPage === "home" && page === "iyref" || idx === 1 && (iyrefPage === "refwon" || iyrefPage === "comvis") || idx === 2 && (iyrefPage === "bpc" || iyrefPage === "nec" || iyrefPage === "bcc") || idx === 3 && (iyrefPage === "pcc" || iyrefPage === "pw") || idx === 4 && iyrefPage === "summit" ? "rounded-[20px] bg-green7 py-[4px] px-[15px] font-bold" : ""} inline-flex items-center`,
                                                     children: [
                                                         menu.text,
                                                         menu.contents ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_src_components_Icon_ArrowDownIcon__WEBPACK_IMPORTED_MODULE_7__/* ["default"] */ .Z, {
