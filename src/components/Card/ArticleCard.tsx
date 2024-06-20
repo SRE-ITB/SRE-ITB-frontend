@@ -66,7 +66,7 @@ const ArticleCard: React.FC<{ image: any, source: string, position: string, para
       </div>
       <div
         ref={paragraphRef}
-        className={`bg-semiWhite text-justify w-full px-10 rounded-b-xl text-left transition-max-height duration-500 ease-in-out ${isParagraphVisible ? '-mt-[10px] py-[15px]' : 'mt-0'}`}
+        className={`bg-semiWhite text-justify w-full px-10 rounded-b-xl transition-max-height duration-500 ease-in-out ${isParagraphVisible ? '-mt-[10px] py-[15px]' : 'mt-0'}`}
         style={{ maxHeight, overflow: 'hidden' }}
       >
         {paragraph.split('\n\n').map((para, index) => (
