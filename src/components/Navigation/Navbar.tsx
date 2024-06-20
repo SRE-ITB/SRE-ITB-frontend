@@ -30,6 +30,10 @@ const MENU_LIST: Menu[] = [
     href: '/activity'
   },
   {
+    text: 'Article',
+    href: '/article'
+  },
+  {
     text: 'Student',
     href: '/student'
   },
@@ -247,13 +251,19 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
   const page = router.pathname.split('/')[1] || 'home'
   const iyrefPage = router.pathname.split('/')[2] || 'home'
 
+  let isSolid = false
+
   useEffect(() => {
     if (page === 'iyref') {
       setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] === 'iyref'))
     } else {
       setMenuList(MENU_LIST.filter((item) => item.href.split('/')[1] !== 'iyref'))
     }
-  }, [page])
+
+    if (iyrefPage === 'engineering' || iyrefPage === 'consulting' || iyrefPage === 'research' || iyrefPage === 'law-policy' || iyrefPage === 'finance-marketing' || iyrefPage === 'founder') {
+      isSolid = true
+    }
+  }, [page, iyrefPage])
 
   const handleToggle = (isChecked: boolean): void => {
     if (isChecked) {
@@ -271,9 +281,13 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
     const handleScroll = (): void => {
       if (window.scrollY !== 0) {
         setIsNavbarSolid(true)
-      } else {
+      } else if (window.scrollY === 0 && !isSolid) {
         setIsNavbarSolid(false)
       }
+    }
+
+    if (isSolid) {
+      setIsNavbarSolid(true)
     }
 
     window.addEventListener('scroll', handleScroll)
@@ -281,7 +295,7 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [isSolid])
 
   return (
     <motion.nav
@@ -347,8 +361,9 @@ const Navbar: React.FC<{ e?: string }> = ({ e }): JSX.Element => {
                       (idx === 0 && page === 'home') ||
                       (idx === 1 && page === 'about') ||
                       (idx === 2 && page === 'activity') ||
-                      (idx === 3 && page === 'student') ||
-                      (idx === 4 && page === 'merchandise') ||
+                      (idx === 3 && page === 'article') ||
+                      (idx === 4 && page === 'student') ||
+                      (idx === 5 && page === 'merchandise') ||
                       (idx === 0 && (iyrefPage === 'home' && page === 'iyref')) ||
                       (idx === 1 && (iyrefPage === 'refwon' || iyrefPage === 'comvis')) ||
                       (idx === 2 && (iyrefPage === 'bpc' || iyrefPage === 'nec' || iyrefPage === 'bcc')) ||
