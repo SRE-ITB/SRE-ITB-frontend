@@ -4,6 +4,7 @@ import Hero from '@src/contexts/About/Hero'
 import VisionMission from '@src/contexts/About/VisionMission'
 import Banner from '@src/contexts/About/Banner'
 import BehindSRE from '@src/contexts/About/BehindSRE'
+import Family from '@src/contexts/About/Family'
 import Footer from '@src/components/Navigation/Footer'
 
 const AboutPage = (): JSX.Element => {
@@ -14,6 +15,7 @@ const AboutPage = (): JSX.Element => {
       <VisionMission />
       <Banner />
       <BehindSRE />
+      <Family />
       <Footer />
     </SEO>
   )
