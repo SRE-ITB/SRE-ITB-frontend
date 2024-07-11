@@ -23,10 +23,17 @@ const Organogram: React.FC<{ image: any, name: string, major: string, title: str
         </div>
       </div>
       <div className='absolute h-[96px] w-[96px] z-9'>
-        <div className={`relative h-full w-full -top-[50%] max-w-[400px] rounded-full bg-[${color}]`}>
+        <div
+          className='relative h-full w-full -top-[50%] max-w-[400px] rounded-full'
+          style={{ backgroundColor: color }}
+        >
         </div>
       </div>
-      <div className={`absolute -top-1 w-full h-[50px] rounded-xl max-w-[400px] bg-[${color}]`}></div>
+      <div
+        className='absolute -top-1 w-full h-[50px] rounded-xl max-w-[400px]'
+        style={{ backgroundColor: color }}
+      >
+      </div>
       {/* <div className='w-full bg-green1'>s</div> */}
       <div
         className='relative rounded-xl bg-white font-montserrat px-5 max-w-[400px] w-[70vw] sm:w-[50vw] md:w-[25vw] h-full'
