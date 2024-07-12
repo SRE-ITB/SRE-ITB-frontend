@@ -1,7 +1,5 @@
 import Organogram from '@src/components/Card/Organogram'
 
-import empty from '@src/assets/Images/About/Family/empty.png'
-
 // Executives
 import President from '@src/assets/Images/About/Family/Executives/President.webp'
 import VicePresident from '@src/assets/Images/About/Family/Executives/VicePresident.webp'
