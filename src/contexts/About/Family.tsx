@@ -21,6 +21,7 @@ import ViceDirectorEntre from '@src/assets/Images/About/Family/Finance/ViceDirec
 // Internal
 import DeputyInternal from '@src/assets/Images/About/Family/Internal/DeputyInternal.webp'
 import DirectorMembers from '@src/assets/Images/About/Family/Internal/DirectorMembers.webp'
+import ViceDirectorMembers from '@src/assets/Images/About/Family/Internal/ViceDirectorMembers.webp'
 import DirectorOrganization from '@src/assets/Images/About/Family/Internal/DirectorOrganization.webp'
 import ViceDirectorOrganization from '@src/assets/Images/About/Family/Internal/ViceDirectorOrganization.webp'
 import DirectorEvents from '@src/assets/Images/About/Family/Internal/DirectorEvents.webp'
@@ -31,6 +32,8 @@ import DeputyExternal from '@src/assets/Images/About/Family/External/DeputyExter
 import DirectorPR from '@src/assets/Images/About/Family/External/DirectorPR.webp'
 import DirectorMedmar from '@src/assets/Images/About/Family/External/DirectorMedmar.webp'
 import OrangGanteng from '@src/assets/Images/About/Family/External/OrangGanteng.webp'
+import ManagerDesign from '@src/assets/Images/About/Family/External/ManagerDesign.webp'
+import ManagerSocmed from '@src/assets/Images/About/Family/External/ManagerSocmed.webp'
 
 // Academics
 import DeputyAcademics from '@src/assets/Images/About/Family/Academics/DeputyAcademics.webp'
@@ -40,6 +43,7 @@ import DirectorCommunity from '@src/assets/Images/About/Family/Academics/Directo
 import ViceDirectorCommunity from '@src/assets/Images/About/Family/Academics/ViceDirectorCommunity.webp'
 import DirectorAcademics from '@src/assets/Images/About/Family/Academics/DirectorAcademics.webp'
 import ManagerProduct from '@src/assets/Images/About/Family/Academics/ManagerProduct.webp'
+import ManagerResearch from '@src/assets/Images/About/Family/Academics/ManagerResearch.webp'
 import ManagerCampaign from '@src/assets/Images/About/Family/Academics/ManagerCampaign.webp'
 import MentorResearch from '@src/assets/Images/About/Family/Academics/MentorResearch.webp'
 
@@ -173,7 +177,7 @@ const Family = (): JSX.Element => {
             color='#EE4B2B'
           />
           <Organogram
-          image={empty}
+          image={ViceDirectorMembers}
           name='Faridza Hilmi'
           major='(TL’22)'
           title='Vice Director of Members Management'
@@ -256,7 +260,7 @@ const Family = (): JSX.Element => {
       <div className='mt-5 flex flex-wrap w-full justify-center gap-5'>
         <div className='gap-1 flex flex-col'>
           <Organogram
-            image={empty}
+            image={ManagerDesign}
             name='Kendra Yumna'
             major='(TK’22)'
             title='Manager of Design'
@@ -265,7 +269,7 @@ const Family = (): JSX.Element => {
         </div>
         <div className='gap-1 flex flex-col'>
           <Organogram
-            image={empty}
+            image={ManagerSocmed}
             name='Kezia Aisyah'
             major='(TK’22)'
             title='Manager of Social Media'
@@ -279,7 +283,7 @@ const Family = (): JSX.Element => {
         <Organogram
           image={DeputyAcademics}
           name='Ignatius Bima'
-          major='TME’21)'
+          major='(TM’21)'
           title='Deputy Vice President of Academics'
           color='#5D3FD3'
         />
@@ -339,7 +343,7 @@ const Family = (): JSX.Element => {
         </div>
         <div className='gap-1 flex flex-col'>
           <Organogram
-            image={empty}
+            image={ManagerResearch}
             name='Zidan Fikri'
             major='(GL’21)'
             title='Manager of Research'
