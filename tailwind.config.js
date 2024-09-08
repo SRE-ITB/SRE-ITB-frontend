@@ -13,6 +13,7 @@ module.exports = {
         semiBlack: '#1F1F21',
         green0: '#0D664C',
         green1: '#046669',
+        green111: '#ACC4C0',
         green2: '#046E6C',
         green3: '#0B7D73',
         green4: '#1C907C',
@@ -22,9 +23,16 @@ module.exports = {
         green8: '#89C190',
         green9: '#70B69B',
         green10: '#43A3A2',
-        green11: '#346E3C'
+        green11: '#346E3C',
+        blue1: '#E3F7F6',
+        blue2: '#AAF4EE',
+        blue3: '#559BA0',
+        blue4: '#004353',
+        blue5: '#132D48',
+        blue6: '#172A3A'
       },
       fontFamily: {
+        merich: ['Merich', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
         archivo: ['Archivo', 'sans-serif'],
         varela: ['Varela-Round', 'sans-serif'],

@@ -43,9 +43,20 @@
     @apply bg-gradient-to-r from-[#046669] to-[#89C190];
   }
 
+  .bg-gradient2 {
+    @apply bg-gradient-to-r from-[#004353] to-[#559BA0];
+  }
+
   .font-gradient {
     background: #046669;
     background: linear-gradient(to right, #046669 0%, #89c190 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .font-gradient2 {
+    background: #004353;
+    background: linear-gradient(to right, #004353 0%, #559BA0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -70,6 +81,10 @@
 
   .white-text-shadow {
     text-shadow: 0px 0px 25px #89C190; /* Offset horizontal, offset vertikal, blur, dan warna */
+  }
+
+  .white-text-shadow-blue {
+    text-shadow: 2px 4px 25px #559BA0; /* Offset horizontal, offset vertikal, blur, dan warna */
   }
 }
 
@@ -124,6 +139,11 @@
   @font-face {
     font-family: 'OpenSans-Regular';
     src: url('../assets/fonts/OpenSans-Regular.ttf');
+  }
+  
+  @font-face {
+    font-family: 'Merich';
+    src: url('../assets/fonts/Merich.otf');
   }
 }
 
